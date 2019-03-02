@@ -16,7 +16,7 @@ print(ia.get_movie_infoset())  # args
 i = 1  # reshape <-> rows
 
 for row in fileR:  # every movie id from database
-    if row == '0000001' or row == '0000002':  # test
+    if int(row) < 10:  # test
         try:
             movie = ia.get_movie(row)  # download all info about movie
             # print(movie.get_current_info())
@@ -41,8 +41,10 @@ for row in fileR:  # every movie id from database
             else:
                 i += 1
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # add to an array and reshape to 2D
-        except IMDbError:
-            print(e)
+        except IMDbError as e:
+            print(i, e)
+        except KeyError as e:
+            print(i, e)
 
 dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot'])  # create DataFrame (for AI)
 dataSet.to_csv("database.csv", sep=";")  # convert DataFrame to csv
