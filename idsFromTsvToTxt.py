@@ -1,6 +1,5 @@
 import csv
 
-ia = IMDb()
 imdbIds = list()
 
 fileRW = open('imdbIDs.txt', "a+")
