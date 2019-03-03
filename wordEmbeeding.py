@@ -3,27 +3,26 @@
 # zainstalowac ponizsze pakiety w w/w miejscu
 
 import numpy as np
+import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 import os
+from gensim.models import word2vec
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # usuwa error
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # usuwa warning z tensorflow [wystepuje na Ryzenach]
+corpus = list()
 
-fileR = open("database.csv", "r").read()
+df = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+dfKey = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
 
-fileR = fileR.split("\n")
+for row in df.values:
+    corpus.append(row[4])
+    corpus.append(row[5])
 
-for i in range(len(fileR)):
-    fileR[i] = fileR[i].split(';')
-    for j in range(len(fileR[i])):
-        fileR[i][j] = fileR[i][j].split()
+tokenized_sentences = [sentence.split() for sentence in corpus]
+model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0)
 
-fileR = np.array(fileR[1:])
+# print(model.wv.vocab)
 
-np1D = fileR.flatten()
-print(np1D)
-
-# fileRTf = tf.convert_to_tensor(fileR)
-# sess = tf.InteractiveSession()
-# print(fileRTf.eval())
-# sess.close()
+for word in dfKey.values:
+    print(word, " =>", model.wv[word])

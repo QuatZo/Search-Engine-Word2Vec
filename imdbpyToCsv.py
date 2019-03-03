@@ -14,7 +14,6 @@ fileR = fileR.split()  # list from string
 
 print(ia.get_movie_infoset())  # args
 i = 1  # reshape <-> rows
-
 for row in fileR:  # every movie id from database
     if int(row) < 10:  # test
         try:
@@ -29,22 +28,36 @@ for row in fileR:  # every movie id from database
             listOfDirectors = list()
             for director in movie['directors']:
                 listOfDirectors.append(director['name'])
-            listOfInfos.append(" ,".join(listOfDirectors))
+            listOfInfos.append(" ".join(listOfDirectors))
 
             listOfInfos.append(movie['rating'])
-            listOfInfos.append(", ".join(movie['genres']))
-            listOfInfos.append(", ".join(movie['plot']))
-
+            listOfInfos.append(" ".join(movie['genres']))
+            listOfInfos.append(" ".join(movie['plot']))
             if row == '0000001':
+                keywords = list()
                 rowInfo = np.array(listOfInfos)  # create an array
                 rowInfoLen = len(rowInfo)  # amount of infos per movie
             else:
                 i += 1
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # add to an array and reshape to 2D
+
+            for word in listOfInfos[4].split():
+                if word not in keywords:
+                    keywords.append(word)
+            for word in listOfInfos[5].split():
+                if word not in keywords:
+                    keywords.append(word)
+
         except IMDbError as e:
             print(i, e)
         except KeyError as e:
             print(i, e)
 
-dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot'])  # create DataFrame (for AI)
-dataSet.to_csv("database.csv", sep=";")  # convert DataFrame to csv
+npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
+
+dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot'])  # create DataFrame
+dataKeywords = pd.DataFrame(keywords, columns=['keyword'])
+
+dataSet.to_csv("dataSet.csv", sep=";")  # convert DataFrame to csv
+dataKeywords.to_csv("dataKeywords.csv", sep=";")
+# pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
