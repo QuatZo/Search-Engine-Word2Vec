@@ -1,3 +1,14 @@
+# -------------------------------------------- TODO: ----------------------------------------------------------------- #
+#                                                                                                                      #
+# ----- Sposob zapisu autora (nie moze byc spacji)                                                                     #
+# ----- Usuniecie znakow interpunkcyjnych ze zdan (wiaze sie z tym podzielenie recenzji etc na kolejne listy - zdań    #
+# ----- Zapamiętywanie ostatniego zapisanego ID, by co odpalenie nie importowal danych z filmow o ID od 0000001        #
+# ----- Komentarze                                                                                                     #
+# ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
+#                                                                                                                      #
+# Jesli cos z TODO zrobicie to usuncie. Jak zrobicie wszystko z listy TODO zostawcie naglowek i te wiadomosc           #
+# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
+
 from imdb import IMDb, IMDbError
 import numpy as np
 import pandas as pd
@@ -35,7 +46,16 @@ for row in fileR:  # kazdy movieID z bazy
 
             listOfInfos.append(movie['rating'])
             listOfInfos.append(" ".join(movie['genres']))
-            listOfInfos.append(" ".join(movie['plot']))
+
+            # usuwamy .:: i autora tekstu -- START
+            plots = list()
+            for plot in movie['plot']:
+                index = plot.index(".::")
+                plot = plot[:index]
+                plots.append(plot)
+            listOfInfos.append(" ".join(plots))
+            # usuwamy .:: i autora tekstu -- KONIEC
+
             if row == '0000001':
                 keywords = list()
                 rowInfo = np.array(listOfInfos)  # tablica numpy
@@ -58,7 +78,7 @@ for row in fileR:  # kazdy movieID z bazy
         except IMDbError as e:
             print(row, e)
         except KeyError as e:
-            print(row, e)
+            print("Brak pelnych danych filmu o ID: ", row, "; brakujace dane: ", e)
 
 fileSavedIds.close()
 npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords

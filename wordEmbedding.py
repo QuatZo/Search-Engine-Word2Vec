@@ -1,4 +1,14 @@
-# KURWA POKI CO NIE ZWRACAC UWAGI NA TO O 3.6. ZAINSTALUJCIE '''''GENSIM''''' I POWINNO DZIALAC
+# -------------------------------------------- TODO: ----------------------------------------------------------------- #
+#                                                                                                                      #
+# ----- Komentarze                                                                                                     #
+# ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
+# ----- Testowanie modelu w oparciu o logiczne myslenie                                                                #
+#                                                                                                                      #
+# Jesli cos z TODO zrobicie to usuncie. Jak zrobicie wszystko z listy TODO zostawcie naglowek i te wiadomosc           #
+# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
+
+
+# ----------- KURWA POKI CO NIE ZWRACAC UWAGI NA TO O 3.6. ZAINSTALUJCIE '''''GENSIM''''' I POWINNO DZIALAC -----------#
 # -----Dziala na pythonie 3.6, tensorflow nie dziala jeszcze na 3.7; pobrac z neta, zainstalowac 3.6
 # -----Plik -> Opcje -> wyszukac 'interpreter', wyswietlic wszystkie, dodac swoj i wybrac 3.6
 # -----zainstalowac ponizsze pakiety w w/w miejscu
