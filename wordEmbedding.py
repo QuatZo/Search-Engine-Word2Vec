@@ -32,7 +32,7 @@ for row in df.values:  # wyciagnij typ i recenzje [poki co tylko tyle, na potrze
 
 tokenized_sentences = [sentence.split() for sentence in corpus]  # wyrazy z sentencji (dzielimy zdania na wyrazy)
 model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
-model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - liczba iteraji
+model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save("vocab.model")  # zapis słownika/modelu do pliku (binarnie)
 print(model.wv.most_similar(positive=['girl']))  # pokaz najbardziej podobne
 print(model.wv.most_similar(negative=['girl']))  # pokaz najmniej podobne
