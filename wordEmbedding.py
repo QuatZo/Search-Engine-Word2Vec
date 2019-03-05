@@ -39,5 +39,5 @@ print(model.wv.most_similar(negative=['girl']))  # pokaz najmniej podobne
 
 # print(model.wv.vocab)
 
-#for word in dfKey.values:
+# for word in dfKey.values:
 #    print(word, " =>", model.wv[word])
