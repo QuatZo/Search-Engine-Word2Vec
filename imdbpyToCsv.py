@@ -23,41 +23,41 @@ fileR = fileR.split()  # list from string
 # unnecessary: 'cast', 'production companies',
 # print(ia.get_movie_infoset())  # args
 
-savedIds = list() # przygotowanie do trzeciej pozycji z listy TODO
+savedIds = list()  # przygotowanie do trzeciej pozycji z listy TODO
 fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już mamy)
 
 i = 1  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
     if int(row) < 1000:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
         try:
-            movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla jaki to błąd na jakim ID
+            movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
             # print(movie.get_current_info())
             # movieMain = movie.infoset2keys['main']
             # print(movieMain)
-            listOfInfos = list() # Lista informacji, w której będziemy przechowywać inforamcje na temat jednego filmu
-            listOfInfos.append(movie['title']) # na początek tytuł
+            listOfInfos = list()  # Lista informacji, w której będziemy przechowywać inforamcje na temat jednego filmu
+            listOfInfos.append(movie['title'])  # na początek tytuł
             listOfInfos.append(movie['year'])  # potem rok produkcji
 
             listOfDirectors = list()
-            for director in movie['directors']: # lista reżyserów, może być więcej niż jeden więc pętla i dodajemy po spacji
-                listOfDirectors.append(director['name']) # imie reżysera
+            for director in movie['directors']:  # lista reżyserów, może być więcej niż jeden więc jest pętla
+                listOfDirectors.append(director['name'])  # imie reżysera
             listOfInfos.append(" ".join(listOfDirectors))
 
             listOfInfos.append(movie['rating'])          # ocena filmu
-            listOfInfos.append(" ".join(movie['genres'])) # kategoria
+            listOfInfos.append(" ".join(movie['genres']))  # kategoria
 
             # usuwamy .:: i autora tekstu -- START
             plots = list()
             for plot in movie['plot']:
-                index = plot.index(".::") # szukamy ".::" i od tego miejsca ucinamy recenzje
+                index = plot.index(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
                 plot = plot[:index]
                 plots.append(plot)
             listOfInfos.append(" ".join(plots))
             # usuwamy .:: i autora tekstu -- KONIEC
 
             if row == '0000001':
-                keywords = list() # tworzymy liste słów kluczowych do danego ID
+                keywords = list()  # tworzymy liste słów kluczowych do danego ID
                 rowInfo = np.array(listOfInfos)  # tablica numpy (ma więcej metod)
                 rowInfoLen = len(rowInfo)  # ilosc info jaką pobraliśmy z filmu
             else:
@@ -67,10 +67,10 @@ for row in fileR:  # kazdy imdbID z bazy
             savedIds.append(row)
 
             # keywords -- START
-            for word in listOfInfos[4].split(): # pętla która zapisuje wszystkie keywords
+            for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords
                 if word not in keywords:
                     keywords.append(word)
-            for word in listOfInfos[5].split(): # taka sama pętla, ale inne info
+            for word in listOfInfos[5].split():  # taka sama pętla, ale inne info
                 if word not in keywords:
                     keywords.append(word)
             # keywords -- END
@@ -80,7 +80,7 @@ for row in fileR:  # kazdy imdbID z bazy
         except KeyError as e:
             print("Brak pelnych danych filmu o ID: ", row, "; brakujace dane: ", e)
 
-fileSavedIds.close() # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
+fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
 npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
 
 dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot'])  # stworz DataFrame
@@ -89,7 +89,7 @@ dataKeywords = pd.DataFrame(keywords, columns=['keyword'])
 dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
 dataKeywords.to_csv("dataKeywords.csv", sep=";")
 
-fileSavedIds = open("dataSetIds.txt", "a+") # to co trzeba zaimplementować, teraz zapisuje do dataSetIDs
+fileSavedIds = open("dataSetIds.txt", "a+")  # to co trzeba zaimplementować, teraz zapisuje do dataSetIDs
 for Id in savedIds:
     if Id not in fileSavedIds:
         fileSavedIds.write(Id + "\n")

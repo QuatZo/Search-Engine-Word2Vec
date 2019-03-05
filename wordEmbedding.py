@@ -22,7 +22,7 @@ import pandas as pd
 from gensim.models import word2vec
 
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # usuwa warning z tensorflow [wystepuje na Ryzenach]
-corpus = list() # kręgosłup - wszystkie dane
+corpus = list()  # kręgosłup - wszystkie dane
 
 df = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # baza danych (czytamy pliki)
 dfKey = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # keywords (czytamy pliki)
