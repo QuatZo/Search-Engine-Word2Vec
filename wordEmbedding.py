@@ -34,9 +34,28 @@ tokenized_sentences = [sentence.split() for sentence in corpus]  # wyrazy z sent
 model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save("vocab.model")  # zapis słownika/modelu do pliku (binarnie)
-print(model.wv.most_similar(positive=['girl']))  # pokaz najbardziej podobne
-print(model.wv.most_similar(negative=['girl']))  # pokaz najmniej podobne
 
+# jeden wyraz
+# print(model.wv.most_similar(positive=['girl'], topn=3))  # pokaz najbardziej podobne
+# print(model.wv.most_similar(negative=['girl'], topn=3))  # pokaz najmniej podobne
+
+# wszystkie keywordsy
+j = 1  # iterator - wiersze
+for row in dfKey.values:  # for ewery (~R.W.) keyword
+    tempPositivities = list()  # tymczasowa lista, przechowuje info o jednym wierszu
+    score = model.wv.most_similar(positive=row, topn=3)  # 3 najbardziej podobne wyniki do keyworda
+    tempPositivities.append(row[0])  # dodaj keyworda
+    for i in range(3):
+        tempPositivities.append(score[i][0])  # utnij prawdopodobienstwo, dodaj tylko nazwe
+
+    if j == 1:
+        positivities = np.array(tempPositivities)  # pierwszy wpis
+    else:
+        positivities = np.append(positivities, tempPositivities).reshape((j, len(tempPositivities)))  # konwersja na 2d
+
+    j += 1  # kolejny wiersz
+
+print(positivities)
 # print(model.wv.vocab)
 
 # for word in dfKey.values:
