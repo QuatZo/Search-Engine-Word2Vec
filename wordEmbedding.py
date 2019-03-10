@@ -4,6 +4,7 @@
 # ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
 # ----- Testowanie modelu w oparciu o logiczne myslenie                                                                #
 # ----- Usunąć znaki interpunkcyjne                                                                                    #
+# ----- Uznac wyrazy typu 'a', 'the' etc za nieważne (czyt. z wagą 0)                                                  #
 #                                                                                                                      #
 # Jesli cos z TODO zrobicie to usuncie. Jak zrobicie wszystko z listy TODO zostawcie naglowek i te wiadomosc           #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -56,6 +57,7 @@ for row in dfKey.values:  # for ewery (~R.W.) keyword
     j += 1  # kolejny wiersz
 
 print(positivities)
+
 # print(model.wv.vocab)
 
 # for word in dfKey.values:

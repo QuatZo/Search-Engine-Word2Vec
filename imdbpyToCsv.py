@@ -46,38 +46,29 @@ for row in fileR:  # kazdy imdbID z bazy
                 listOfDirectors.append(director['name'])  # imie reżysera
             listOfInfos.append(" ".join(listOfDirectors))
 
-            listOfInfos.append(movie['rating'])          # ocena filmu
+            listOfInfos.append(movie['rating'])  # ocena filmu
             listOfInfos.append(" ".join(movie['genres']))  # kategoria
 
-            # usuwamy .:: i autora tekstu -- START
+            # usuwamy .::, autora tekstu i znaki specjalne -- START
             plots = list()
-            for plot in movie['plot']:
-                index = plot.index(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
-                plot = plot[:index]
-                plots.append(plot)
-            listOfInfos.append(" ".join(plots))
-            # usuwamy .:: i autora tekstu -- KONIEC
-
-            # lista bez znaków interpunkcyjnych
-            # usuwamy .:: i autora tekstu -- START
             plotsmarks = list()
             for plot in movie['plot']:
-                index = plot.index(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
+                index = plot.find(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
                 plot = plot[:index]
+                plots.append(plot)
                 for mark in marks:  # wyszukaj znaku interpunkcyjnego (lista marks) i go usun/zamien
                     plot = plot.replace(mark, '')
                 plotsmarks.append(plot)
+            # listOfInfos.append(" ".join(plots))
             listOfInfos.append(" ".join(plotsmarks))
-            # usuwamy .:: i autora tekstu -- KONIEC
-
-            print(plotsmarks)
+            # usuwamy .::, autora tekstu i znaki specjalne  -- KONIEC
 
             if row == '0000001':
                 keywords = list()  # tworzymy liste słów kluczowych do danego ID
                 rowInfo = np.array(listOfInfos)  # tablica numpy (ma więcej metod)
                 rowInfoLen = len(rowInfo)  # ilosc info jaką pobraliśmy z filmu
             else:
-                i += 1 # powiększamy "i" czyli liczbę wierszy
+                i += 1  # powiększamy "i" czyli liczbę wierszy
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # zmien tablice numpy na numpy 2D
 
             savedIds.append(row)
@@ -99,7 +90,8 @@ for row in fileR:  # kazdy imdbID z bazy
 fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
 npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
 
-dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot', 'plotmarks'])  # stworz DataFrame
+dataSet = pd.DataFrame(rowInfo,
+                       columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])  # stworz DataFrame
 dataKeywords = pd.DataFrame(keywords, columns=['keyword'])
 
 dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
