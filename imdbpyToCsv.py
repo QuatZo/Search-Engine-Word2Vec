@@ -1,7 +1,6 @@
 # -------------------------------------------- TODO: ----------------------------------------------------------------- #
 #                                                                                                                      #
 # ----- Sposob zapisu autora (nie moze byc spacji)                                                                     #
-# ----- Usuniecie znakow interpunkcyjnych ze zdan (wiaze sie z tym podzielenie recenzji etc na kolejne listy - zdań    #
 # ----- Zapamiętywanie ostatniego zapisanego ID, by co odpalenie nie importowal danych z filmow o ID od 0000001        #
 # ----- Komentarze                                                                                                     #
 # ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
@@ -28,7 +27,7 @@ fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już ma
 
 i = 1  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
-    if int(row) < 1000:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
+    if int(row) < 10:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
         try:
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
@@ -54,6 +53,19 @@ for row in fileR:  # kazdy imdbID z bazy
                 plot = plot[:index]
                 plots.append(plot)
             listOfInfos.append(" ".join(plots))
+            # usuwamy .:: i autora tekstu -- KONIEC
+
+            # lista bez znaków interpunkcyjnych
+            # usuwamy .:: i autora tekstu -- START
+            plotsmarks = list()
+            for plot in movie['plot']:
+                index = plot.index(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
+                plot = plot[:index]
+                plot = plot.replace(',', '')
+                plot = plot.replace('.', '')
+                plot = plot.replace(':', '')
+                plotsmarks.append(plot)
+            listOfInfos.append(" ".join(plotsmarks))
             # usuwamy .:: i autora tekstu -- KONIEC
 
             if row == '0000001':
@@ -83,7 +95,7 @@ for row in fileR:  # kazdy imdbID z bazy
 fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
 npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
 
-dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot'])  # stworz DataFrame
+dataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plot', 'plotmarks'])  # stworz DataFrame
 dataKeywords = pd.DataFrame(keywords, columns=['keyword'])
 
 dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
