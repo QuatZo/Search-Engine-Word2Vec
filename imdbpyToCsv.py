@@ -25,6 +25,8 @@ fileR = fileR.split()  # list from string
 savedIds = list()  # przygotowanie do trzeciej pozycji z listy TODO
 fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już mamy)
 
+marks = {('.', ''), (',', ''), (':', ''), ('(', ''), (')', '')}  # lista znakow interpunkcyjnych do usunięcia
+
 i = 1  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
     if int(row) < 10:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
@@ -61,9 +63,8 @@ for row in fileR:  # kazdy imdbID z bazy
             for plot in movie['plot']:
                 index = plot.index(".::")  # szukamy ".::" i od tego miejsca ucinamy recenzje
                 plot = plot[:index]
-                plot = plot.replace(',', '')
-                plot = plot.replace('.', '')
-                plot = plot.replace(':', '')
+                for mark, blank in marks: # wyszukaj znaku interpunkcyjnego (lista marks) i go usun/zamien
+                    plot = plot.replace(mark, blank)
                 plotsmarks.append(plot)
             listOfInfos.append(" ".join(plotsmarks))
             # usuwamy .:: i autora tekstu -- KONIEC
