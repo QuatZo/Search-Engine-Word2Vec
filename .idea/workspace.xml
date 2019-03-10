@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db5672b3-b719-4a53-8e5f-d23d0d56d20b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataSet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataSetIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSetIds.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imdbpyToCsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/imdbpyToCsv.py" afterDir="false" />
-    </list>
+    <list default="true" id="db5672b3-b719-4a53-8e5f-d23d0d56d20b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +119,7 @@
       <updated>1552218677604</updated>
       <workItem from="1552218682128" duration="1847000" />
       <workItem from="1552233130288" duration="1517000" />
+      <workItem from="1552234713277" duration="238000" />
     </task>
     <servers />
   </component>
@@ -132,8 +128,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
