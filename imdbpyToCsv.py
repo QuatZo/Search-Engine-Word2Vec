@@ -29,11 +29,12 @@ marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']'
 
 lastId = str(1).zfill(7)  # ustawione jako 0000001
 with open('dataSetIds.txt') as Ids:
-    lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobeirania danych do pliku od początku
+    lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
 
-i = 1  # reshape <-> rows
+
+i = 0  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
-    if int(row) < 10:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
+    if row > lastId:  # test do 1000, żeby nie pobierać wszystkich xD
         try:
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
@@ -68,10 +69,11 @@ for row in fileR:  # kazdy imdbID z bazy
             listOfInfos.append(" ".join(plotsmarks))
             # usuwamy .::, autora tekstu i znaki specjalne  -- KONIEC
 
-            if row == '0000001':
+            if i == 0:
                 keywords = list()  # tworzymy liste słów kluczowych do danego ID
                 rowInfo = np.array(listOfInfos)  # tablica numpy (ma więcej metod)
                 rowInfoLen = len(rowInfo)  # ilosc info jaką pobraliśmy z filmu
+                i += 1  # powiększamy "i" czyli liczbę wierszy
             else:
                 i += 1  # powiększamy "i" czyli liczbę wierszy
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # zmien tablice numpy na numpy 2D
