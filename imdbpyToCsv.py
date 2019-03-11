@@ -1,6 +1,5 @@
 # -------------------------------------------- TODO: ----------------------------------------------------------------- #
 #                                                                                                                      #
-# ----- Sposob zapisu autora (nie moze byc spacji)                                                                     #
 # ----- Zapamiętywanie ostatniego zapisanego ID, by co odpalenie nie importowal danych z filmow o ID od 0000001        #
 # ----- Komentarze                                                                                                     #
 # ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
@@ -28,6 +27,10 @@ fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już ma
 marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']', '}', '!', '@', '#', '$', '%', '^',
          '&', '&', '*', '(', ')', '-', '_', '=', '+'}  # lista znakow specjalnych do usunięcia
 
+lastId = str(1).zfill(7)  # ustawione jako 0000001
+with open('dataSetIds.txt') as Ids:
+    lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobeirania danych do pliku od początku
+
 i = 1  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
     if int(row) < 10:  # test do 1000, żeby nie pobierać wszystkich xD, nie będzie jej jak będziemy pobierać wszystko
@@ -42,8 +45,10 @@ for row in fileR:  # kazdy imdbID z bazy
             listOfInfos.append(movie['year'])  # potem rok produkcji
 
             listOfDirectors = list()
+            listOfDirectorsSpace = list()
             for director in movie['directors']:  # lista reżyserów, może być więcej niż jeden więc jest pętla
-                listOfDirectors.append(director['name'])  # imie reżysera
+                tempDirectors = director['name'].replace(' ', '_')  # usunięcie spacji i zamiana na _
+                listOfDirectors.append(tempDirectors)
             listOfInfos.append(" ".join(listOfDirectors))
 
             listOfInfos.append(movie['rating'])  # ocena filmu
