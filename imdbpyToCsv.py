@@ -1,10 +1,9 @@
-# -------------------------------------------- TODO: ----------------------------------------------------------------- #
+# -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# ----- Zapamiętywanie ostatniego zapisanego ID, by co odpalenie nie importowal danych z filmow o ID od 0000001        #
-# ----- Komentarze                                                                                                     #
-# ----- Zmienne lepiej odzwierciedlajace przechowywane dane                                                            #
+# TODO - Komentarze                                                                                                    #
+# TODO - Zmienne lepiej odzwierciedlajace przechowywane dane                                                           #
 #                                                                                                                      #
-# Jesli cos z TODO zrobicie to usuncie. Jak zrobicie wszystko z listy TODO zostawcie naglowek i te wiadomosc           #
+# Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
 
 from imdb import IMDb, IMDbError
@@ -21,7 +20,7 @@ fileR = fileR.split()  # list from string
 # unnecessary: 'cast', 'production companies',
 # print(ia.get_movie_infoset())  # args
 
-savedIds = list()  # przygotowanie do trzeciej pozycji z listy TODO
+savedIds = list()  # przygotowanie do trzeciej pozycji z listy do zrobienia
 fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już mamy)
 
 marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']', '}', '!', '@', '#', '$', '%', '^',
@@ -30,18 +29,20 @@ marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']'
 lastId = str(1).zfill(7)  # ustawione jako 0000001
 with open('dataSetIds.txt') as Ids:
     lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
-
+tempId = lastId
 
 i = 0  # reshape <-> rows
 for row in fileR:  # kazdy imdbID z bazy
-    if row > lastId:  # test do 1000, żeby nie pobierać wszystkich xD
+    if int(row) <= int(tempId) + 10 and row > lastId:
         try:
+            if int(row) % 100 == 0:
+                print('dupa')
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
             # print(movie.get_current_info())
             # movieMain = movie.infoset2keys['main']
             # print(movieMain)
-            listOfInfos = list()  # Lista informacji, w której będziemy przechowywać inforamcje na temat jednego filmu
+            listOfInfos = list()  # Lista informacji, które będziemy przechowywać inforamcje na temat jednego filmu
             listOfInfos.append(movie['title'])  # na początek tytuł
             listOfInfos.append(movie['year'])  # potem rok produkcji
 
@@ -97,9 +98,18 @@ for row in fileR:  # kazdy imdbID z bazy
 fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
 npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
 
-dataSet = pd.DataFrame(rowInfo,
+tempdataSet = pd.DataFrame(rowInfo,
                        columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])  # stworz DataFrame
-dataKeywords = pd.DataFrame(keywords, columns=['keyword'])
+dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+
+dataSet = pd.concat([dataSet, tempdataSet])
+dataSet = dataSet.reset_index(drop=True)
+
+tempdataKeywords = pd.DataFrame(keywords, columns=['keyword'])
+dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+
+dataKeywords = pd.concat([dataKeywords, tempdataKeywords])
+dataKeywords = dataKeywords.reset_index(drop=True)
 
 dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
 dataKeywords.to_csv("dataKeywords.csv", sep=";")
