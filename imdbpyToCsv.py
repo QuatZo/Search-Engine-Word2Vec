@@ -1,5 +1,7 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
+# TODO - zapisywać ID których brakuje                                                                                  #
+# TODO - dodać aktorów                                                                                                 #
 # TODO - Komentarze                                                                                                    #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane                                                           #
 #                                                                                                                      #
@@ -9,6 +11,30 @@
 from imdb import IMDb, IMDbError
 import numpy as np
 import pandas as pd
+
+def saveToFile(rowInfo, keywords):
+    tempdataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])  # stworz DataFrame
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+
+    dataSet = pd.concat([dataSet, tempdataSet])
+    dataSet = dataSet.reset_index(drop=True)
+
+    dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
+
+    tempdataKeywords = pd.DataFrame(keywords, columns=['keyword'])
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+
+    dataKeywords = pd.concat([dataKeywords, tempdataKeywords])
+    dataKeywords = dataKeywords.reset_index(drop=True)
+
+    dataKeywords.to_csv("dataKeywords.csv", sep=";")
+
+    fileSavedIds = open("dataSetIds.txt", "a+")  # to co trzeba zaimplementować, teraz zapisuje do dataSetIDs
+    for Id in savedIds:
+        if Id not in fileSavedIds:
+            fileSavedIds.write(Id + "\n")
+    fileSavedIds.close()
+    # pd.read_csv("dataKeywords.csv", sep=";", index_col=0) # metoda jak się odczytuje z pliku csv
 
 ia = IMDb()
 
@@ -31,12 +57,19 @@ with open('dataSetIds.txt') as Ids:
     lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
 tempId = lastId
 
+stopTerm = 0
 i = 0  # reshape <-> rows
+rowInfo = list()
+keywords = list()
 for row in fileR:  # kazdy imdbID z bazy
-    if int(row) <= int(tempId) + 10 and row > lastId:
+    if row > lastId:
         try:
-            if int(row) % 100 == 0:
+            stopTerm += 1
+            if stopTerm == 6:
                 print('dupa')
+                stopTerm = 0
+                saveToFile(rowInfo, keywords)
+
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
             # print(movie.get_current_info())
@@ -96,27 +129,5 @@ for row in fileR:  # kazdy imdbID z bazy
             print("Brak pelnych danych filmu o ID: ", row, "; brakujace dane: ", e)
 
 fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
-npKeywords = np.array(keywords).reshape(len(keywords), 1)  # keywords
 
-tempdataSet = pd.DataFrame(rowInfo,
-                       columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])  # stworz DataFrame
-dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
-
-dataSet = pd.concat([dataSet, tempdataSet])
-dataSet = dataSet.reset_index(drop=True)
-
-tempdataKeywords = pd.DataFrame(keywords, columns=['keyword'])
-dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
-
-dataKeywords = pd.concat([dataKeywords, tempdataKeywords])
-dataKeywords = dataKeywords.reset_index(drop=True)
-
-dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
-dataKeywords.to_csv("dataKeywords.csv", sep=";")
-
-fileSavedIds = open("dataSetIds.txt", "a+")  # to co trzeba zaimplementować, teraz zapisuje do dataSetIDs
-for Id in savedIds:
-    if Id not in fileSavedIds:
-        fileSavedIds.write(Id + "\n")
-fileSavedIds.close()
-# pd.read_csv("dataKeywords.csv", sep=";", index_col=0) # metoda jak się odczytuje z pliku csv
+saveToFile(rowInfo, keywords)
