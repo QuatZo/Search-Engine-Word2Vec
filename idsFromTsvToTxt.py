@@ -3,8 +3,6 @@
 
 import csv
 
-imdbIds = list()
-
 fileRW = open('imdbIDs.txt', "a+")
 
 with open('data.tsv', encoding="utf8") as tsvfile:

@@ -1,10 +1,11 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Dodać aktorów                                                                                                 #
-# TODO - Dokończyc warunki try-catch                                                                                   #
-# TODO - Plik dataKeywords.csv nie ma zawierac jednego wyrazu kilka razy                                               #
+# TODO - Sprawdzic warunki try-except                                                                                  #
+# TODO - Plik dataKeywords.csv bez powtorzen (teoretycznie warunek jest dobry, ale czasem wartosci sie powtarzaja)     #
 # TODO - Komentarze                                                                                                    #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane                                                           #
+# TODO - Usuniecie cudzyslowia z opisow (mozliwe, ze brakuje \ w tablicy znakow specjalnych)                           #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -37,14 +38,19 @@ def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):
         argDataKeywords.to_csv("dataKeywords.csv", sep=";")
 
         return True
-    except ValueError:
+    except ValueError as err:
+        print("Blad: ", err)
         return False
 
 
 ia = IMDb()
 
-fileR = open('imdbIDs.txt', "r").read()  # read file
-fileR = fileR.split()  # list from string
+try:
+    fileR = open('imdbIDs.txt', "r").read()  # read file
+    fileR = fileR.split()  # list from string
+except FileNotFoundError as e:
+    print("Blad: ", e)
+    exit(-1)
 
 # listOfInfos = ['genres', 'countries', 'rating', 'title', 'year', 'directors', 'plot', 'producers']
 # temporary deleted: 'reviews', 'synapsis', 'awards', 'keywords', 'writers', 'editors'
@@ -55,12 +61,15 @@ marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']'
          '&', '&', '*', '(', ')', '-', '_', '=', '+'}  # lista znakow specjalnych do usunięcia
 
 lastId = str(0).zfill(7) + '\n'  # ustawione jako 0000001
-with open('dataSetIds.txt') as Ids:
-    try:
-        lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
-        fileR = fileR[fileR.index(lastId[:-1]) + 1:]
-    except IndexError:
-        print("Plik ID jest pusty, zaczynamy od 0000001!")
+try:
+    with open('dataSetIds.txt') as Ids:
+        try:
+            lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
+            fileR = fileR[fileR.index(lastId[:-1]) + 1:]
+        except IndexError:
+            print("Plik ID jest pusty, zaczynamy od 0000001!")
+except FileNotFoundError as e:
+    open("dataSetIds.txt", "w+").write("")
 
 stopTerm = 0
 i = 0  # reshape <-> rows
@@ -68,8 +77,18 @@ rowInfo = list()
 keywords = list()
 idsToSave = list()
 
-dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
-dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+try:
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+except FileNotFoundError as e:
+    open("dataSet.csv", "w+").write(";title;year;directors;rating;genres;plotmarks")
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+
+try:
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+except FileNotFoundError as e:
+    open("dataKeywords.csv", "w+").write(";keyword")
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+
 
 for row in fileR:  # kazdy imdbID z bazy
     if row > lastId:
@@ -125,12 +144,13 @@ for row in fileR:  # kazdy imdbID z bazy
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # zmien tablice numpy na numpy 2D
 
             # keywords -- START
+            keywordsTemp = pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values.transpose()
             for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords
-                if word not in pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values:
-                    keywords.append(word)
+                if word.casefold() not in keywordsTemp and word not in keywords:
+                    keywords.append(word.casefold())
             for word in listOfInfos[5].split():  # taka sama pętla, ale inne info
-                if word not in pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values:
-                    keywords.append(word)
+                if word.casefold() not in keywordsTemp and word not in keywords:
+                    keywords.append(word.casefold())
             # keywords -- END
 
         except IMDbError as e:
