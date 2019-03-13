@@ -1,40 +1,45 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - zapisywać ID których brakuje                                                                                  #
-# TODO - dodać aktorów                                                                                                 #
+# TODO - Dodać aktorów                                                                                                 #
+# TODO - Dokończyc warunki try-catch                                                                                   #
+# TODO - Plik dataKeywords.csv nie ma zawierac jednego wyrazu kilka razy                                               #
 # TODO - Komentarze                                                                                                    #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane                                                           #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
 
-from imdb import IMDb, IMDbError
 import numpy as np
 import pandas as pd
+from imdb import IMDb, IMDbError
 
-def saveToFile(rowInfo, keywords):
-    tempdataSet = pd.DataFrame(rowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])  # stworz DataFrame
-    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
 
-    dataSet = pd.concat([dataSet, tempdataSet])
-    dataSet = dataSet.reset_index(drop=True)
+def saveIDs(stepIDList):
+    fileSaveIDs = open("dataSetIds.txt", "a+")
+    for imdbID in stepIDList:
+        if imdbID not in fileSaveIDs:
+            fileSaveIDs.write(imdbID + "\n")
+    fileSaveIDs.close()
 
-    dataSet.to_csv("dataSet.csv", sep=";")  # przekonwertuj DataFrame to csv
 
-    tempdataKeywords = pd.DataFrame(keywords, columns=['keyword'])
-    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):
+    try:
+        dataSetTemp = pd.DataFrame(argRowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])
+        dataKeywordsTemp = pd.DataFrame(argKeywords, columns=['keyword'])
 
-    dataKeywords = pd.concat([dataKeywords, tempdataKeywords])
-    dataKeywords = dataKeywords.reset_index(drop=True)
+        argDataSet = pd.concat([argDataSet, dataSetTemp])
+        argDataKeywords = pd.concat([argDataKeywords, dataKeywordsTemp])
 
-    dataKeywords.to_csv("dataKeywords.csv", sep=";")
+        argDataSet = argDataSet.reset_index(drop=True)
+        argDataKeywords = argDataKeywords.reset_index(drop=True)
 
-    fileSavedIds = open("dataSetIds.txt", "a+")  # to co trzeba zaimplementować, teraz zapisuje do dataSetIDs
-    for Id in savedIds:
-        if Id not in fileSavedIds:
-            fileSavedIds.write(Id + "\n")
-    fileSavedIds.close()
-    # pd.read_csv("dataKeywords.csv", sep=";", index_col=0) # metoda jak się odczytuje z pliku csv
+        argDataSet.to_csv("dataSet.csv", sep=";")
+        argDataKeywords.to_csv("dataKeywords.csv", sep=";")
+
+        return True
+    except ValueError:
+        return False
+
 
 ia = IMDb()
 
@@ -46,35 +51,43 @@ fileR = fileR.split()  # list from string
 # unnecessary: 'cast', 'production companies',
 # print(ia.get_movie_infoset())  # args
 
-savedIds = list()  # przygotowanie do trzeciej pozycji z listy do zrobienia
-fileSavedIds = open("dataSetIds.txt", "r+")  # baza movieID (tych które już mamy)
-
 marks = {'.', ',', '<', '>', '/', '?', ';', ':', '\'', '\'s', '"', '[', '{', ']', '}', '!', '@', '#', '$', '%', '^',
          '&', '&', '*', '(', ')', '-', '_', '=', '+'}  # lista znakow specjalnych do usunięcia
 
-lastId = str(1).zfill(7)  # ustawione jako 0000001
+lastId = str(0).zfill(7) + '\n'  # ustawione jako 0000001
 with open('dataSetIds.txt') as Ids:
-    lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
-tempId = lastId
+    try:
+        lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
+        fileR = fileR[fileR.index(lastId[:-1]) + 1:]
+    except IndexError:
+        print("Plik ID jest pusty, zaczynamy od 0000001!")
 
 stopTerm = 0
 i = 0  # reshape <-> rows
 rowInfo = list()
 keywords = list()
+idsToSave = list()
+
+dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+
 for row in fileR:  # kazdy imdbID z bazy
     if row > lastId:
         try:
             stopTerm += 1
             if stopTerm == 6:
-                print('dupa')
+                print("Zapis do plikow")
                 stopTerm = 0
-                saveToFile(rowInfo, keywords)
+                if saveToFile(rowInfo, keywords, dataSet, dataKeywords):
+                    saveIDs(idsToSave)
+                    idsToSave.clear()  # list
+                else:
+                    print("Niepowodzenie w zapisie!")
+                    exit(-1)
+            idsToSave.append(row)
 
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
-            # print(movie.get_current_info())
-            # movieMain = movie.infoset2keys['main']
-            # print(movieMain)
             listOfInfos = list()  # Lista informacji, które będziemy przechowywać inforamcje na temat jednego filmu
             listOfInfos.append(movie['title'])  # na początek tytuł
             listOfInfos.append(movie['year'])  # potem rok produkcji
@@ -99,7 +112,6 @@ for row in fileR:  # kazdy imdbID z bazy
                 for mark in marks:  # wyszukaj znaku interpunkcyjnego (lista marks) i go usun/zamien
                     plot = plot.replace(mark, '')
                 plotsmarks.append(plot)
-            # listOfInfos.append(" ".join(plots))
             listOfInfos.append(" ".join(plotsmarks))
             # usuwamy .::, autora tekstu i znaki specjalne  -- KONIEC
 
@@ -112,14 +124,12 @@ for row in fileR:  # kazdy imdbID z bazy
                 i += 1  # powiększamy "i" czyli liczbę wierszy
                 rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # zmien tablice numpy na numpy 2D
 
-            savedIds.append(row)
-
             # keywords -- START
             for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords
-                if word not in keywords:
+                if word not in pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values:
                     keywords.append(word)
             for word in listOfInfos[5].split():  # taka sama pętla, ale inne info
-                if word not in keywords:
+                if word not in pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values:
                     keywords.append(word)
             # keywords -- END
 
@@ -128,6 +138,5 @@ for row in fileR:  # kazdy imdbID z bazy
         except KeyError as e:
             print("Brak pelnych danych filmu o ID: ", row, "; brakujace dane: ", e)
 
-fileSavedIds.close()  # tutaj potrzebna talibca gdzie kolumną są wszystkie ID
-
-saveToFile(rowInfo, keywords)
+if saveToFile(rowInfo, keywords, dataSet, dataKeywords):
+    saveIDs(idsToSave)
