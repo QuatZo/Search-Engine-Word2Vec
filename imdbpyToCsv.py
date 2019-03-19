@@ -15,37 +15,38 @@ import pandas as pd
 from imdb import IMDb, IMDbError
 
 
-def saveIDs(stepIDList):
-    fileSaveIDs = open("dataSetIds.txt", "a+")
+def saveIDs(stepIDList):  # funkcja do zapiswania już wykorzystanych ID do pliku
+    fileSaveIDs = open("dataSetIds.txt", "a+")  # otwieranie pliku dataSetIds
     for imdbID in stepIDList:
         if imdbID not in fileSaveIDs:
-            fileSaveIDs.write(imdbID + "\n")
-    fileSaveIDs.close()
+            fileSaveIDs.write(imdbID + "\n")  # wypisywanie każdego elementu w nowej lini
+    fileSaveIDs.close()  # zamykanie pliku
 
 
-def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):
+def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):  # zapisywanie pobranych danych do pliku
     try:
+        #  tworzenie dataFrame - taka tabelka która ma jasno określone nagłówki i indeksy
         dataSetTemp = pd.DataFrame(argRowInfo, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks'])
         dataKeywordsTemp = pd.DataFrame(argKeywords, columns=['keyword'])
 
-        argDataSet = pd.concat([argDataSet, dataSetTemp])
-        argDataKeywords = pd.concat([argDataKeywords, dataKeywordsTemp])
+        argDataSet = pd.concat([argDataSet, dataSetTemp])  # konkatenacja - łączenie tego co mamy w pliku i co pobrane
+        argDataKeywords = pd.concat([argDataKeywords, dataKeywordsTemp])  # to samo co wyżej
 
-        argDataSet = argDataSet.reset_index(drop=True)
-        argDataKeywords = argDataKeywords.reset_index(drop=True)
+        argDataSet = argDataSet.reset_index(drop=True)  # reset indeksu
+        argDataKeywords = argDataKeywords.reset_index(drop=True)  # to samo co wyżej
 
-        argDataSet.to_csv("dataSet.csv", sep=";")
-        argDataKeywords.to_csv("dataKeywords.csv", sep=";")
+        argDataSet.to_csv("dataSet.csv", sep=";")  # zmiana na plik .csv
+        argDataKeywords.to_csv("dataKeywords.csv", sep=";")  # zmiana na plik .csv
 
-        return True
-    except ValueError as err:
+        return True  # zwracamy prawde
+    except ValueError as err:  # error
         print("Blad: ", err)
         return False
 
 
 ia = IMDb()
 
-try:
+try:  # spróbuj otworzyć plik
     fileR = open('imdbIDs.txt', "r").read()  # read file
     fileR = fileR.split()  # list from string
 except FileNotFoundError as e:
@@ -73,46 +74,46 @@ except FileNotFoundError as e:
 
 stopTerm = 0
 i = 0  # reshape <-> rows
-rowInfo = list()
+rowInfo = list()  # tworzymy listy
 keywords = list()
 idsToSave = list()
 
 try:
-    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # czytaj plik .csv
 except FileNotFoundError as e:
-    open("dataSet.csv", "w+").write(";title;year;directors;rating;genres;plotmarks")
-    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)
+    open("dataSet.csv", "w+").write(";title;year;directors;rating;genres;plotmarks")  # jeśli go nie ma, to utwórz
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # a potem czytaj
 
 try:
-    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # czytaj plik .csv
 except FileNotFoundError as e:
-    open("dataKeywords.csv", "w+").write(";keyword")
-    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)
+    open("dataKeywords.csv", "w+").write(";keyword")  # jeśli go nie ma, to uwtórz
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # a potem czytaj
 
 
 for row in fileR:  # kazdy imdbID z bazy
     if row > lastId:
         try:
-            stopTerm += 1
+            stopTerm += 1  # warunek stopu zapisu - kiedy ma zapisać
             if stopTerm == 6:
-                print("Zapis do plikow")
-                stopTerm = 0
-                if saveToFile(rowInfo, keywords, dataSet, dataKeywords):
-                    saveIDs(idsToSave)
-                    idsToSave.clear()  # list
+                print("Zapis do plikow")  # wyświetla że zapisuje
+                stopTerm = 0  # zerowanie warunku stopu
+                if saveToFile(rowInfo, keywords, dataSet, dataKeywords):  # wywołuje funkcje zapisu do pliku
+                    saveIDs(idsToSave)  # zapisuje
+                    idsToSave.clear()  # czyści - dupe na przykład
                 else:
-                    print("Niepowodzenie w zapisie!")
-                    exit(-1)
-            idsToSave.append(row)
+                    print("Niepowodzenie w zapisie!")  # błąd, wyświetla komunikat błedu
+                    exit(-1)  # kod błędu - kończenie programu
+            idsToSave.append(row)  # dopisue aktualne ID do listy ID przeznaczonych do zapisu
 
             movie = ia.get_movie(row)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
 
             listOfInfos = list()  # Lista informacji, które będziemy przechowywać inforamcje na temat jednego filmu
-            listOfInfos.append(movie['title'])  # na początek tytuł
+            listOfInfos.append(movie['title'])  # na początek tytułu
             listOfInfos.append(movie['year'])  # potem rok produkcji
 
-            listOfDirectors = list()
-            listOfDirectorsSpace = list()
+            listOfDirectors = list()  # tworzenie listy
+            listOfDirectorsSpace = list()  # tworzenie listy
             for director in movie['directors']:  # lista reżyserów, może być więcej niż jeden więc jest pętla
                 tempDirectors = director['name'].replace(' ', '_')  # usunięcie spacji i zamiana na _
                 listOfDirectors.append(tempDirectors)
