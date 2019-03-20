@@ -1,18 +1,15 @@
+#                   KURWA WOJTEK ZACZNIJ COS ROBIC, JUZ MNIE ZACZYNASZ WKURWIAC!!!111ONEONEONE                         #
+#                                   MINĘLY PONAD 2 TYGODNIE, NO JA PIERDOLE                                            #
+#                                                                                                       - DAWID        #
+
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Komentarze                                                                                                    #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane                                                           #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
-# TODO - Uznac wyrazy typu 'a', 'the' etc za nieważne (czyt. z wagą 0)                                                 #
+# TODO - Uznac wyrazy typu 'a', 'the' etc za nieważne (czyt. z wagą 0), NULL tez!                                      #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
-
-
-# ----------- KURWA POKI CO NIE ZWRACAC UWAGI NA TO O 3.6. ZAINSTALUJCIE '''''GENSIM''''' I POWINNO DZIALAC -----------#
-# -----Dziala na pythonie 3.6, tensorflow nie dziala jeszcze na 3.7; pobrac z neta, zainstalowac 3.6
-# -----Plik -> Opcje -> wyszukac 'interpreter', wyswietlic wszystkie, dodac swoj i wybrac 3.6
-# -----zainstalowac ponizsze pakiety w w/w miejscu
 
 import numpy as np
 import pandas as pd
