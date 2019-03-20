@@ -23,9 +23,9 @@ keywords = list()
 
 def getInfo(  # pobieranie danych
         simpleMovie,
-        i,
-        rowInfo,
-        keywords,
+        iTemp,
+        rowTemp,
+        keywordsArg,
         rowInfoLen=7,
         boolTitle=True,
         boolYear=True,
@@ -37,7 +37,6 @@ def getInfo(  # pobieranie danych
 ):
     try:
         movie = ia.get_movie(simpleMovie)  # pobieramy info nt filmow o danym ID. Jak wywali Error -> wyświetla błąd ID
-        print(simpleMovie)
         listOfInfos = list()  # Lista informacji, które będziemy przechowywać inforamcje na temat jednego filmu
         if boolTitle:
             listOfInfos.append(movie['title'])  # na początek tytułu
@@ -93,28 +92,27 @@ def getInfo(  # pobieranie danych
         else:
             listOfInfos.append("NULL")
 
-        if i == 0:
-            keywords = list()  # tworzymy liste słów kluczowych do danego ID
-            rowInfo = np.array(listOfInfos)  # tablica numpy (ma więcej metod)
-            rowInfoLen = len(rowInfo)  # ilosc info jaką pobraliśmy z filmu
-            i += 1  # powiększamy "i" czyli liczbę wierszy
+        if iTemp == 0:
+            rowTemp = np.array(listOfInfos)  # tablica numpy (ma więcej metod)
+            iTemp += 1  # powiększamy "i" czyli liczbę wierszy
         else:
-            i += 1  # powiększamy "i" czyli liczbę wierszy
-            rowInfo = np.append(rowInfo, listOfInfos).reshape((i, rowInfoLen))  # zmien tablice numpy na numpy 2D
+            iTemp += 1  # powiększamy "i" czyli liczbę wierszy
+            rowTemp = np.append(rowTemp, listOfInfos).reshape((iTemp, rowInfoLen))  # zmien tablice numpy na numpy 2D
 
         # keywords -- START
         keywordsTemp = pd.read_csv("dataKeywords.csv", sep=";", index_col=0).values.transpose()
         for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords
             if word.casefold() not in keywordsTemp and word not in keywords:
-                keywords.append(word.casefold())
+                keywordsArg.append(word.casefold())
                 #  print(word.casefold())
                 #  open("temp.txt", "a+").write(word.casefold() + "\n")
         for word in listOfInfos[5].split():  # taka sama pętla, ale inne info
             if word.casefold() not in keywordsTemp and word not in keywords:
-                keywords.append(word.casefold())
+                keywordsArg.append(word.casefold())
                 #  print(word.casefold())
                 #  open("temp.txt", "a+").write(word.casefold() + "\n")
         # keywords -- END
+        return rowTemp, keywordsArg, iTemp
 
     except IMDbError as e:
         print(row, e)
@@ -137,9 +135,8 @@ def getInfo(  # pobieranie danych
         else:
             print(e)
             exit(-1)
-        print(e)
-        getInfo(simpleMovie, i, rowInfo, keywords, rowInfoLen, boolTitle, boolYear, boolDirector, boolRating,
-                boolGenre, boolPlotmark, boolActor)
+        return getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen, boolTitle, boolYear, boolDirector, boolRating,
+                       boolGenre, boolPlotmark, boolActor)
 
 
 def saveIDs(stepIDList):  # funkcja do zapiswania już wykorzystanych ID do pliku
@@ -154,13 +151,13 @@ def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):  # zapisyw
     try:
         #  tworzenie dataFrame - taka tabelka która ma jasno określone nagłówki i indeksy
         dataSetTemp = pd.DataFrame(argRowInfo, columns=['title',
-                                                        'year',
-                                                        'directors',
-                                                        'rating',
-                                                        'genres',
-                                                        'plotmarks',
-                                                        'actors'
-                                                        ])
+                                                          'year',
+                                                          'directors',
+                                                          'rating',
+                                                          'genres',
+                                                          'plotmarks',
+                                                          'actors'
+                                                          ])
         dataKeywordsTemp = pd.DataFrame(argKeywords, columns=['keyword'])
 
         argDataSet = pd.concat([argDataSet, dataSetTemp])  # konkatenacja - łączenie tego co mamy w pliku i co pobrane
@@ -228,9 +225,12 @@ for row in fileR:  # kazdy imdbID z bazy
         if stopTerm == 6:
             print("Zapis do plikow")  # wyświetla że zapisuje
             stopTerm = 0  # zerowanie warunku stopu
+
+            rowInfo, keywords, i = getInfo(row, i, rowInfo, keywords)
             if saveToFile(rowInfo, keywords, dataSet, dataKeywords):  # wywołuje funkcje zapisu do pliku
                 saveIDs(idsToSave)  # zapisuje
                 idsToSave.clear()  # czyści - dupe na przykład
+                print(rowInfo)
             else:
                 print("Niepowodzenie w zapisie!")  # błąd, wyświetla komunikat błedu
                 exit(-1)  # kod błędu - kończenie programu
