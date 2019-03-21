@@ -1,7 +1,8 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane (jak bedziemy pewni, ze wszystko zrobione)                #
-# TODO - Uznac wyrazy typu 'a', 'the' etc za keywords                                                                  #
+# TODO - Usunac wyrazy typu 'a', 'the' etc z keywords                                                                  #
+# TODO - Dodanie aktorow, rezyserow (ogolnie kazdego info) do keywordsow (zamiana 97-108 na petle)                     #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -96,13 +97,15 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
         # keywords -- START
         keywordsTemp = pd.read_csv("dataKeywords.csv", sep=";", index_col=0).to_numpy()
         for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords (category)
-            if word.casefold() in keywordsTemp or word.casefold() in keywordsArg:  # jesli keywords juz istnieje
+            word = word.casefold()
+            if word in keywordsTemp or word in keywordsArg or word in linkingWords:  # jesli keywords juz istnieje
                 continue  # pomin
-            keywordsArg.append(word.casefold())  # jesli nie to dopisz do bazy
+            keywordsArg.append(word)  # jesli nie to dopisz do bazy
         for word in listOfInfos[5].split():  # taka sama pętla, ale inne info (plotmarks)
-            if word.casefold() in keywordsTemp or word.casefold() in keywordsArg:  # jesli keywords juz istnieje
+            word = word.casefold()
+            if word in keywordsTemp or word in keywordsArg or word in linkingWords:  # jesli keywords juz istnieje
                 continue  # pomin
-            keywordsArg.append(word.casefold())  # jesli nie to dopisz do bazy
+            keywordsArg.append(word)  # jesli nie to dopisz do bazy
         # keywords -- END
 
         return rowTemp, keywordsArg, iTemp  # zwracamy dane, ktore sa potrzebne do kolejnego filmu
@@ -202,6 +205,14 @@ try:
 except FileNotFoundError as e:
     open("dataKeywords.csv", "w+").write(";keyword")  # jeśli go nie ma, to uwtórz
     dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # a potem czytaj
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+
+# ------------------------------------- CZYTAMY PLIK ZE SPOJNIKAMI I PRZYIMKAMI -------------------------------------- #
+try:
+    temp = list()
+    linkingWords = open("linkingWords.txt").read().split()
+except FileNotFoundError as e:
+    linkingWords = list()
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
