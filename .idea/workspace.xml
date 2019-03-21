@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5672b3-b719-4a53-8e5f-d23d0d56d20b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Systemy-SI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Systemy-SI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataKeywords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataKeywords.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataSet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataSetIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataSetIds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imdbpyToCsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/imdbpyToCsv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vocab.model" beforeDir="false" afterPath="$PROJECT_DIR$/vocab.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordEmbedding.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,18 +17,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Systemy_SI$imdbpyToCsv.coverage" NAME="imdbpyToCsv Coverage Results" MODIFIED="1553072180210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Systemy_SI$wordEmbedding.coverage" NAME="wordEmbedding Coverage Results" MODIFIED="1553178124764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Systemy_SI$imdbpyToCsv.coverage" NAME="imdbpyToCsv Coverage Results" MODIFIED="1553176016699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imdbpyToCsv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="144" column="37" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="37" />
-              <folding>
-                <element signature="e#1211#1229#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -46,17 +43,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataSet.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="-16">
+              <caret line="9" column="139" selection-start-line="9" selection-start-column="139" selection-end-line="9" selection-end-column="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wordEmbedding.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="120" />
+              <folding>
+                <element signature="e#1333#1351#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wordEmbedding.py">
+        <entry file="file://$PROJECT_DIR$/linkingWords.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="117" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
+            <state relative-caret-position="623">
+              <caret line="228" column="4" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -84,6 +93,8 @@
       <find>like</find>
       <find>on</find>
       <find>null</find>
+      <find>resha</find>
+      <find>documentary</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,9 +105,10 @@
       <list>
         <option value="$PROJECT_DIR$/dataSet.csv" />
         <option value="$PROJECT_DIR$/dataSetIds.txt" />
-        <option value="$PROJECT_DIR$/wordEmbedding.py" />
         <option value="$PROJECT_DIR$/Lab2.py" />
+        <option value="$PROJECT_DIR$/wordEmbedding.py" />
         <option value="$PROJECT_DIR$/imdbpyToCsv.py" />
+        <option value="$PROJECT_DIR$/linkingWords.txt" />
       </list>
     </option>
   </component>
@@ -142,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.wordEmbedding">
     <configuration name="imdbpyToCsv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Systemy-SI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,8 +177,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="wordEmbedding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Systemy-SI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordEmbedding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.wordEmbedding" />
         <item itemvalue="Python.imdbpyToCsv" />
       </list>
     </recent_temporary>
@@ -191,11 +226,12 @@
       <workItem from="1552464036410" duration="3553000" />
       <workItem from="1553067220767" duration="95000" />
       <workItem from="1553068863930" duration="3338000" />
+      <workItem from="1553173958393" duration="3304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24673000" />
+    <option name="totallyTimeSpent" value="27977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -208,14 +244,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.096481875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09754797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27009645" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26795283" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -225,7 +260,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3290461" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -238,11 +273,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/imdbIDs.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-2417247" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/idsFromTsvToTxt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -256,6 +286,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lab2.py" />
+    <entry file="file://$PROJECT_DIR$/imdbIDs.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-8738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSet.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="9" column="139" selection-start-line="9" selection-start-column="139" selection-end-line="9" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imdbpyToCsv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dataSetIds.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -263,26 +312,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataSet.csv">
+    <entry file="file://$PROJECT_DIR$/linkingWords.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="623">
+          <caret line="228" column="4" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wordEmbedding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="117" selection-start-line="7" selection-start-column="117" selection-end-line="7" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imdbpyToCsv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="144" column="37" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="37" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="120" />
           <folding>
-            <element signature="e#1211#1229#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
           </folding>
         </state>
       </provider>

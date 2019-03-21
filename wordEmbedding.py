@@ -13,10 +13,16 @@
 
 import numpy as np
 import pandas as pd
-# import tensorflow as tf
-# from tensorflow import keras
-# import os
 from gensim.models import word2vec
+
+try:
+    linkingWords = open("linkingWords.txt").read().split("\n")
+except FileNotFoundError as e:
+    linkingWords = open("linkingWords.txt", "w+").write("")
+    print(e)
+
+for row in range(len(linkingWords)):
+    linkingWords[row] = linkingWords[row].casefold()
 
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # usuwa warning z tensorflow [wystepuje na Ryzenach]
 corpus = list()  # kręgosłup - wszystkie dane
@@ -25,7 +31,13 @@ df = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # baza danych (czytamy pl
 dfKey = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # keywords (czytamy pliki)
 
 for row in df.values:  # wyciagnij typ i recenzje [poki co tylko tyle, na potrzeby testow]
-    corpus.append(row[4] + " " + row[5])  # jeden wpis to jeden film
+    corpus.append(str(row[4]) + " " + str(row[5]))  # jeden wpis to jeden film
+
+for row in range(len(corpus)):
+    corpus[row] = corpus[row].casefold()
+    for word in linkingWords:
+        corpus[row] = corpus[row].replace(" " + word + " ", " ")
+print(corpus)
 
 tokenized_sentences = [sentence.split() for sentence in corpus]  # wyrazy z sentencji (dzielimy zdania na wyrazy)
 model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
