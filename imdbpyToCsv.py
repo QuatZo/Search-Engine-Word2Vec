@@ -1,8 +1,8 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane (jak bedziemy pewni, ze wszystko zrobione)                #
-# TODO - Usunac wyrazy typu 'a', 'the' etc z keywords                                                                  #
 # TODO - Dodanie aktorow, rezyserow (ogolnie kazdego info) do keywordsow (zamiana 97-108 na petle)                     #
+# [OSOBNY BRANCH] TODO - Przywrocenie znakow konca zdania (. ! ?)                                                      #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #

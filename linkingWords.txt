@@ -47,7 +47,6 @@ with
 besides
 addition
 moreover
-not
 only
 but
 apart
