@@ -24,8 +24,8 @@ for row in range(len(linkingWords)):
 
 corpus = list()  # kręgosłup - wszystkie dane
 
-df = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # baza danych (czytamy pliki)
-dfKey = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # keywords (czytamy pliki)
+df = pd.read_csv("dataSet.csv", sem=";", index_col=0)  # baza danych (czytamy pliki)
+dfKey = pd.read_csv("dataKeywords.csv", sem=";", index_col=0)  # keywords (czytamy pliki)
 
 for row in df.values:  # wyciagnij typ i recenzje [poki co tylko tyle, na potrzeby testow]
     for element in range(len(row)):
