@@ -1,10 +1,13 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
+#                     OD TRZECIEGO TODO JEST NAJWAŻNIEJSZE, DWA PIERWSZE ZOSTAWCIE NA KONIEC!                          #
+#                                                                                                                      #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane jak bedziemy pewni, ze wszystko zrobione)                 #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
-# TODO - Uznac wyrazy typu 'a', 'the' etc za nieważne (czyt. z wagą 0), NULL tez!                                      #
-# [OSOBNY BRANCH] THEORY CRAFTING - TODO - Opisy podzielic na zdania, wszystkie zdania rozwalic na wyrazy              #
-# TODO - Dodanie reszty info do Corpusu (jak wszystko wyzej zostanie zrobione/przetestowane)                           #
+# TODO - Dodanie reszty info do Corpusu (procz ratingu i [możliwe] dat)                                                #
+# TODO - Z corpusu stworzyc 'dokument' podzielony na zdania tablica jednowymiarowa, podzielone na zdania wg . ! ?      #
+# TODO - Usunac most-common english words z corpusu (nie linkingWords)                                                 #
+# TODO - Corpus podzielic na wyrazy (tokenized_sentences, zrobione, ale zostawiam dla informacji)                      #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -41,33 +44,6 @@ model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, wo
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save("vocab.model")  # zapis słownika/modelu do pliku (binarnie)
 
-
-# jeden wyraz
-# print(model.wv.most_similar(positive=['girl'], topn=3))  # pokaz najbardziej podobne
-# print(model.wv.most_similar(negative=['girl'], topn=3))  # pokaz najmniej podobne
-
-# wszystkie keywordsy
-# j = 1  # iterator - wiersze
-# for row in dfKey.values:  # for ewery (~R.W.) keyword
-#     tempPositivities = list()  # tymczasowa lista, przechowuje info o jednym wierszu
-#     score = model.wv.most_similar(positive=row, topn=3)  # 3 najbardziej podobne wyniki do keyworda
-#     tempPositivities.append(row[0])  # dodaj keyworda
-#     for i in range(3):
-#         tempPositivities.append(score[i][0])  # utnij prawdopodobienstwo, dodaj tylko nazwe
-
-#     if j == 1:
-#        positivities = np.array(tempPositivities)  # pierwszy wpis
-#     else:
-#        positivities = np.append(positivities, tempPositivities).reshape((j, len(tempPositivities)))  # konwersja na 2d
-
-#     j += 1  # kolejny wiersz
-
-# print(positivities)
-
-# print(model.wv.vocab)
-
-# for word in dfKey.values:
-#    print(word, " =>", model.wv[word])
 
 print(model.wv.most_similar(positive=['girl'], topn=3))
 print(model.wv.most_similar(negative=['girl'], topn=3))

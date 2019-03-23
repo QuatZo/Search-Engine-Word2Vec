@@ -1,7 +1,6 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Zmienne lepiej odzwierciedlajace przechowywane dane (jak bedziemy pewni, ze wszystko zrobione)                #
-# TODO - Dodanie aktorow, rezyserow (ogolnie kazdego info) do keywordsow (zamiana 97-108 na petle)                     #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -66,8 +65,9 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
             plotsmarks = list()
             for plot in movie['plot']:
                 index = plot.find(".::")  # szukamy ".::" i od tego miejsca ucinamy tekst
-                plot = plot[:index]
-                for mark in marks:  # wyszukaj znaku interpunkcyjnego (lista marks) i go usun/zamien
+                plot = plot.replace(".::", ".")
+                plot = plot[:index + 1]
+                for mark in marks:  # wyszukaj znaku specjalnego (lista marks) i go usun/zamien
                     plot = plot.replace(mark, '')
                 plotsmarks.append(plot)
             listOfInfos.append(" ".join(plotsmarks))
@@ -95,16 +95,15 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
 
         # keywords -- START
         keywordsTemp = pd.read_csv("dataKeywords.csv", sep=";", index_col=0).to_numpy()
-        for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords (category)
-            word = word.casefold()
-            if word in keywordsTemp or word in keywordsArg or word in linkingWords:  # jesli keywords juz istnieje
-                continue  # pomin
-            keywordsArg.append(word)  # jesli nie to dopisz do bazy
-        for word in listOfInfos[5].split():  # taka sama pętla, ale inne info (plotmarks)
-            word = word.casefold()
-            if word in keywordsTemp or word in keywordsArg or word in linkingWords:  # jesli keywords juz istnieje
-                continue  # pomin
-            keywordsArg.append(word)  # jesli nie to dopisz do bazy
+
+        for el in range(len(listOfInfos)):
+            if type(listOfInfos[el]) is int or type(listOfInfos[el]) is float:
+                continue
+            for word in listOfInfos[el].split():  # pętla która zapisuje wszystkie keywords (category)
+                word = word.casefold()
+                if word in keywordsTemp or word in keywordsArg:  # jesli keywords juz istnieje
+                    continue  # pomin
+                keywordsArg.append(word)  # jesli nie to dopisz do bazy
         # keywords -- END
 
         return rowTemp, keywordsArg, iTemp  # zwracamy dane, ktore sa potrzebne do kolejnego filmu
@@ -204,14 +203,6 @@ try:
 except FileNotFoundError as e:
     open("dataKeywords.csv", "w+").write(";keyword")  # jeśli go nie ma, to uwtórz
     dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # a potem czytaj
-# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
-
-# ------------------------------------- CZYTAMY PLIK ZE SPOJNIKAMI I PRZYIMKAMI -------------------------------------- #
-try:
-    temp = list()
-    linkingWords = open("linkingWords.txt").read().split()
-except FileNotFoundError as e:
-    linkingWords = list()
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
