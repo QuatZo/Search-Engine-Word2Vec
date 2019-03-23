@@ -94,7 +94,7 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
         rowTemp = rowTemp.reshape((iTemp, rowInfoLen))  # zmien tablice numpy 1D na 2D
 
         # keywords -- START
-        keywordsTemp = pd.read_csv("dataKeywords.csv", sem=";", index_col=0).to_numpy()
+        keywordsTemp = pd.read_csv("dataKeywords.csv", sep=";", index_col=0).to_numpy()
         for word in listOfInfos[4].split():  # pętla która zapisuje wszystkie keywords (category)
             word = word.casefold()
             if word in keywordsTemp or word in keywordsArg or word in linkingWords:  # jesli keywords juz istnieje
@@ -159,8 +159,8 @@ def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):  # zapisyw
         argDataSet = argDataSet.reset_index(drop=True)  # reset indeksu
         argDataKeywords = argDataKeywords.reset_index(drop=True)  # to samo co wyżej
 
-        argDataSet.to_csv("dataSet.csv", sem=";")  # zmiana na plik .csv
-        argDataKeywords.to_csv("dataKeywords.csv", sem=";")  # zmiana na plik .csv
+        argDataSet.to_csv("dataSet.csv", sep=";")  # zmiana na plik .csv
+        argDataKeywords.to_csv("dataKeywords.csv", sep=";")  # zmiana na plik .csv
         return True  # zwracamy prawde, dzieki czemu ID tych filmow mozemy zapisac jako 'zrobione'
     except ValueError as err:  # error
         print("Blad: ", err)
@@ -194,16 +194,16 @@ except FileNotFoundError as e:
 
 # ----------------------- SPRAWDZAMY CZY PLIKI Z DANYMI ISTNIEJA I (JESLI TRZEBA) TWORZYMY JE ------------------------ #
 try:
-    dataSet = pd.read_csv("dataSet.csv", sem=";", index_col=0)  # czytaj plik .csv
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # czytaj plik .csv
 except FileNotFoundError as e:
     open("dataSet.csv", "w+").write(";title;year;directors;rating;genres;plotmarks;actors")  # jeśli nie ma, to utwórz
-    dataSet = pd.read_csv("dataSet.csv", sem=";", index_col=0)  # a potem czytaj
+    dataSet = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # a potem czytaj
 
 try:
-    dataKeywords = pd.read_csv("dataKeywords.csv", sem=";", index_col=0)  # czytaj plik .csv
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # czytaj plik .csv
 except FileNotFoundError as e:
     open("dataKeywords.csv", "w+").write(";keyword")  # jeśli go nie ma, to uwtórz
-    dataKeywords = pd.read_csv("dataKeywords.csv", sem=";", index_col=0)  # a potem czytaj
+    dataKeywords = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # a potem czytaj
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 # ------------------------------------- CZYTAMY PLIK ZE SPOJNIKAMI I PRZYIMKAMI -------------------------------------- #
