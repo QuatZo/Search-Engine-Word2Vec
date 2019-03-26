@@ -12,7 +12,6 @@ from imdb import IMDb, IMDbError
 # --------------------------------------------- INICJALIZACJA ZMIENNYCH ---------------------------------------------- #
 ia = IMDb()  # polaczenie z baza IMDb
 i = 0  # reshape <-> rows
-lastId = str(0).zfill(7) + '\n'  # ustawione jako 0000001
 stopTerm = 0  # warunek stopu (zapisu) [warunek pauzy jest IMO lepszym okresleniem - przyp. Dawida]
 rowInfo = list()  # tworzymy listy
 idsToSave = list()
@@ -170,7 +169,7 @@ def saveToFile(argRowInfo, argKeywords, argDataSet, argDataKeywords):  # zapisyw
 # ------------------------------------------------------- IMDB ------------------------------------------------------- #
 try:  # spróbuj otworzyć plik ze wszystkimi ID IMDb
     fileR = open('imdbIDs.txt', "r").read()  # czytaj plik
-    fileR = fileR.split()  # lista ze string
+    fileR = fileR.split()[::-1]  # lista ze string, najnowszy jako pierwszy
 except FileNotFoundError as e:  # jesli nie ma pliku wejsciowego to nie ma co robic
     print("Blad: ", e)
     exit(-1)  # zamknij program
@@ -178,14 +177,14 @@ except FileNotFoundError as e:  # jesli nie ma pliku wejsciowego to nie ma co ro
 
 
 # ----------------------------------- CZYTAMY JAKIE ID MAMY ZAPISANE JAKO OSTATNIE ----------------------------------- #
+lastId = fileR[0]  # ustawione jako najnowszy
 try:  # obsluga bledu 'brak pliku'
     with open('dataSetIds.txt') as Ids:  # rownie dobrze mogloby byc cos w stylu:
-        # file = open('dataSetIds.txt').read()
         try:
             lastId = list(Ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
-            fileR = fileR[fileR.index(lastId[:-1]) + 1:]  # ucinamy wszystkie ID z IMDb od ostatniego ID + 1
+            fileR = fileR[fileR.index(lastId[:-1]) + 1:]  # ucinamy wszystkie ID z IMDb od ostatniego najnowszego ID - 1
         except IndexError:  # jesli plik jest pusty
-            print("Plik ID jest pusty, zaczynamy od 0000001!")
+            print("Plik ID jest pusty, zaczynamy od ", lastId, "!")
 except FileNotFoundError as e:
     open("dataSetIds.txt", "w+").write("")
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
@@ -208,22 +207,20 @@ except FileNotFoundError as e:
 
 # ------------------------- PETLA WYWOLUJACA WARUNEK STOPU [PAUZY] I FUNKCJE CZYTANIA/ZAPISU ------------------------- #
 for row in fileR:  # kazdy imdbID z bazy
-    if row > lastId:  # na wszelki wypadek sprawdzamy jeszcze raz czy pobralismy poprawne ID (nie-duplikat)
-        # prawdopodobnie ta instrukcja warunkowa (up) jest niepotrzebna
-        stopTerm += 1  # warunek stopu zapisu - kiedy ma zapisać
-        if stopTerm == 6:  # co 5
-            print("Zapis do plikow")  # wyświetla że zapisuje
-            stopTerm = 0  # zerowanie warunku stopu [pauzy]
-            if saveToFile(rowInfo, keywords, dataSet, dataKeywords):  # wywołuje funkcje zapisu do pliku
-                saveIDs(idsToSave)  # zapisuje
-                idsToSave.clear()  # czyści - dupe na przykład
-            else:
-                print("Niepowodzenie w zapisie!")  # błąd, wyświetla komunikat błedu
-                exit(-1)  # kod błędu - kończenie programu
+    stopTerm += 1  # warunek stopu zapisu - kiedy ma zapisać
+    if stopTerm == 6:  # co 5
+        print("Zapis do plikow")  # wyświetla że zapisuje
+        stopTerm = 0  # zerowanie warunku stopu [pauzy]
+        if saveToFile(rowInfo, keywords, dataSet, dataKeywords):  # wywołuje funkcje zapisu do pliku
+            saveIDs(idsToSave)  # zapisuje
+            idsToSave.clear()  # czyści - dupe na przykład
+        else:
+            print("Niepowodzenie w zapisie!")  # błąd, wyświetla komunikat błedu
+            exit(-1)  # kod błędu - kończenie programu
 
-        idsToSave.append(row)  # dopisue aktualne ID do listy ID przeznaczonych do zapisu
+    idsToSave.append(row)  # dopisue aktualne ID do listy ID przeznaczonych do zapisu
 
-        rowInfo, keywords, i = getInfo(row, i, rowInfo, keywords)
+    rowInfo, keywords, i = getInfo(row, i, rowInfo, keywords)
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 

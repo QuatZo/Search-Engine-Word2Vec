@@ -16,6 +16,8 @@ import numpy as np
 import pandas as pd
 from gensim.models import word2vec
 
+pathToModel = "vocab.model"
+
 try:
     linkingWords = open("linkingWords.txt").read().split()
 except FileNotFoundError as e:
@@ -40,12 +42,19 @@ for row in df.values:  # wyciagnij typ i recenzje [poki co tylko tyle, na potrze
     corpus.append(str(row[4]).casefold() + " " + str(row[5]).casefold())  # jeden wpis to jeden film
 
 tokenized_sentences = [sentence.split() for sentence in corpus]  # wyrazy z sentencji (dzielimy zdania na wyrazy)
-model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
+
+try:
+    model = word2vec.Word2Vec.load(pathToModel)
+except FileNotFoundError:
+    print("Slownik ", pathToModel, " nie istnieje. Zaczynamy trening od poczatku.")
+    model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
-model.save("vocab.model")  # zapis słownika/modelu do pliku (binarnie)
+model.save(pathToModel)  # zapis słownika/modelu do pliku (binarnie)
 
-
-print(model.wv.most_similar(positive=['girl'], topn=3))
-print(model.wv.most_similar(negative=['girl'], topn=3))
-print(model.wv.most_similar(positive=['documentary'], topn=3))
-print(model.wv.most_similar(negative=['documentary'], topn=3))
+for element in ['mystery', 'documentary']:
+    try:
+        print("Word: ", element)
+        print("\tPositive: ", model.wv.most_similar(positive=[element], topn=3))
+        print("\tNegative: ", model.wv.most_similar(negative=[element], topn=3))
+    except KeyError as e:
+        print("\t", str(e)[1:-1])  # usuwamy "" z początku
