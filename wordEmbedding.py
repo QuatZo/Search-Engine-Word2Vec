@@ -17,6 +17,7 @@ import pandas as pd
 from gensim.models import word2vec
 
 pathToModel = "vocab.model"
+topN = 3
 
 try:
     linkingWords = open("linkingWords.txt").read().split()
@@ -51,10 +52,20 @@ except FileNotFoundError:
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save(pathToModel)  # zapis słownika/modelu do pliku (binarnie)
 
+positiveProbability = dict()
+negativeProbability = dict()
 for element in ['mystery', 'documentary']:
     try:
-        print("Word: ", element)
-        print("\tPositive: ", model.wv.most_similar(positive=[element], topn=3))
-        print("\tNegative: ", model.wv.most_similar(negative=[element], topn=3))
+        print("Word:", element)
+        posProbEl = positiveProbability[element] = model.wv.most_similar(positive=[element], topn=topN)
+        negProbEl = negativeProbability[element] = model.wv.most_similar(negative=[element], topn=topN)
+
+        print("\tPositive:")
+        for i in range(topN):
+            print("\t\t", posProbEl[i][0], ":", posProbEl[i][1])
+        print("\tNegative:")
+        for i in range(topN):
+            print("\t\t", negProbEl[i][0], ":", negProbEl[i][1])
+        print()
     except KeyError as e:
         print("\t", str(e)[1:-1])  # usuwamy "" z początku
