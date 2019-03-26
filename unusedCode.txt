@@ -4,6 +4,23 @@ try:
     linkingWords = open("linkingWords.txt").read().split()
 except FileNotFoundError as e:
     linkingWords = list()
+	
+try:
+    linkingWords = open("linkingWords.txt").read().split()
+except FileNotFoundError as e:
+    linkingWords = open("linkingWords.txt", "w+").write("")
+    print(e)
+
+for row in range(len(linkingWords)):
+    linkingWords[row] = linkingWords[row].casefold()
+	
+	
+for element in range(len(row)):
+	if type(row[element]) is not str:
+		continue
+	for word in linkingWords:
+		if word in row[element]:
+			row[element] = row[element].replace(" " + word + " ", " ")
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 # -------------------------------------------------- wordEmbedding --------------------------------------------------- #

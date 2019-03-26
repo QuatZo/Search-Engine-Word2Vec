@@ -22,11 +22,9 @@ marks = {',', '<', '>', '/', ';', ':', '\'', '\'s', '\"', '[', '{', ']', '}', '@
 
 
 # ----------------------------------- FUNKCJA POBIERAJACA INFO NT FILMU O DANYM ID ----------------------------------- #
-def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=True, boolYear=True, boolDirector=True,
+def getInfo(movie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=True, boolYear=True, boolDirector=True,
             boolRating=True, boolGenre=True, boolPlotmark=True, boolActor=True):
-    print(simpleMovie)
     try:
-        movie = ia.get_movie(simpleMovie)  # pobieramy info nt filmow o danym ID
         listOfInfos = list()  # Lista, w ktorej bedziemy przechowywac informacje nt. pojedycznego filmu
 
         # zmienne typu Bool obsluguja blad pustej wartosci (w ich miejsce bedzie wpisywany NULL)
@@ -106,8 +104,6 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
         # keywords -- END
 
         return rowTemp, keywordsArg, iTemp  # zwracamy dane, ktore sa potrzebne do kolejnego filmu
-    except IMDbError as e:  # blad z polaczeniem do bazy IMDb lub inny blad zwiazany z biblioteka IMDb
-        print(row, e)
     # blad danych (pusta informacja), w takim przypadku oznaczamy tam NULLa i wywolujemy funkcje jeszcze raz
     except KeyError as e:
         e = str(e)
@@ -128,7 +124,7 @@ def getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen=7, boolTitle=Tr
         else:
             print(e)
             exit(-1)
-        return getInfo(simpleMovie, iTemp, rowTemp, keywordsArg, rowInfoLen, boolTitle, boolYear, boolDirector,
+        return getInfo(movie, iTemp, rowTemp, keywordsArg, rowInfoLen, boolTitle, boolYear, boolDirector,
                        boolRating, boolGenre, boolPlotmark, boolActor)
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
@@ -210,7 +206,7 @@ for row in fileR:  # kazdy imdbID z bazy
     stopTerm += 1  # warunek stopu zapisu - kiedy ma zapisać
     if stopTerm == 6:  # co 5
         print("Zapis do plikow")  # wyświetla że zapisuje
-        stopTerm = 0  # zerowanie warunku stopu [pauzy]
+        stopTerm = 1  # zerowanie warunku stopu [pauzy]
         if saveToFile(rowInfo, keywords, dataSet, dataKeywords):  # wywołuje funkcje zapisu do pliku
             saveIDs(idsToSave)  # zapisuje
             idsToSave.clear()  # czyści - dupe na przykład
@@ -220,7 +216,12 @@ for row in fileR:  # kazdy imdbID z bazy
 
     idsToSave.append(row)  # dopisue aktualne ID do listy ID przeznaczonych do zapisu
 
-    rowInfo, keywords, i = getInfo(row, i, rowInfo, keywords)
+    try:
+        movieInfo = ia.get_movie(row)  # pobieramy info nt filmow o danym ID
+        print(row)
+        rowInfo, keywords, i = getInfo(movieInfo, i, rowInfo, keywords)
+    except IMDbError as e:  # blad z polaczeniem do bazy IMDb lub inny blad zwiazany z biblioteka IMDb
+        print(row, e)
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 

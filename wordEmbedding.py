@@ -18,28 +18,12 @@ from gensim.models import word2vec
 
 pathToModel = "vocab.model"
 topN = 3
-
-try:
-    linkingWords = open("linkingWords.txt").read().split()
-except FileNotFoundError as e:
-    linkingWords = open("linkingWords.txt", "w+").write("")
-    print(e)
-
-for row in range(len(linkingWords)):
-    linkingWords[row] = linkingWords[row].casefold()
-
 corpus = list()  # kręgosłup - wszystkie dane
 
 df = pd.read_csv("dataSet.csv", sep=";", index_col=0)  # baza danych (czytamy pliki)
 dfKey = pd.read_csv("dataKeywords.csv", sep=";", index_col=0)  # keywords (czytamy pliki)
 
 for row in df.values:  # wyciagnij typ i recenzje [poki co tylko tyle, na potrzeby testow]
-    for element in range(len(row)):
-        if type(row[element]) is not str:
-            continue
-        for word in linkingWords:
-            if word in row[element]:
-                row[element] = row[element].replace(" " + word + " ", " ")
     corpus.append(str(row[4]).casefold() + " " + str(row[5]).casefold())  # jeden wpis to jeden film
 
 tokenized_sentences = [sentence.split() for sentence in corpus]  # wyrazy z sentencji (dzielimy zdania na wyrazy)
@@ -48,13 +32,13 @@ try:
     model = word2vec.Word2Vec.load(pathToModel)
 except FileNotFoundError:
     print("Slownik ", pathToModel, " nie istnieje. Zaczynamy trening od poczatku.")
-    model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=4)  # 'workers' to wątki CPU
+    model = word2vec.Word2Vec(tokenized_sentences, min_count=1, hs=1, negative=0, workers=12)  # 'workers' to wątki CPU
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save(pathToModel)  # zapis słownika/modelu do pliku (binarnie)
 
 positiveProbability = dict()
 negativeProbability = dict()
-for element in ['mystery', 'documentary']:
+for element in ['mystery', 'documentary', 'where']:
     try:
         print("Word:", element)
         posProbEl = positiveProbability[element] = model.wv.most_similar(positive=[element], topn=topN)
