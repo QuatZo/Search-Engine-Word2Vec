@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Zmienne lepiej odzwierciedlajace przechowywane dane (jak bedziemy pewni, ze wszystko zrobione)                #
+# TODO - Nothing                                                                                                       #
 #                                                                                                                      #
 # Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #

@@ -1,3 +1,10 @@
+# -------------------------------------------------------------------------------------------------------------------- #
+#                                                                                                                      #
+# TODO - Wszelkie zmiany tokenizacji w pliku word_embedding musza zostac zastosowane rowniez tutaj                     #
+#                                                                                                                      #
+# Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
+# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
+
 import numpy as np
 import pandas as pd
 

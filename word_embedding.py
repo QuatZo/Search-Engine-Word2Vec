@@ -1,8 +1,5 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-#                     OD TRZECIEGO TODO JEST NAJWAŻNIEJSZE, DWA PIERWSZE ZOSTAWCIE NA KONIEC!                          #
-#                                                                                                                      #
-# TODO - Zmienne lepiej odzwierciedlajace przechowywane dane jak bedziemy pewni, ze wszystko zrobione)                 #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
 # TODO - Usunac most-common english words z corpusu (nie linkingWords) - Wojtek Zimoch                                 #
 #                                                                                                                      #
