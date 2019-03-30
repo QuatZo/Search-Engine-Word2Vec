@@ -15,13 +15,11 @@ from imdb import IMDb, IMDbError
 path_to_dataset_ids = "dataset_ids.txt"
 path_to_imdb_ids = "imdb_ids.txt"
 path_to_dataset = "dataset.csv"
-path_to_datakeywords = "datakeywords.csv"
 ia = IMDb()  # polaczenie z baza IMDb
 i = 0  # reshape <-> rows
 stop_term = 0  # warunek stopu (zapisu) [warunek pauzy jest IMO lepszym okresleniem - przyp. Dawida]
 row_info = list()  # tworzymy listy
 ids_to_save = list()
-keywords = list()
 marks = {',', '<', '>', '/', ';', ':', '\'', '\'s', '\"', '[', '{', ']', '}', '@', '#', '$', '%', '^',
          '&', '&', '*', '(', ')', '-', '_', '=', '+'}  # lista znakow specjalnych do usunięcia
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
@@ -31,8 +29,8 @@ marks = {',', '<', '>', '/', ';', ':', '\'', '\'s', '\"', '[', '{', ']', '}', '@
 
 
 # ----------------------------------- FUNKCJA POBIERAJACA INFO NT FILMU O DANYM ID ----------------------------------- #
-def get_info(movie, arg_i, arg_row, arg_keywords, arg_row_info_len=7, bool_title=True, bool_year=True,
-             bool_director=True, bool_rating=True, bool_genre=True, bool_plotmark=True, bool_actor=True):
+def get_info(movie, arg_i, arg_row, arg_row_info_len=7, bool_title=True, bool_year=True, bool_director=True,
+             bool_rating=True, bool_genre=True, bool_plotmark=True, bool_actor=True):
     try:
         list_of_infos = list()  # Lista, w ktorej bedziemy przechowywac informacje nt. pojedycznego filmu
 
@@ -99,20 +97,7 @@ def get_info(movie, arg_i, arg_row, arg_keywords, arg_row_info_len=7, bool_title
             arg_row = np.append(arg_row, list_of_infos)
         arg_row = arg_row.reshape((arg_i, arg_row_info_len))  # zmien tablice numpy 1D na 2D
 
-        # keywords -- START
-        temp_keywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0).to_numpy()
-
-        for el in range(len(list_of_infos)):
-            if type(list_of_infos[el]) is int or type(list_of_infos[el]) is float:
-                continue
-            for word in list_of_infos[el].split():  # pętla która zapisuje wszystkie keywords (category)
-                word = word.casefold()
-                if word in temp_keywords or word in arg_keywords:  # jesli keywords juz istnieje
-                    continue  # pomin
-                arg_keywords.append(word)  # jesli nie to dopisz do bazy
-        # keywords -- END
-
-        return arg_row, arg_keywords, arg_i  # zwracamy dane, ktore sa potrzebne do kolejnego filmu
+        return arg_row, arg_i  # zwracamy dane, ktore sa potrzebne do kolejnego filmu
     # blad danych (pusta informacja), w takim przypadku oznaczamy tam NULLa i wywolujemy funkcje jeszcze raz
     except KeyError as e:
         e = str(e)
@@ -133,7 +118,7 @@ def get_info(movie, arg_i, arg_row, arg_keywords, arg_row_info_len=7, bool_title
         else:
             print(e)
             exit(-1)
-        return get_info(movie, arg_i, arg_row, arg_keywords, arg_row_info_len, bool_title, bool_year, bool_director,
+        return get_info(movie, arg_i, arg_row, arg_row_info_len, bool_title, bool_year, bool_director,
                         bool_rating, bool_genre, bool_plotmark, bool_actor)
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
@@ -149,22 +134,14 @@ def save_ids(id_list):  # funkcja do zapiswania już wykorzystanych ID do pliku
 
 
 # ------------------------------------- FUNKCJA ZAPISUJACA DANE FILMOW DO PLIKU -------------------------------------- #
-def save_to_file(argrow_info, arg_keywords, arg_dataset, arg_datakeywords):  # zapisywanie pobranych danych do pliku
+def save_to_file(argrow_info, arg_dataset):  # zapisywanie pobranych danych do pliku
     try:
         #  tworzenie dataFrame - taka tabelka która ma jasno określone nagłówki i indeksy
         temp_dataset = pd.DataFrame(argrow_info, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks',
                                                           'actors'])
-        temp_datakeywords = pd.DataFrame(arg_keywords, columns=['keyword'])
-
-        arg_dataset = pd.concat(
-            [arg_dataset, temp_dataset])  # konkatenacja - łączenie tego co mamy w pliku i co pobrane
-        arg_datakeywords = pd.concat([arg_datakeywords, temp_datakeywords])  # to samo co wyżej
-
+        arg_dataset = pd.concat([arg_dataset, temp_dataset])  # konkatenacja - łączenie pliku z tym co pobrane
         arg_dataset = arg_dataset.reset_index(drop=True)  # reset indeksu
-        arg_datakeywords = arg_datakeywords.reset_index(drop=True)  # to samo co wyżej
-
         arg_dataset.to_csv(path_to_dataset, sep=";")  # zmiana na plik .csv
-        arg_datakeywords.to_csv(path_to_datakeywords, sep=";")  # zmiana na plik .csv
         return True  # zwracamy prawde, dzieki czemu ID tych filmow mozemy zapisac jako 'zrobione'
     except ValueError as err:  # error
         print("Blad: ", err)
@@ -206,12 +183,6 @@ try:
 except FileNotFoundError as e:
     open(path_to_dataset, "w+").write(";title;year;directors;rating;genres;plotmarks;actors")  # jeśli nie ma, to utwórz
     dataset = pd.read_csv(path_to_dataset, sep=";", index_col=0)  # a potem czytaj
-
-try:
-    datakeywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0)  # czytaj plik .csv
-except FileNotFoundError as e:
-    open(path_to_datakeywords, "w+").write(";keyword")  # jeśli go nie ma, to uwtórz
-    datakeywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0)  # a potem czytaj
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
 
@@ -222,7 +193,7 @@ for row in file_read:  # kazdy imdb_id z bazy
     if stop_term == 6:  # co 5
         print("Zapis do plikow")  # wyświetla że zapisuje
         stop_term = 1  # zerowanie warunku stopu [pauzy]
-        if save_to_file(row_info, keywords, dataset, datakeywords):  # wywołuje funkcje zapisu do pliku
+        if save_to_file(row_info, dataset):  # wywołuje funkcje zapisu do pliku
             save_ids(ids_to_save)  # zapisuje
             ids_to_save.clear()  # czyści - dupe na przykład
         else:
@@ -234,7 +205,7 @@ for row in file_read:  # kazdy imdb_id z bazy
     try:
         movie_info = ia.get_movie(row)  # pobieramy info nt filmow o danym ID
         print(row)
-        row_info, keywords, i = get_info(movie_info, i, row_info, keywords)
+        row_info, i = get_info(movie_info, i, row_info)
     except IMDbError as e:  # blad z polaczeniem do bazy IMDb lub inny blad zwiazany z biblioteka IMDb
         print(row, e)
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
@@ -242,7 +213,7 @@ for row in file_read:  # kazdy imdb_id z bazy
 
 # region End
 # --------------------------------------- ZAMKNIECIE PROGRAMU (OSTATNI ZAPIS) ---------------------------------------- #
-if save_to_file(row_info, keywords, dataset, datakeywords):
+if save_to_file(row_info, dataset):
     save_ids(ids_to_save)
 # ------------------------------------------- TO BY BYLO NA TYLE KURWIBĄKI ------------------------------------------- #
 # endregion

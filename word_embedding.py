@@ -17,14 +17,12 @@ from gensim.models import word2vec
 # --------------------------------------------- INICJALIZACJA ZMIENNYCH ---------------------------------------------- #
 path_to_model = "vocab.model"
 path_to_dataset = "dataset.csv"
-path_to_keywords = "datakeywords.csv"
 top_n = 3
 corpus = list()  # kręgosłup - wszystkie dane
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
 
 df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0)  # baza danych (czytamy pliki)
-df_keywords = pd.read_csv(path_to_keywords, sep=";", index_col=0)  # keywords (czytamy pliki)
 
 for row in df_set.values:  # wyciągnij informacje
     temp_str = ""
