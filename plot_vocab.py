@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from gensim.models import word2vec
 from sklearn.manifold import TSNE
 
+path_to_model = "vocab.model"
 
 def display_closestwords_tsnescatterplot(arg_model, word):
     for i in range(len(word)):
@@ -41,5 +42,8 @@ def display_closestwords_tsnescatterplot(arg_model, word):
     plt.show()
 
 
-model = word2vec.Word2Vec.load("vocab.model")
-display_closestwords_tsnescatterplot(model, ['david', 'love', 'draw'])
+try:
+    model = word2vec.Word2Vec.load(path_to_model)
+    display_closestwords_tsnescatterplot(model, ['david', 'love', 'draw'])
+except FileNotFoundError:
+    print("Slownik", path_to_model, "nie istnieje. Nie mozna wyswietlic wykresu.")
