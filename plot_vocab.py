@@ -1,12 +1,31 @@
 # ------------------------------------------------------ CREDITS ----------------------------------------------------- #
-# PLOT - https://medium.com/@aneesha/using-tsne-to-plot-a-subset-of-similar-words-from-word2vec-bb8eeaea6229
+# PLOT - ALL WORDS - https://stackoverflow.com/a/43956937                                                              #
+# PLOT - https://medium.com/@aneesha/using-tsne-to-plot-a-subset-of-similar-words-from-word2vec-bb8eeaea6229           #
 
 import numpy as np
 import matplotlib.pyplot as plt
 from gensim.models import word2vec
 from sklearn.manifold import TSNE
+import pandas as pd
 
 path_to_model = "vocab.model"
+
+
+def display_allwords_tsnescatterplot(arg_model):
+    vocab = list(arg_model.wv.vocab)
+    X = arg_model[vocab]
+    tsne = TSNE(n_components=2, random_state=0)
+    X_tsne = tsne.fit_transform(X)
+    df = pd.DataFrame(X_tsne, index=vocab, columns=['x', 'y'])
+
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+
+    ax.scatter(df['x'], df['y'])
+    for word, pos in df.iterrows():
+        ax.annotate(word, pos)
+    plt.show()
+
 
 def display_closestwords_tsnescatterplot(arg_model, word):
     for i in range(len(word)):
@@ -44,6 +63,7 @@ def display_closestwords_tsnescatterplot(arg_model, word):
 
 try:
     model = word2vec.Word2Vec.load(path_to_model)
+    display_allwords_tsnescatterplot(model)
     display_closestwords_tsnescatterplot(model, ['david', 'love', 'draw'])
 except FileNotFoundError:
     print("Slownik", path_to_model, "nie istnieje. Nie mozna wyswietlic wykresu.")

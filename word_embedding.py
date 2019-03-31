@@ -40,7 +40,7 @@ try:
     model = word2vec.Word2Vec.load(path_to_model)
 except FileNotFoundError:
     print("Slownik", path_to_model, "nie istnieje. Zaczynamy trening od poczatku.")
-    model = word2vec.Word2Vec(tokenized_sentences, min_count=5, hs=1, negative=0, workers=12)  # 'workers' to wątki CPU
+    model = word2vec.Word2Vec(tokenized_sentences, seed=1, sample=1e-3, min_count=3, workers=12)
 model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
 model.save(path_to_model)  # zapis słownika/modelu do pliku (binarnie)
 
