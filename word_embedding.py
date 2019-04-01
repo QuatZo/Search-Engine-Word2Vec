@@ -2,6 +2,10 @@
 #                                                                                                                      #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
 # TODO - Usunac most-common english words z corpusu (nie linkingWords) - Wojtek Zimoch                                 #
+# TODO - Usunac znaki specjalne z corpusu (np. ',' bo nie wszystkie zostaly usuniete)                                  #
+# TODO - Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)                    #
+# TODO - [PROBA] - Zamiana _ z aktorow i rezyserow na spacje                                                           #
+# TODO - Stworzenie search engine (osobny plik)                                                                        #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -16,6 +20,9 @@ path_to_model = "vocab.model"
 path_to_dataset = "dataset.csv"
 top_n = 3
 corpus = list()  # kręgosłup - wszystkie dane
+most_common_words = ['a', 'the', 'in']
+probability_positive = dict()
+rows_per_element = dict()
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
 
@@ -23,7 +30,6 @@ df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0)  # baza danych (czyt
 
 for row in df_set.values:  # wyciągnij informacje
     temp_str = ""
-    # TODO - Ziojtek tutaj
     for i in range(len(row)):
         if i == 1 or i == 3:
             continue
@@ -36,28 +42,36 @@ corpus = "".join(corpus)  # tworzy dokument
 corpus = corpus.replace('?', '.').replace('!', '.').split('.')  # zamiana znaków '?' i '!' na kropki
 tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
 
+# usuwanie most-common english words z corpusu
+for sentence in range(len(tokenized_sentences)):
+    for most_common_word in most_common_words:
+        while True:
+            try:
+                tokenized_sentences[sentence].remove(most_common_word)
+            except ValueError:
+                break
+
 try:
     model = word2vec.Word2Vec.load(path_to_model)
 except FileNotFoundError:
     print("Slownik", path_to_model, "nie istnieje. Zaczynamy trening od poczatku.")
     model = word2vec.Word2Vec(tokenized_sentences, seed=1, sample=1e-3, min_count=3, workers=12)
-model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie, epochs - l. iteracji
-model.save(path_to_model)  # zapis słownika/modelu do pliku (binarnie)
+    model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie
+    model.save(path_to_model)  # zapis słownika/modelu do pliku (binarnie)
 
-probability_positive = dict()
-probability_negative = dict()
 for element in ['david', 'love', 'draw']:
     try:
         print("Word:", element)
         prob_pos_el = probability_positive[element] = model.wv.most_similar(positive=[element], topn=top_n)
-        prob_neg_el = probability_negative[element] = model.wv.most_similar(negative=[element], topn=top_n)
 
         print("\tPositive:")
         for i in range(top_n):
             print("\t\t", prob_pos_el[i][0], ":", prob_pos_el[i][1])
-        print("\tNegative:")
-        for i in range(top_n):
-            print("\t\t", prob_neg_el[i][0], ":", prob_neg_el[i][1])
         print()
     except KeyError as e:
         print("\t", str(e)[1:-1])  # usuwamy "" z początku
+
+    rows_per_element[element] = [1, prob_pos_el[1][1] / prob_pos_el[0][1], prob_pos_el[2][1] / prob_pos_el[0][1]]
+    print(rows_per_element[element])
+    # suma elementw rows_per_elemenet[element] to wspolczynnik x (np. 2.73x), y to liczba wynikow (np. 25)
+    # Trzeba wyznaczyc x, dzieki czemu poznamy ilosc wynikow dla poszczegolnego wyrazu podobnego
