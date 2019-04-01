@@ -1,7 +1,6 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
-# TODO - Usunac most-common english words z corpusu (nie linkingWords) - Wojtek Zimoch                                 #
 # TODO - Usunac znaki specjalne z corpusu (np. ',' bo nie wszystkie zostaly usuniete)                                  #
 # TODO - Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)                    #
 # TODO - [PROBA] - Zamiana _ z aktorow i rezyserow na spacje                                                           #
@@ -18,13 +17,18 @@ from gensim.models import word2vec
 # --------------------------------------------- INICJALIZACJA ZMIENNYCH ---------------------------------------------- #
 path_to_model = "vocab.model"
 path_to_dataset = "dataset.csv"
+path_to_most_common_words = "most_common_english_words.txt"
 top_n = 3
 corpus = list()  # kręgosłup - wszystkie dane
-most_common_words = ['a', 'the', 'in']
 probability_positive = dict()
 rows_per_element = dict()
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
+
+try:
+    most_common_words = open(path_to_most_common_words).read().split()
+except FileNotFoundError as e:
+    most_common_words = list()
 
 df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0)  # baza danych (czytamy pliki)
 
@@ -50,7 +54,7 @@ for sentence in range(len(tokenized_sentences)):
                 tokenized_sentences[sentence].remove(most_common_word)
             except ValueError:
                 break
-
+                
 try:
     model = word2vec.Word2Vec.load(path_to_model)
 except FileNotFoundError:
@@ -59,19 +63,22 @@ except FileNotFoundError:
     model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie
     model.save(path_to_model)  # zapis słownika/modelu do pliku (binarnie)
 
-for element in ['david', 'love', 'draw']:
+for element in ['marvel', 'hate', 'everyone']:
     try:
         print("Word:", element)
         prob_pos_el = probability_positive[element] = model.wv.most_similar(positive=[element], topn=top_n)
+        prob_pos_el = model.wv.most_similar_cosmul(positive=[element], topn=top_n)
 
         print("\tPositive:")
         for i in range(top_n):
             print("\t\t", prob_pos_el[i][0], ":", prob_pos_el[i][1])
         print()
+        rows_per_element[element] = [1, prob_pos_el[1][1] / prob_pos_el[0][1], prob_pos_el[2][1] / prob_pos_el[0][1]]
+        # Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)
+        # suma elementow rows_per_element[element] to wspolczynnik x (np. 2.73x), y to liczba wynikow (np. 25)
+        # Trzeba wyznaczyc x, dzieki czemu poznamy ilosc wynikow dla poszczegolnego wyrazu podobnego
     except KeyError as e:
         print("\t", str(e)[1:-1])  # usuwamy "" z początku
 
-    rows_per_element[element] = [1, prob_pos_el[1][1] / prob_pos_el[0][1], prob_pos_el[2][1] / prob_pos_el[0][1]]
-    print(rows_per_element[element])
-    # suma elementw rows_per_elemenet[element] to wspolczynnik x (np. 2.73x), y to liczba wynikow (np. 25)
-    # Trzeba wyznaczyc x, dzieki czemu poznamy ilosc wynikow dla poszczegolnego wyrazu podobnego
+# print(25/sum(rows_per_element['series']))
+# print(rows_per_element['series'])
