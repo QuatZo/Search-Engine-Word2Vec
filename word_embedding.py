@@ -1,9 +1,6 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
 # TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
-# TODO - Usunac znaki specjalne z corpusu (np. ',' bo nie wszystkie zostaly usuniete)                                  #
-# TODO - Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)                    #
-# TODO - [PROBA] - Zamiana _ z aktorow i rezyserow na spacje                                                           #
 # TODO - Stworzenie search engine (osobny plik)                                                                        #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
@@ -22,6 +19,7 @@ top_n = 3
 corpus = list()  # kręgosłup - wszystkie dane
 probability_positive = dict()
 rows_per_element = dict()
+amount_of_rows = 30
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
 
@@ -43,7 +41,7 @@ for row in df_set.values:  # wyciągnij informacje
     corpus.append(temp_str)  # jeden wpis to jeden film
 
 corpus = "".join(corpus)  # tworzy dokument
-corpus = corpus.replace('?', '.').replace('!', '.').split('.')  # zamiana znaków '?' i '!' na kropki
+corpus = corpus.replace('?', '.').replace('!', '.').replace('\'s', '').replace(',', '').replace('_', ' ').split('.')
 tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
 
 # usuwanie most-common english words z corpusu
@@ -54,7 +52,7 @@ for sentence in range(len(tokenized_sentences)):
                 tokenized_sentences[sentence].remove(most_common_word)
             except ValueError:
                 break
-                
+
 try:
     model = word2vec.Word2Vec.load(path_to_model)
 except FileNotFoundError:
@@ -77,8 +75,9 @@ for element in ['marvel', 'hate', 'everyone']:
         # Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)
         # suma elementow rows_per_element[element] to wspolczynnik x (np. 2.73x), y to liczba wynikow (np. 25)
         # Trzeba wyznaczyc x, dzieki czemu poznamy ilosc wynikow dla poszczegolnego wyrazu podobnego
+        temp_alg = amount_of_rows / sum(rows_per_element[element])
+        rows_per_element[element] = [int(temp_alg), int((prob_pos_el[1][1] / prob_pos_el[0][1]) * temp_alg),
+                                     int((prob_pos_el[2][1] / prob_pos_el[0][1]) * temp_alg)]
+        print(rows_per_element)
     except KeyError as e:
         print("\t", str(e)[1:-1])  # usuwamy "" z początku
-
-# print(25/sum(rows_per_element['series']))
-# print(rows_per_element['series'])
