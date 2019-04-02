@@ -1,7 +1,8 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Testowanie modelu w oparciu o logiczne myslenie                                                               #
-# TODO - Stworzenie search engine (osobny plik)                                                                        #
+# TODO - Zabawa parametrami modelu, sprawdzanie najlepszego (najbardziej dokladnego) rozwiazania                       #
+# TODO - Sposob sortowania wynikow (myslalem nad sortowaniem wg ratingu, ale wtedy trzeba to [nawet losowo] uzupelnic  #
+# TODO - Usunc daty (dokladniej rok) ze slownika                                                                       #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -9,75 +10,97 @@
 import numpy as np
 import pandas as pd
 from gensim.models import word2vec
+import time
 
 # region Variables
 # --------------------------------------------- INICJALIZACJA ZMIENNYCH ---------------------------------------------- #
 path_to_model = "vocab.model"
 path_to_dataset = "dataset.csv"
-path_to_most_common_words = "most_common_english_words.txt"
-top_n = 3
-corpus = list()  # kręgosłup - wszystkie dane
-probability_positive = dict()
-rows_per_element = dict()
-amount_of_rows = 30
+path_to_stop_words = "stop_words.txt"
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
 
-try:
-    most_common_words = open(path_to_most_common_words).read().split()
-except FileNotFoundError as e:
-    most_common_words = list()
+# region Functions
 
-df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0)  # baza danych (czytamy pliki)
 
-for row in df_set.values:  # wyciągnij informacje
-    temp_str = ""
-    for i in range(len(row)):
-        if i == 1 or i == 3:
-            continue
-        if str(row[i]).casefold() != 'nan':
-            temp_str += str(row[i]).replace('.', ',').casefold() + '.'
-
-    corpus.append(temp_str)  # jeden wpis to jeden film
-
-corpus = "".join(corpus)  # tworzy dokument
-corpus = corpus.replace('?', '.').replace('!', '.').replace('\'s', '').replace(',', '').replace('_', ' ').split('.')
-tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
-
-# usuwanie most-common english words z corpusu
-for sentence in range(len(tokenized_sentences)):
-    for most_common_word in most_common_words:
-        while True:
-            try:
-                tokenized_sentences[sentence].remove(most_common_word)
-            except ValueError:
-                break
-
-try:
-    model = word2vec.Word2Vec.load(path_to_model)
-except FileNotFoundError:
-    print("Slownik", path_to_model, "nie istnieje. Zaczynamy trening od poczatku.")
-    model = word2vec.Word2Vec(tokenized_sentences, seed=1, sample=1e-3, min_count=3, workers=12)
-    model.train(tokenized_sentences, total_examples=len(tokenized_sentences), epochs=20)  # trenowanie
-    model.save(path_to_model)  # zapis słownika/modelu do pliku (binarnie)
-
-for element in ['marvel', 'hate', 'everyone']:
+# ------------------------------------ FUNKCJA SPRAWDZAJACA CZY MODEL JUZ ISTNIEJE ----------------------------------- #
+def model_exists(arg_path_to_model):
     try:
-        print("Word:", element)
-        prob_pos_el = probability_positive[element] = model.wv.most_similar(positive=[element], topn=top_n)
-        prob_pos_el = model.wv.most_similar_cosmul(positive=[element], topn=top_n)
+        word2vec.Word2Vec.load(arg_path_to_model)
+        print("Slownik juz istnieje")
+        return True
+    except FileNotFoundError:
+        print("Slownik", arg_path_to_model, "nie istnieje. Zaczynamy trening od poczatku.")
+        return False
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
-        print("\tPositive:")
-        for i in range(top_n):
-            print("\t\t", prob_pos_el[i][0], ":", prob_pos_el[i][1])
-        print()
-        rows_per_element[element] = [1, prob_pos_el[1][1] / prob_pos_el[0][1], prob_pos_el[2][1] / prob_pos_el[0][1]]
-        # Dodanie algorytmu wyznaczajacego ilosc wierszy z danymi wyrazami (mozliwe, ze osobny plik)
-        # suma elementow rows_per_element[element] to wspolczynnik x (np. 2.73x), y to liczba wynikow (np. 25)
-        # Trzeba wyznaczyc x, dzieki czemu poznamy ilosc wynikow dla poszczegolnego wyrazu podobnego
-        temp_alg = amount_of_rows / sum(rows_per_element[element])
-        rows_per_element[element] = [int(temp_alg), int((prob_pos_el[1][1] / prob_pos_el[0][1]) * temp_alg),
-                                     int((prob_pos_el[2][1] / prob_pos_el[0][1]) * temp_alg)]
-        print(rows_per_element)
-    except KeyError as e:
-        print("\t", str(e)[1:-1])  # usuwamy "" z początku
+
+# ------------------------------------------- FUNKCJA PRZYGOTOWUJACA DANE -------------------------------------------- #
+def prepare_data(arg_path_to_dataset, arg_path_to_stop_words):
+    print("-" * 10)
+    print("Trwa przygotowywanie danych.")
+    corpus = list()
+    start = time.time()
+    try:
+        stop_words = open(arg_path_to_stop_words, encoding='utf8').read().split()
+    except FileNotFoundError as e:
+        stop_words = list()
+
+    df_set = pd.read_csv(arg_path_to_dataset, sep=";", index_col=0)  # baza danych (czytamy pliki)
+
+    for row in df_set.values:  # wyciągnij informacje
+        temp_str = ""
+        for i in range(len(row)):
+            if i == 1 or i == 3:
+                continue
+            if str(row[i]).casefold() != 'nan':
+                temp_str += str(row[i]).replace('.', ',').casefold() + '.'
+
+        corpus.append(temp_str)  # jeden wpis to jeden film
+
+    corpus = "".join(corpus)  # tworzy dokument
+    corpus = corpus.replace('?', '.').replace('!', '.').replace('\'s', '').replace(',', '').replace('_', ' ').split('.')
+    tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
+
+    # usuwanie stop-words z corpusu
+    print("-" * 10)
+    print("Trwa usuwanie niepotrzebnych wyrazow (np. 'a', 'the')")
+    for sentence in range(len(tokenized_sentences)):
+        for most_common_word in stop_words:
+            while True:
+                try:
+                    tokenized_sentences[sentence].remove(most_common_word)
+                except ValueError:
+                    break
+
+    print("Czyszczenie danych zakonczone. Czas trwania:", time.time() - start, "secs")
+    return tokenized_sentences
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+
+
+# --------------------------------------------- FUNKCJA TRENUJACA MODEL ---------------------------------------------- #
+def train_model(arg_dataset, arg_path_to_model, arg_epochs=20, arg_size=300, arg_sample=1e-3,
+                arg_min_count=5, arg_workers=12, arg_iter=5):
+    print("-" * 10)
+    print("Rozpoczynamy trening")
+    try:
+        start = time.time()
+        model = word2vec.Word2Vec(arg_dataset, size=arg_size, sample=arg_sample, min_count=arg_min_count,
+                                  workers=arg_workers, iter=arg_iter)
+        model.train(arg_dataset, total_examples=len(arg_dataset), epochs=arg_epochs)  # trenowanie
+        model.save(arg_path_to_model)  # zapis słownika/modelu do pliku (binarnie)
+        print("Trening zakonczony. Czas trwania:", time.time() - start, "secs")
+        return True
+    except:
+        return False
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+# endregion
+
+# region Main
+
+
+if not model_exists(path_to_model):
+    processed_data = prepare_data(path_to_dataset, path_to_stop_words)
+    if not train_model(processed_data, path_to_model, arg_epochs=25, arg_iter=15):  # arg_iter=50 - nie polecam
+        print("Ups! Cos poszlo nie tak!")
+# endregion
