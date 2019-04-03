@@ -29,7 +29,7 @@ def display_allwords_tsnescatterplot(arg_model):
 
 def display_closestwords_tsnescatterplot(arg_model, word):
     for i in range(len(word)):
-        arr = np.empty((0, 100), dtype='f')
+        arr = np.empty((0, 300), dtype='f')
         word_labels = [word[i]]
 
         # get close words
@@ -63,7 +63,7 @@ def display_closestwords_tsnescatterplot(arg_model, word):
 
 try:
     model = word2vec.Word2Vec.load(path_to_model)
-    display_allwords_tsnescatterplot(model)
+    # display_allwords_tsnescatterplot(model)
     display_closestwords_tsnescatterplot(model, ['david', 'love', 'draw'])
 except FileNotFoundError:
     print("Slownik", path_to_model, "nie istnieje. Nie mozna wyswietlic wykresu.")

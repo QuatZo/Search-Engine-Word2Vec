@@ -31,19 +31,15 @@ except FileNotFoundError:
 for element in ['which', 'film', 'was', 'the', 'best', 'in', '2019', 'dc', 'universe', 'or', 'marvel', 'or', 'disney']:
     try:
         print("Word:", element)
-        prob_pos_el = probability_positive[element] = model.wv.most_similar(positive=[element], topn=top_n)
+        prob_pos_el = probability_positive[element] = model.wv.most_similar_cosmul(positive=[element], topn=top_n)
 
         probability_ratio = list()
         print("\tPositive:")
         for i in range(top_n):
-            if i == 0:
-                probability_ratio.append(1)
-            else:
-                probability_ratio.append(prob_pos_el[i][1] / prob_pos_el[0][1])
+            probability_ratio.append(prob_pos_el[i][1] / prob_pos_el[0][1])
             print("\t\t", prob_pos_el[i][0], ":", prob_pos_el[i][1])
 
-        rows_per_element[element] = [1, probability_ratio[1], probability_ratio[2]]
-        temp_alg = amount_of_rows / sum(rows_per_element[element])
+        temp_alg = amount_of_rows / sum(probability_ratio)
         rows_per_element[element] = [int(temp_alg), int(probability_ratio[1] * temp_alg),
                                      int(probability_ratio[2] * temp_alg)]
     except KeyError as e:
