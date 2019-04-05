@@ -1,7 +1,5 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Wszelkie zmiany tokenizacji w pliku word_embedding musza zostac zastosowane rowniez tutaj                     #
-#                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
 
@@ -26,7 +24,8 @@ except FileNotFoundError as e:
     datakeywords = pd.read_csv(path_to_keywords, sep=";", index_col=0).to_numpy()  # a potem czytaj
 # endregion
 
-# region Tokenization
+# region Tokenization -- DEPRECATED
+print("Warning! Tokenization is DEPRECATED!");
 for row in df_set.values:
     temp_str = ""
     for i in range(len(row)):

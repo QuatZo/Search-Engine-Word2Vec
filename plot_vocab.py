@@ -1,4 +1,4 @@
-# ------------------------------------------------------ CREDITS ----------------------------------------------------- #
+# ----------------------------------------------------- CREDITS ------------------------------------------------------ #
 # PLOT - ALL WORDS - https://stackoverflow.com/a/43956937                                                              #
 # PLOT - https://medium.com/@aneesha/using-tsne-to-plot-a-subset-of-similar-words-from-word2vec-bb8eeaea6229           #
 
@@ -23,7 +23,7 @@ def display_allwords_tsnescatterplot(arg_model):
 
     ax.scatter(df['x'], df['y'])
     for word, pos in df.iterrows():
-        ax.annotate(word, pos)
+        ax.annotate(word, pos)  # labele to to co laguje wykres
     plt.show()
 
 
@@ -63,7 +63,7 @@ def display_closestwords_tsnescatterplot(arg_model, word):
 
 try:
     model = word2vec.Word2Vec.load(path_to_model)
-    # display_allwords_tsnescatterplot(model)
+    display_allwords_tsnescatterplot(model)
     display_closestwords_tsnescatterplot(model, ['david', 'love', 'draw'])
 except FileNotFoundError:
     print("Slownik", path_to_model, "nie istnieje. Nie mozna wyswietlic wykresu.")
