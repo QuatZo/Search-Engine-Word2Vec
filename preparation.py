@@ -1,12 +1,12 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Usunac wszelkie liczby z corpusu (aktualny sposob nie do konca dziala)                                        #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
 
 
 import time
+import re
 
 
 # ------------------------------------------- FUNKCJA PRZYGOTOWUJACA DANE -------------------------------------------- #
@@ -40,13 +40,9 @@ def prepare(arg_dataset, arg_path_to_stop_words):
     print("-" * 10)
     print("Removing unnecessary characters (f.e. 'a', 'the')")
     for sentence in range(len(tokenized_sentences)):
-        for word in tokenized_sentences[sentence]:  # usuwanie liczb
-            try:
-                int(word)
-                tokenized_sentences[sentence].remove(word)
+        for word in range(len(tokenized_sentences[sentence])):  # usuwanie liczb
+            tokenized_sentences[sentence][word] = re.sub(r'[0-9\.]+', '', tokenized_sentences[sentence][word])
 
-            except ValueError:
-                continue
         for stop_word in stop_words:  # usuwanie stop_words
             while True:
                 try:

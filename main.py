@@ -28,6 +28,6 @@ print(se.correlations(cleaned_data, var.path_to_model, top_n=var.top_n, amount_o
 
 print("-"*10)
 print("Plotting...")
-pv.display_allwords_tsnescatterplot(var.path_to_model)
+# pv.display_allwords_tsnescatterplot(var.path_to_model)
 pv.display_closestwords_tsnescatterplot(var.path_to_model, ['disney', 'company', 'movie'])
 print("Plotting completed.")
