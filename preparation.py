@@ -7,10 +7,11 @@
 
 import time
 import re
+import random as rm
 
 
 # ------------------------------------------- FUNKCJA PRZYGOTOWUJACA DANE -------------------------------------------- #
-def prepare(arg_dataset, arg_path_to_stop_words):
+def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
     print("-" * 10)
     print("Preparing/Cleaning data, please wait...")
     corpus = list()
@@ -23,8 +24,10 @@ def prepare(arg_dataset, arg_path_to_stop_words):
     for row in arg_dataset:  # wyciągnij informacje
         temp_str = ""
         for i in range(len(row)):
-            if i == 1 or i == 3:  # pomijamy rok i rating
+            if i == 1:  # pomijamy rok i rating
                 continue
+            if i == 3 and str(row[i]).casefold() == 'nan':
+                row[i] = rm.choice(arg_rating_values)
             if str(row[i]).casefold() != 'nan':  # przepisujemy tylko niepuste dane
                 temp_str += str(row[i]).replace('.', ',').casefold() + '.'
 

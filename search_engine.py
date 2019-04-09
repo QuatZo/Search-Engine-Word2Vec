@@ -1,8 +1,7 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 #                                                                                                                      #
-# TODO - Dodac algorytm wyswietlajacy najlepsze wyniki wedlug zadanego kryterium (trzeba uzupelnic rating)             #
-#        Ustalone z Bartkiem, ze pierw po tytule, potem opisie, na koncu autorzy i recenzje                            #
-# TODO - Sposob sortowania wynikow (myslalem nad sortowaniem wg ratingu)                                               #
+# TODO - Dodac algorytm wyswietlajacy najlepsze wyniki wedlug zadanego kryterium                                       #
+#        Ustalone z Bartkiem, ze pierw po tytule, potem opisie, na koncu autorzy i rezyserzy                           #
 #                                                                                                                      #
 # Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
@@ -29,3 +28,19 @@ def correlations(arg_input, arg_path_to_model, top_n, amount_of_rows):
             probability_positive[element] = "Word " + element + " not in vocabulary."
 
     return probability_positive, rows_per_element
+
+
+def return_data(arg_total_rows, arg_match, arg_dataset):  # funkcja zwracająca/sortująca wynik wyszukiwania
+    arg_dataset = arg_dataset.sort_values(by='rating', ascending=False)
+    result = list()
+    print(arg_dataset[['rating']])
+    for row in arg_dataset.values:
+        for el in range(len(row)):
+            try:
+                for match in arg_match.keys():
+                    if match in row[el]:
+                        result.append(row)
+            except TypeError:
+                continue
+    return result
+

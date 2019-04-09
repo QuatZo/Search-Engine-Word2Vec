@@ -13,3 +13,9 @@ probability_positive = dict()
 rows_per_element = dict()
 amount_of_rows = 30
 # endregion
+
+# region Preparation
+rating_values = [round(0.1 * i, 2) for i in range(101)]
+
+
+# endregion
