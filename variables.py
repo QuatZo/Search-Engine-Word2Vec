@@ -11,11 +11,15 @@ path_to_stop_words = "stop_words.txt"
 top_n = 3
 probability_positive = dict()
 rows_per_element = dict()
-amount_of_rows = 30
+ai_rows = 50
+total_rows = 100
 # endregion
 
 # region Preparation
 rating_values = [round(0.1 * i, 2) for i in range(101)]
+# endregion
 
-
+# region Main
+line = "-"*10
+website = "http://localhost:8000/search/table.html?search_text"
 # endregion
