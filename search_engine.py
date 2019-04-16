@@ -5,8 +5,12 @@
 # ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
 
 from gensim.models import word2vec
+import time
+
+# region Functions
 
 
+# --------------------------------------- FUNKCJA WYZNACZAJACA WYRAZY PODOBNE ---------------------------------------- #
 def correlations(arg_input, arg_path_to_model, top_n, arg_ai_rows):
     model = word2vec.Word2Vec.load(arg_path_to_model)
     probability = dict()
@@ -23,9 +27,13 @@ def correlations(arg_input, arg_path_to_model, top_n, arg_ai_rows):
         probability[el] = int(probability[el] / len(probability) * arg_ai_rows)
 
     return probability
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
+# ------------------------------------------- PODFUNKCJA POBIERAJACA DANE -------------------------------------------- #
 def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=False):
+    validate_set = [0, 1]  # title, year
+    data_search_order = [0, 5, 2, 6]  # title, plot, directors, actors
     for word in arg_data.keys():
         rows = 0
         if similar:
@@ -35,15 +43,15 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=F
                 break
             suma = 0
             for el_result in arg_result:
-                for i in range(len(el_result)):
+                for i in validate_set:
                     if el_result[i] == row[i]:
                         suma += 1
-            if suma == 7:
+            if suma == len(validate_set):
                 continue
 
-            for el in range(len(row)):
+            for el_row in data_search_order:
                 try:
-                    if word.casefold() in row[el].casefold():
+                    if word.casefold() in row[el_row].casefold():
                         arg_result.append(row)
                         rows += 1
                         break
@@ -54,8 +62,10 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=F
         if not similar:
             arg_total_words += rows
     return arg_result
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
+# -------------------------------------------- FUNKCJA POBIERAJACA DANE ---------------------------------------------- #
 def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja zwracająca/sortująca wynik wyszukiwania
     input_rows = arg_total_rows - sum(arg_match.values())
     rows_per_input = int(input_rows / len(arg_input))
@@ -67,7 +77,9 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
 
     for word in arg_input:
         inp[word] = rows_per_input
+    del arg_input
 
+    start = time.time()
     result = fetch_data(inp, result, arg_dataset, total_words)
 
     try:
@@ -77,6 +89,8 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
 
     result = fetch_data(arg_match, result, arg_dataset, total_words, )
 
+    print(f"Search time: {time.time() - start} secs")
     return result
-
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+# endregion
 

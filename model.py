@@ -27,7 +27,6 @@ def exists(arg_path_to_model):
 # --------------------------------------------- FUNKCJA TRENUJACA MODEL ---------------------------------------------- #
 def train(arg_dataset, arg_path_to_model, arg_epochs=20, arg_size=300, arg_sample=1e-3,
           arg_min_count=5, arg_workers=12, arg_iter=5):
-    print("-" * 10)
     print("Training...")
     try:
         start = time.time()
