@@ -25,13 +25,13 @@ def exists(arg_path_to_model):
 
 
 # --------------------------------------------- FUNKCJA TRENUJACA MODEL ---------------------------------------------- #
-def train(arg_dataset, arg_path_to_model, arg_epochs=20, arg_size=300, arg_sample=1e-3,
+def train(arg_dataset, arg_path_to_model, arg_epochs=20, arg_size=1000, arg_sample=1e-3,
           arg_min_count=5, arg_workers=12, arg_iter=5):
     print("Training...")
     try:
         start = time.time()
         model = word2vec.Word2Vec(arg_dataset, size=arg_size, sample=arg_sample, min_count=arg_min_count,
-                                  workers=arg_workers, iter=arg_iter, window=10)
+                                  workers=arg_workers, iter=arg_iter, window=5)
         model.train(arg_dataset, total_examples=len(arg_dataset), epochs=arg_epochs)  # trenowanie
         model.save(arg_path_to_model)  # zapis słownika/modelu do pliku (binarnie)
         print("Training completed, time:", time.time() - start, "secs")

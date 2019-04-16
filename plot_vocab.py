@@ -8,6 +8,8 @@ from gensim.models import word2vec
 from sklearn.manifold import TSNE
 import pandas as pd
 
+# region Functions
+
 
 def display_allwords_tsnescatterplot(arg_path_to_model):
     model = word2vec.Word2Vec.load(arg_path_to_model)
@@ -59,3 +61,4 @@ def display_closestwords_tsnescatterplot(arg_path_to_model, word):
     plt.xlim(x_coords.min()*1, x_coords.max()*1)
     plt.ylim(y_coords.min()*1, y_coords.max()*1)
     plt.show()
+# endregion

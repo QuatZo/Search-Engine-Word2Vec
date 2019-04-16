@@ -38,7 +38,7 @@ def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
 
     start = time.time()
     corpus = "".join(corpus)  # tworzy dokument
-    # zamieniamy znaki interpunkcyjne na jeden ('.'), usuwamy '\s' i ',' jesli jeszcze jakies istnieja
+    # zamieniamy znaki '?' i '!' na jeden ('.'), usuwamy '\s' i ',' jesli jeszcze jakies istnieja
     # zamieniamy autorow na {imie} i {nazwisko} zamiast na {imie_nazwisko}
     corpus = corpus.replace('?', '.').replace('!', '.').replace('\'s', '').replace(',', '').replace('_', ' ').split('.')
     tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
@@ -59,12 +59,6 @@ def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
         # list comprehensions instead of typical loop, almost 10x faster (from 290secs to 33secs)
         tokenized_sentences[sentence] = [x for x in tokenized_sentences[sentence]
                                          if x.casefold() not in stop_words]
-        # for stop_word in stop_words:  # usuwanie stop_words
-        #     while True:
-        #         try:
-        #             tokenized_sentences[sentence] = tokenized_sentences[sentence].remove(stop_word)
-        #        except ValueError:
-        #             break
 
     print("Preparation/Cleaning completed, time:", time.time() - start, "secs")
     return tokenized_sentences

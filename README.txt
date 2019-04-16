@@ -5,4 +5,4 @@ IMDb
 Used with permission.
 
 ------------------ INSTRUCTION
-Run main.py
+Run run.bat and go to http://localhost:8000

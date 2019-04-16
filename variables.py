@@ -10,8 +10,6 @@ path_to_stop_words = "stop_words.txt"
 
 # region Search Engine
 top_n = 3
-probability_positive = dict()
-rows_per_element = dict()
 ai_rows = 50
 total_rows = 100
 # endregion

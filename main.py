@@ -6,6 +6,7 @@
 # Heart of our program
 
 import pandas as pd
+
 import variables as var
 import model
 import preparation as prep
@@ -18,7 +19,7 @@ if not model.exists(var.path_to_model):
     print(f"Vocabulary {var.path_to_model} doesn't exist. Starting from the scratch.")
     df_set = pd.read_csv(var.path_to_dataset, sep=";", index_col=0).values  # baza danych (czytamy pliki)
     processed_data = prep.prepare(df_set, var.path_to_stop_words, var.rating_values)
-    df_set = None
+    del df_set
     if not model.train(processed_data, var.path_to_model, arg_epochs=20, arg_iter=10):  # arg_iter=50 - nie polecam
         print("Whoops! Something went wrong while training model.")
         exit(-1)

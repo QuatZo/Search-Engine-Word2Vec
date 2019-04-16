@@ -23,6 +23,8 @@ def correlations(arg_input, arg_path_to_model, top_n, arg_ai_rows):
         except KeyError:
             continue
 
+    print(probability)
+
     for el in probability.keys():
         probability[el] = int(probability[el] / len(probability) * arg_ai_rows)
 
@@ -34,6 +36,7 @@ def correlations(arg_input, arg_path_to_model, top_n, arg_ai_rows):
 def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=False):
     validate_set = [0, 1]  # title, year
     data_search_order = [0, 5, 2, 6]  # title, plot, directors, actors
+
     for word in arg_data.keys():
         rows = 0
         if similar:
@@ -61,6 +64,7 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=F
                     continue
         if not similar:
             arg_total_words += rows
+
     return arg_result
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
@@ -87,10 +91,9 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
     except ZeroDivisionError:
         return result
 
-    result = fetch_data(arg_match, result, arg_dataset, total_words, )
+    result = fetch_data(arg_match, result, arg_dataset, total_words, similar=True)
 
     print(f"Search time: {time.time() - start} secs")
     return result
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
-
