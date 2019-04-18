@@ -19,8 +19,6 @@ def exists(arg_path_to_model):
         return True
     except FileNotFoundError:
         return False
-
-
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
@@ -31,8 +29,8 @@ def train(arg_dataset, arg_path_to_model, arg_epochs=20, arg_size=1000, arg_samp
     try:
         start = time.time()
         model = word2vec.Word2Vec(arg_dataset, size=arg_size, sample=arg_sample, min_count=arg_min_count,
-                                  workers=arg_workers, iter=arg_iter, window=5)
-        model.train(arg_dataset, total_examples=len(arg_dataset), epochs=arg_epochs)  # trenowanie
+                                  workers=arg_workers, iter=arg_iter, window=5)  # stworz model
+        model.train(arg_dataset, total_examples=len(arg_dataset), epochs=arg_epochs)  # trenuj
         model.save(arg_path_to_model)  # zapis słownika/modelu do pliku (binarnie)
         print("Training completed, time:", time.time() - start, "secs")
         return True

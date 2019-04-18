@@ -15,12 +15,16 @@ import random as rm
 # ------------------------------------------- FUNKCJA PRZYGOTOWUJACA DANE -------------------------------------------- #
 def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
     print("Preparing/Cleaning data, please wait...")
+    marks = ['#', '$', '%', '&', '\'', '\'s', '(', ')', '*', '+', '-', '/', ':', ';',
+             ',', '<', '=', '>', '@', '[', '\\', ']', '^', '`', '{', '|', '}', '~']  # znaki specjalne
     corpus = list()
+
     start = time.time()
     try:
-        stop_words = open(arg_path_to_stop_words, encoding='utf8').read().split()
+        stop_words = open(arg_path_to_stop_words, encoding='utf8').read().split()  # czytaj stop wordsy, zrob liste
     except FileNotFoundError:
         stop_words = list()
+    stop_words.append('')  # dodaj pusty element do usuniecia
 
     for row in arg_dataset:  # wyciągnij informacje
         temp_str = ""
@@ -38,9 +42,9 @@ def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
 
     start = time.time()
     corpus = "".join(corpus)  # tworzy dokument
-    # zamieniamy znaki '?' i '!' na jeden ('.'), usuwamy '\s' i ',' jesli jeszcze jakies istnieja
-    # zamieniamy autorow na {imie} i {nazwisko} zamiast na {imie_nazwisko}
-    corpus = corpus.replace('?', '.').replace('!', '.').replace('\'s', '').replace(',', '').replace('_', ' ').split('.')
+    for mark in marks:  # usun znaki specjalne
+        corpus = corpus.replace(mark, '')
+    corpus = corpus.replace('?', '.').replace('!', '.').replace('_', ' ').split('.')  # autorzy na normalny format
     tokenized_sentences = [sentence.replace('.', '').split() for sentence in corpus]  # wyrazy z sentencji
     print(f"Sentences tokenization was done within: {time.time() - start} secs")
 
@@ -48,15 +52,10 @@ def prepare(arg_dataset, arg_path_to_stop_words, arg_rating_values):
     print("Removing unnecessary characters (f.e. 'a', 'the')")
     start = time.time()
     for sentence in range(len(tokenized_sentences)):
-        for word in range(len(tokenized_sentences[sentence])):  # usuwanie liczb
-            tokenized_sentences[sentence][word] = re.sub(r'[0-9\.]+', '', tokenized_sentences[sentence][word])
+        for word in range(len(tokenized_sentences[sentence])):  # usuwanie liczb, wyrazenia regularne
+            tokenized_sentences[sentence][word] = re.sub(r'[0-9]+', '', tokenized_sentences[sentence][word])
 
-        try:
-            tokenized_sentences[sentence].remove('')
-        except ValueError:
-            pass
-
-        # list comprehensions instead of typical loop, almost 10x faster (from 290secs to 33secs)
+        # lista wyrazen zamiast petli, redukuje czas z ~300s do ~30s
         tokenized_sentences[sentence] = [x for x in tokenized_sentences[sentence]
                                          if x.casefold() not in stop_words]
 

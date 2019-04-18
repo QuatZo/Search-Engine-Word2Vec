@@ -9,9 +9,9 @@ path_to_stop_words = "stop_words.txt"
 # endregion
 
 # region Search Engine
-top_n = 3
-ai_rows = 50
-total_rows = 100
+top_n = 3  # ilosc wyrazow podobnych przypadajacych na jeden wyraz wejsciowy
+ai_rows = 50  # ilosc wierszy dla wyrazow podobnych
+total_rows = 100  # ogolna ilosc wierszy
 # endregion
 
 # region Preparation
@@ -24,6 +24,6 @@ website = "http://localhost:8000/search/table.html?search_text"
 
 
 def now():
-    return dt.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')
+    return dt.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')  # logi
 # endregion
 

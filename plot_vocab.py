@@ -11,6 +11,7 @@ import pandas as pd
 # region Functions
 
 
+# ---------------------------------------------- PLOT WSZYSTKICH WYRAZOW --------------------------------------------- #
 def display_allwords_tsnescatterplot(arg_path_to_model):
     model = word2vec.Word2Vec.load(arg_path_to_model)
     vocab = list(model.wv.vocab)
@@ -26,8 +27,10 @@ def display_allwords_tsnescatterplot(arg_path_to_model):
     for word, pos in df.iterrows():
         ax.annotate(word, pos)  # labele to to co laguje wykres
     plt.show()
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
+# ----------------------------------------------- PLOT PODANYCH WYRAZOW ---------------------------------------------- #
 def display_closestwords_tsnescatterplot(arg_path_to_model, word):
     model = word2vec.Word2Vec.load(arg_path_to_model)
     for i in range(len(word)):
@@ -61,4 +64,5 @@ def display_closestwords_tsnescatterplot(arg_path_to_model, word):
     plt.xlim(x_coords.min()*1, x_coords.max()*1)
     plt.ylim(y_coords.min()*1, y_coords.max()*1)
     plt.show()
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
