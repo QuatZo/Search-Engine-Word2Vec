@@ -25,13 +25,12 @@ def search(inp):
         print("Vocabulary already exists.")
 
     cleaned_data = prepare([[inp]], path_to_stop_words)[0]
-
     ai_words = correlations(cleaned_data, path_to_model, top_n, ai_rows)
     df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0)
-    cleaned_data = '+'.join(cleaned_data)
+    cleaned_data_link = '+'.join(cleaned_data)
     print("Searching...")
-    print(f"Sending search result to {website}={cleaned_data}")
-    res = return_data(inp.split(), ai_words, df_set, total_rows)  # to bedzie szlo do WWW, czyli to bedzie returnem
+    print(f"Sending search result to {website}={cleaned_data_link}")
+    res = return_data(cleaned_data, ai_words, df_set, total_rows)  # to bedzie szlo do WWW, czyli to bedzie returnem
 
     del df_set
 

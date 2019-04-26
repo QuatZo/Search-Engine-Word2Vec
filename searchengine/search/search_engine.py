@@ -28,14 +28,15 @@ def correlations(arg_input, arg_path_to_model, top_n, arg_ai_rows):
 
 
 # ------------------------------------------- PODFUNKCJA POBIERAJACA DANE -------------------------------------------- #
-def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=False):
+def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words=0, similar=False):
     df_columns = ['title', 'plotmarks', 'directors', 'actors']  # kolejnosc wyszukiwania
     arg_arg_dataset = arg_arg_dataset.fillna(" ")  # zamien 'nan' na spacje
-    rows_len = 0
+    total_rows = arg_total_words
 
     for word in arg_data.keys():
+        rows_len = 0
         if similar:
-            arg_data[word] = arg_total_words  # jesli jest to wyraz podobny, podmien ilosc wierszy dla tego wyrazu
+            arg_data[word] = total_rows  # jesli jest to wyraz podobny, podmien ilosc wierszy dla tego wyrazu
 
         for col in df_columns:
             if rows_len == arg_data[word]:  # jesli osiagnelismy oczekiwana ilosc wierszy dla danego wyrazu
@@ -48,9 +49,8 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words, similar=F
                 arg_result.append(row)  # kazdy wynik dopisz do listy wynikow
                 rows_len += 1
         if not similar:
-            arg_total_words += rows_len  # dodaj ilosc wierszy danego wyrazu do ilosci wszystkich wierszy
-
-    return arg_result  # zwroc wynik
+            total_rows += rows_len  # dodaj ilosc wierszy danego wyrazu do ilosci wszystkich wierszy
+    return arg_result, total_rows  # zwroc wynik
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
@@ -59,7 +59,6 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
     input_rows = arg_total_rows - sum(arg_match.values())  # ilosc wierszy przeznaczonych dla wyrazow z wejscia to ilosc
     # wszystkich wierszy minus ilosc wierszy zarezerwowanych dla wyrazow podobnych
     rows_per_input = int(input_rows / len(arg_input))  # ilosc wierszy na wyraz z wejscia
-    total_words = 0
     arg_dataset = arg_dataset.sort_values(by='rating', ascending=False)  # sortuj po ratingu
 
     result = list()
@@ -70,14 +69,13 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
     del arg_input
 
     start = time.time()
-    result = fetch_data(inp, result, arg_dataset, total_words)  # wyrazy wejsciowe
-
+    result, total_words = fetch_data(inp, result, arg_dataset)  # wyrazy wejsciowe
     try:
-        total_words = int((arg_total_rows - total_words) / len(arg_match))  # aktualna ilosc wierszy na wyraz podobny
+        rows_per_match = int((arg_total_rows - total_words) / len(arg_match))  # aktualna ilosc wierszy na wyraz podobny
     except ZeroDivisionError:
         return result  # brak wyrazow podobnych, zwroc wynik tylko dla wejscia
 
-    result = fetch_data(arg_match, result, arg_dataset, total_words, similar=True)  # wyrazy podobne
+    result, _ = fetch_data(arg_match, result, arg_dataset, rows_per_match, similar=True)  # wyrazy podobne
 
     print(f"Search time: {time.time() - start} secs")
     return result
