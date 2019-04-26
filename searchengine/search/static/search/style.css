@@ -1,0 +1,26 @@
+ul {
+    list-style-type: None;
+	display: None;
+}
+
+input{
+	position: relative;
+	left: 15%;
+	padding: 5 10;
+}
+
+input[type=text]{
+	width: 55%;
+	border: solid 1px red;
+	border-top: None;
+	border-radius: 33px
+}
+
+input[type=submit]{
+	width: 5%;
+	border: None;
+	background: white;
+	border: solid 1px red;
+	border-top: None;
+	border-radius: 33px
+}

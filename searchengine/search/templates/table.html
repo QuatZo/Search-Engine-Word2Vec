@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}">
+{{ info|safe }}
+<table>
+	<tr> 
+		<th>Title</th>
+		<th>Year</th>
+		<th>Directors</th>
+		<th>Rating</th>
+		<th>Category</th>
+		<th>Plot</th>
+		<th>Actors</th>
+	</tr>
+{{ table|safe }}
+</table>

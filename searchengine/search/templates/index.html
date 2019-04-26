@@ -1,0 +1,8 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}">
+
+<form action="/search/table.html?{{ form.as_url_args }}" method="get">
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,80 @@
+# ------------------------------------- CZYTAMY PLIK ZE SPOJNIKAMI I PRZYIMKAMI -------------------------------------- #
+try:
+    temp = list()
+    linkingWords = open("linkingWords.txt").read().split()
+except FileNotFoundError as e:
+    linkingWords = list()
+	
+try:
+    linkingWords = open("linkingWords.txt").read().split()
+except FileNotFoundError as e:
+    linkingWords = open("linkingWords.txt", "w+").write("")
+    print(e)
+
+for row in range(len(linkingWords)):
+    linkingWords[row] = linkingWords[row].casefold()
+	
+for element in range(len(row)):
+	if type(row[element]) is not str:
+		continue
+	for word in linkingWords:
+		if word in row[element]:
+			row[element] = row[element].replace(" " + word + " ", " ")
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+
+# -------------------------------------------------- WORDEMBEDDING --------------------------------------------------- #
+jeden wyraz
+print(model.wv.most_similar(positive=['girl'], topn=3))  # pokaz najbardziej podobne
+print(model.wv.most_similar(negative=['girl'], topn=3))  # pokaz najmniej podobne
+
+j = 1  # iterator - wiersze
+for row in dfKey.values:  # for ewery (~R.W.) keyword
+    tempPositivities = list()  # tymczasowa lista, przechowuje info o jednym wierszu
+    score = model.wv.most_similar(positive=row, topn=3)  # 3 najbardziej podobne wyniki do keyworda
+    tempPositivities.append(row[0])  # dodaj keyworda
+    for i in range(3):
+        tempPositivities.append(score[i][0])  # utnij prawdopodobienstwo, dodaj tylko nazwe
+
+    if j == 1:
+       positivities = np.array(tempPositivities)  # pierwszy wpis
+    else:
+       positivities = np.append(positivities, tempPositivities).reshape((j, len(tempPositivities)))  # konwersja na 2d
+
+    j += 1  # kolejny wiersz
+
+print(positivities)
+
+print(model.wv.vocab)
+
+for word in dfKey.values:
+   print(word, " =>", model.wv[word])
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
+
+# ---------------------------------------------------- KEYWORDS ------------------------------------------------------ #
+path_to_datakeywords = "datakeywords.csv"
+keywords = list()
+
+# keywords -- START
+temp_keywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0).to_numpy()
+
+for el in range(len(list_of_infos)):
+    if type(list_of_infos[el]) is int or type(list_of_infos[el]) is float:
+        continue
+    for word in list_of_infos[el].split():  # pętla która zapisuje wszystkie keywords (category)
+        word = word.casefold()
+        if word in temp_keywords or word in arg_keywords:  # jesli keywords juz istnieje
+            continue  # pomin
+        arg_keywords.append(word)  # jesli nie to dopisz do bazy
+# keywords -- END
+
+temp_datakeywords = pd.DataFrame(arg_keywords, columns=['keyword'])
+arg_datakeywords = pd.concat([arg_datakeywords, temp_datakeywords])  # to samo co wyżej
+arg_datakeywords = arg_datakeywords.reset_index(drop=True)  # to samo co wyżej
+arg_datakeywords.to_csv(path_to_datakeywords, sep=";")  # zmiana na plik .csv
+
+try:
+    datakeywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0)  # czytaj plik .csv
+except FileNotFoundError as e:
+    open(path_to_datakeywords, "w+").write(";keyword")  # jeśli go nie ma, to utwórz
+    datakeywords = pd.read_csv(path_to_datakeywords, sep=";", index_col=0)  # a potem czytaj
+# ------------------------------------------------------ KONIEC ------------------------------------------------------ #
