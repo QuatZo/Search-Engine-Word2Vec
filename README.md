@@ -34,7 +34,7 @@ Standard Django deployment.
 * [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html) - Used to model and train data a neural network
 
 ## Readme template
-Thanks to **Billie Thompson** ([PurpleBooth])(https://github.com/PurpleBooth) for sharing [Readme Template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
+Thanks to **Billie Thompson** ([PurpleBooth](https://github.com/PurpleBooth)) for sharing [Readme Template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
 
 
 ## License
