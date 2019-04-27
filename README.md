@@ -33,11 +33,9 @@ Standard Django deployment.
 * [IMDbPY](https://imdbpy.sourceforge.io/) - Used to download more info using IMDb Dataset
 * [Word2Vec](https://radimrehurek.com/gensim/models/word2vec.html) - Used to model and train data a neural network
 
-## Authors
+## Readme template
+Thanks to **Billie Thompson** ([PurpleBooth])(https://github.com/PurpleBooth) for sharing [Readme Template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
