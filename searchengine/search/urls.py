@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.get_text, name='get_text'),
-    path('table.html', views.get_table, name='get_table')
+    # path('table.html', views.get_table, name='get_table')
 ]

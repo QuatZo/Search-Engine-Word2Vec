@@ -7,19 +7,24 @@ from .main import search
 
 
 def get_text(request):
-    # if this is a GET request we need to process the form data
     if request.method == 'GET':
-        # create a form instance and populate it with data from the request:
         form = SearchForm(request.GET)
-        # check whether it's valid:
-        if form.is_valid():
-            form = None
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/search/table.html')
+        if form.is_valid() and 'search_text' in request.GET:
+            info = "You searched for: %r" % request.GET['search_text'] + "<br><br>"
+            info += "<table>\n" + "\t<tr>\n" + "\t\t<th>Title</th>\n" + "\t\t<th>Year</th>\n" + \
+                    "\t\t<th>Directors</th>\n" + "\t\t<th>Rating</th>\n" + "\t\t<th>Category</th>\n" + \
+                    "\t\t<th>Plot</th>\n" + "\t\t<th>Actors</th>\n" + "\t</tr>\n"
 
-    # if a POST (or any other method) we'll create a blank form
+            message = ""
+            table = search(request.GET['search_text'])
+            for row in table:
+                message += "\t<tr>\n"
+                for col in row:
+                    if str(col) == "nan":
+                        col = ""
+                    message += f"\t\t<td>{str(col)}</td>\n"
+                message += "\t</tr>\n"
+            return render(request, 'index.html', {'form': form, 'table': message, 'info': info})
     else:
         form = NameForm()
 
