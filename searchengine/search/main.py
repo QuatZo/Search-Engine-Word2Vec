@@ -18,7 +18,8 @@ def search(inp):
         df_set = pd.read_csv(path_to_dataset, sep=";", index_col=0).values  # baza danych (czytamy pliki)
         processed_data = prepare(df_set, path_to_stop_words)
         del df_set
-        if not train(processed_data, path_to_model, arg_epochs=20, arg_iter=10):  # arg_iter=50 - nie polecam
+        if not train(processed_data, path_to_model, now(), arg_epochs=30, arg_iter=10, arg_size=300, arg_sample=6e-5,
+                     arg_min_count=3):
             print("Whoops! Something went wrong while training model.")
             exit(-1)
     else:

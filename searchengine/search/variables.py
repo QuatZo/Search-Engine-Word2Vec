@@ -21,6 +21,6 @@ website = "http://localhost:8000/search/table.html?search_text"
 
 
 def now():
-    return dt.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')  # logi
+    return dt.datetime.now().strftime('%d-%m-%Y_%H-%M-%S')  # logi
 # endregion
 
