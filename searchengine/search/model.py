@@ -31,8 +31,7 @@ def train(arg_dataset, arg_path_to_model, arg_now, arg_epochs=20, arg_size=1000,
     try:
         start = time.time()
         model = word2vec.Word2Vec(arg_dataset, size=arg_size, sample=arg_sample, min_count=arg_min_count,
-                                  workers=arg_workers, iter=arg_iter, window=3, alpha=0.03, min_alpha=0.0007,
-                                  negative=20)
+                                  workers=arg_workers, iter=arg_iter, window=3, negative=20)
         model.train(arg_dataset, total_examples=len(arg_dataset), epochs=arg_epochs, report_delay=1)  # trenowanie
         model.init_sims(replace=True)
         model.save(arg_path_to_model)  # zapis słownika/modelu do pliku (binarnie)

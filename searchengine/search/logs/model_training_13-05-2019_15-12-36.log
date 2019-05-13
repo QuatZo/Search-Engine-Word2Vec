@@ -1,0 +1,1610 @@
+2019-05-13 15:12:36,857 : INFO : collecting all words and their counts
+2019-05-13 15:12:36,857 : INFO : PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2019-05-13 15:12:36,867 : INFO : PROGRESS: at sentence #10000, processed 37876 words, keeping 14508 word types
+2019-05-13 15:12:36,877 : INFO : PROGRESS: at sentence #20000, processed 73372 words, keeping 23383 word types
+2019-05-13 15:12:36,886 : INFO : PROGRESS: at sentence #30000, processed 110598 words, keeping 31573 word types
+2019-05-13 15:12:36,896 : INFO : PROGRESS: at sentence #40000, processed 149779 words, keeping 38426 word types
+2019-05-13 15:12:36,907 : INFO : PROGRESS: at sentence #50000, processed 185097 words, keeping 44693 word types
+2019-05-13 15:12:36,917 : INFO : PROGRESS: at sentence #60000, processed 222393 words, keeping 50546 word types
+2019-05-13 15:12:36,927 : INFO : PROGRESS: at sentence #70000, processed 258440 words, keeping 56481 word types
+2019-05-13 15:12:36,936 : INFO : PROGRESS: at sentence #80000, processed 293254 words, keeping 62149 word types
+2019-05-13 15:12:36,946 : INFO : PROGRESS: at sentence #90000, processed 330708 words, keeping 67118 word types
+2019-05-13 15:12:36,956 : INFO : PROGRESS: at sentence #100000, processed 365011 words, keeping 71860 word types
+2019-05-13 15:12:36,967 : INFO : PROGRESS: at sentence #110000, processed 401530 words, keeping 76567 word types
+2019-05-13 15:12:36,976 : INFO : PROGRESS: at sentence #120000, processed 436509 words, keeping 81093 word types
+2019-05-13 15:12:36,987 : INFO : PROGRESS: at sentence #130000, processed 474683 words, keeping 85807 word types
+2019-05-13 15:12:36,999 : INFO : PROGRESS: at sentence #140000, processed 509687 words, keeping 90324 word types
+2019-05-13 15:12:37,010 : INFO : PROGRESS: at sentence #150000, processed 551883 words, keeping 94491 word types
+2019-05-13 15:12:37,020 : INFO : PROGRESS: at sentence #160000, processed 586082 words, keeping 98164 word types
+2019-05-13 15:12:37,030 : INFO : PROGRESS: at sentence #170000, processed 622741 words, keeping 102205 word types
+2019-05-13 15:12:37,041 : INFO : PROGRESS: at sentence #180000, processed 659371 words, keeping 106511 word types
+2019-05-13 15:12:37,052 : INFO : PROGRESS: at sentence #190000, processed 698694 words, keeping 110690 word types
+2019-05-13 15:12:37,062 : INFO : PROGRESS: at sentence #200000, processed 737134 words, keeping 115026 word types
+2019-05-13 15:12:37,073 : INFO : PROGRESS: at sentence #210000, processed 777005 words, keeping 119332 word types
+2019-05-13 15:12:37,083 : INFO : PROGRESS: at sentence #220000, processed 812658 words, keeping 122977 word types
+2019-05-13 15:12:37,094 : INFO : PROGRESS: at sentence #230000, processed 850600 words, keeping 126552 word types
+2019-05-13 15:12:37,104 : INFO : PROGRESS: at sentence #240000, processed 881507 words, keeping 129384 word types
+2019-05-13 15:12:37,115 : INFO : PROGRESS: at sentence #250000, processed 921312 words, keeping 133382 word types
+2019-05-13 15:12:37,126 : INFO : PROGRESS: at sentence #260000, processed 958314 words, keeping 136835 word types
+2019-05-13 15:12:37,137 : INFO : PROGRESS: at sentence #270000, processed 999305 words, keeping 140271 word types
+2019-05-13 15:12:37,148 : INFO : PROGRESS: at sentence #280000, processed 1038433 words, keeping 143864 word types
+2019-05-13 15:12:37,159 : INFO : PROGRESS: at sentence #290000, processed 1074410 words, keeping 146789 word types
+2019-05-13 15:12:37,170 : INFO : PROGRESS: at sentence #300000, processed 1111378 words, keeping 150363 word types
+2019-05-13 15:12:37,180 : INFO : PROGRESS: at sentence #310000, processed 1147832 words, keeping 153350 word types
+2019-05-13 15:12:37,192 : INFO : PROGRESS: at sentence #320000, processed 1188346 words, keeping 156892 word types
+2019-05-13 15:12:37,203 : INFO : PROGRESS: at sentence #330000, processed 1225462 words, keeping 160207 word types
+2019-05-13 15:12:37,213 : INFO : PROGRESS: at sentence #340000, processed 1261136 words, keeping 163369 word types
+2019-05-13 15:12:37,224 : INFO : PROGRESS: at sentence #350000, processed 1298844 words, keeping 166267 word types
+2019-05-13 15:12:37,234 : INFO : PROGRESS: at sentence #360000, processed 1335541 words, keeping 169205 word types
+2019-05-13 15:12:37,245 : INFO : PROGRESS: at sentence #370000, processed 1372899 words, keeping 172051 word types
+2019-05-13 15:12:37,263 : INFO : PROGRESS: at sentence #380000, processed 1410883 words, keeping 174860 word types
+2019-05-13 15:12:37,274 : INFO : PROGRESS: at sentence #390000, processed 1448550 words, keeping 177570 word types
+2019-05-13 15:12:37,285 : INFO : PROGRESS: at sentence #400000, processed 1484369 words, keeping 180034 word types
+2019-05-13 15:12:37,296 : INFO : PROGRESS: at sentence #410000, processed 1520074 words, keeping 182732 word types
+2019-05-13 15:12:37,307 : INFO : PROGRESS: at sentence #420000, processed 1556235 words, keeping 185275 word types
+2019-05-13 15:12:37,319 : INFO : PROGRESS: at sentence #430000, processed 1597370 words, keeping 188275 word types
+2019-05-13 15:12:37,331 : INFO : PROGRESS: at sentence #440000, processed 1635257 words, keeping 190915 word types
+2019-05-13 15:12:37,342 : INFO : PROGRESS: at sentence #450000, processed 1674388 words, keeping 193627 word types
+2019-05-13 15:12:37,353 : INFO : PROGRESS: at sentence #460000, processed 1711793 words, keeping 196136 word types
+2019-05-13 15:12:37,365 : INFO : PROGRESS: at sentence #470000, processed 1751651 words, keeping 198633 word types
+2019-05-13 15:12:37,376 : INFO : PROGRESS: at sentence #480000, processed 1791107 words, keeping 201273 word types
+2019-05-13 15:12:37,388 : INFO : PROGRESS: at sentence #490000, processed 1830840 words, keeping 203778 word types
+2019-05-13 15:12:37,399 : INFO : PROGRESS: at sentence #500000, processed 1869003 words, keeping 206397 word types
+2019-05-13 15:12:37,410 : INFO : PROGRESS: at sentence #510000, processed 1905056 words, keeping 208798 word types
+2019-05-13 15:12:37,421 : INFO : PROGRESS: at sentence #520000, processed 1946466 words, keeping 211451 word types
+2019-05-13 15:12:37,433 : INFO : PROGRESS: at sentence #530000, processed 1984438 words, keeping 214285 word types
+2019-05-13 15:12:37,443 : INFO : PROGRESS: at sentence #540000, processed 2020651 words, keeping 216495 word types
+2019-05-13 15:12:37,455 : INFO : PROGRESS: at sentence #550000, processed 2060708 words, keeping 219061 word types
+2019-05-13 15:12:37,467 : INFO : PROGRESS: at sentence #560000, processed 2104431 words, keeping 221689 word types
+2019-05-13 15:12:37,479 : INFO : PROGRESS: at sentence #570000, processed 2146152 words, keeping 224347 word types
+2019-05-13 15:12:37,490 : INFO : PROGRESS: at sentence #580000, processed 2187627 words, keeping 226746 word types
+2019-05-13 15:12:37,503 : INFO : PROGRESS: at sentence #590000, processed 2228484 words, keeping 229576 word types
+2019-05-13 15:12:37,515 : INFO : PROGRESS: at sentence #600000, processed 2267364 words, keeping 232064 word types
+2019-05-13 15:12:37,527 : INFO : PROGRESS: at sentence #610000, processed 2314331 words, keeping 234383 word types
+2019-05-13 15:12:37,539 : INFO : PROGRESS: at sentence #620000, processed 2354834 words, keeping 236677 word types
+2019-05-13 15:12:37,552 : INFO : PROGRESS: at sentence #630000, processed 2398565 words, keeping 239363 word types
+2019-05-13 15:12:37,552 : INFO : collected 239394 word types from a corpus of 2399154 raw words and 630194 sentences
+2019-05-13 15:12:37,552 : INFO : Loading a fresh vocabulary
+2019-05-13 15:12:37,941 : INFO : effective_min_count=3 retains 77226 unique words (32% of original 239394, drops 162168)
+2019-05-13 15:12:37,941 : INFO : effective_min_count=3 leaves 2201511 word corpus (91% of original 2399154, drops 197643)
+2019-05-13 15:12:38,154 : INFO : deleting the raw counts dictionary of 239394 items
+2019-05-13 15:12:38,158 : INFO : sample=6e-05 downsamples 751 most-common words
+2019-05-13 15:12:38,158 : INFO : downsampling leaves estimated 1747594 word corpus (79.4% of prior 2201511)
+2019-05-13 15:12:38,375 : INFO : estimated required memory for 77226 words and 1500 dimensions: 965325000 bytes
+2019-05-13 15:12:38,376 : INFO : resetting layer weights
+2019-05-13 15:12:40,319 : INFO : training model with 12 workers on 77226 vocabulary and 1500 features, using sg=0 hs=0 sample=6e-05 negative=20 window=3
+2019-05-13 15:12:41,624 : INFO : EPOCH 1 - PROGRESS: at 5.49% examples, 72740 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:42,626 : INFO : EPOCH 1 - PROGRESS: at 11.61% examples, 85033 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:12:43,654 : INFO : EPOCH 1 - PROGRESS: at 19.59% examples, 97831 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:44,731 : INFO : EPOCH 1 - PROGRESS: at 26.84% examples, 102051 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:45,800 : INFO : EPOCH 1 - PROGRESS: at 33.87% examples, 104554 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:46,804 : INFO : EPOCH 1 - PROGRESS: at 40.06% examples, 103955 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:12:47,846 : INFO : EPOCH 1 - PROGRESS: at 47.98% examples, 107910 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:48,961 : INFO : EPOCH 1 - PROGRESS: at 54.68% examples, 107343 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:49,964 : INFO : EPOCH 1 - PROGRESS: at 61.51% examples, 108283 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:50,973 : INFO : EPOCH 1 - PROGRESS: at 68.73% examples, 109671 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:52,110 : INFO : EPOCH 1 - PROGRESS: at 75.67% examples, 109651 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:12:53,116 : INFO : EPOCH 1 - PROGRESS: at 82.19% examples, 110140 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:54,147 : INFO : EPOCH 1 - PROGRESS: at 88.58% examples, 110358 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:12:55,188 : INFO : EPOCH 1 - PROGRESS: at 95.22% examples, 110902 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:12:55,445 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:12:55,479 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:12:55,507 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:12:55,566 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:12:55,596 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:12:55,601 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:12:55,648 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:12:55,699 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:12:55,706 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:12:55,714 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:12:55,721 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:12:55,741 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:12:55,742 : INFO : EPOCH - 1 : training on 2399154 raw words (1747137 effective words) took 15.4s, 113356 effective words/s
+2019-05-13 15:12:56,950 : INFO : EPOCH 2 - PROGRESS: at 5.51% examples, 78595 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:57,986 : INFO : EPOCH 2 - PROGRESS: at 12.09% examples, 90717 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:12:59,004 : INFO : EPOCH 2 - PROGRESS: at 19.99% examples, 102304 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:00,033 : INFO : EPOCH 2 - PROGRESS: at 26.84% examples, 104984 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:01,086 : INFO : EPOCH 2 - PROGRESS: at 33.03% examples, 104615 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:02,180 : INFO : EPOCH 2 - PROGRESS: at 41.29% examples, 108134 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:03,219 : INFO : EPOCH 2 - PROGRESS: at 48.33% examples, 109672 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:04,229 : INFO : EPOCH 2 - PROGRESS: at 54.30% examples, 108482 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:05,244 : INFO : EPOCH 2 - PROGRESS: at 60.62% examples, 108417 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:13:06,298 : INFO : EPOCH 2 - PROGRESS: at 68.28% examples, 110024 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:13:07,345 : INFO : EPOCH 2 - PROGRESS: at 74.89% examples, 110173 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:08,347 : INFO : EPOCH 2 - PROGRESS: at 81.45% examples, 110662 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:09,421 : INFO : EPOCH 2 - PROGRESS: at 87.85% examples, 110493 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:10,427 : INFO : EPOCH 2 - PROGRESS: at 94.04% examples, 110813 words/s, in_qsize 16, out_qsize 1
+2019-05-13 15:13:10,755 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:13:10,755 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:13:10,799 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:13:10,861 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:13:10,880 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:13:10,937 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:13:10,968 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:13:11,015 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:13:11,026 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:13:11,028 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:13:11,057 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:13:11,098 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:13:11,098 : INFO : EPOCH - 2 : training on 2399154 raw words (1747444 effective words) took 15.3s, 113863 effective words/s
+2019-05-13 15:13:12,358 : INFO : EPOCH 3 - PROGRESS: at 5.49% examples, 75350 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:13,422 : INFO : EPOCH 3 - PROGRESS: at 12.51% examples, 90693 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:14,494 : INFO : EPOCH 3 - PROGRESS: at 20.41% examples, 100293 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:15,584 : INFO : EPOCH 3 - PROGRESS: at 27.27% examples, 101979 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:16,724 : INFO : EPOCH 3 - PROGRESS: at 34.33% examples, 103177 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:13:17,801 : INFO : EPOCH 3 - PROGRESS: at 41.67% examples, 104926 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:18,893 : INFO : EPOCH 3 - PROGRESS: at 49.23% examples, 107025 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:19,919 : INFO : EPOCH 3 - PROGRESS: at 56.02% examples, 107689 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:20,934 : INFO : EPOCH 3 - PROGRESS: at 63.21% examples, 109177 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:21,958 : INFO : EPOCH 3 - PROGRESS: at 69.98% examples, 109666 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:23,095 : INFO : EPOCH 3 - PROGRESS: at 75.67% examples, 107799 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:24,138 : INFO : EPOCH 3 - PROGRESS: at 84.26% examples, 110926 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:25,217 : INFO : EPOCH 3 - PROGRESS: at 90.16% examples, 110168 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:26,263 : INFO : EPOCH 3 - PROGRESS: at 96.05% examples, 109823 words/s, in_qsize 11, out_qsize 1
+2019-05-13 15:13:26,264 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:13:26,361 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:13:26,426 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:13:26,437 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:13:26,455 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:13:26,467 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:13:26,497 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:13:26,499 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:13:26,515 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:13:26,562 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:13:26,584 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:13:26,595 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:13:26,596 : INFO : EPOCH - 3 : training on 2399154 raw words (1747737 effective words) took 15.5s, 112837 effective words/s
+2019-05-13 15:13:27,668 : INFO : EPOCH 4 - PROGRESS: at 5.49% examples, 88558 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:28,722 : INFO : EPOCH 4 - PROGRESS: at 11.17% examples, 88911 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:13:29,823 : INFO : EPOCH 4 - PROGRESS: at 19.17% examples, 98855 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:30,849 : INFO : EPOCH 4 - PROGRESS: at 25.58% examples, 100716 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:13:32,036 : INFO : EPOCH 4 - PROGRESS: at 34.33% examples, 106706 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:13:33,230 : INFO : EPOCH 4 - PROGRESS: at 41.67% examples, 105997 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:34,255 : INFO : EPOCH 4 - PROGRESS: at 48.71% examples, 107966 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:35,284 : INFO : EPOCH 4 - PROGRESS: at 56.84% examples, 110989 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:36,418 : INFO : EPOCH 4 - PROGRESS: at 62.33% examples, 107847 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:37,422 : INFO : EPOCH 4 - PROGRESS: at 70.77% examples, 111317 words/s, in_qsize 22, out_qsize 2
+2019-05-13 15:13:38,627 : INFO : EPOCH 4 - PROGRESS: at 77.17% examples, 109942 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:39,637 : INFO : EPOCH 4 - PROGRESS: at 84.70% examples, 111445 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:13:40,828 : INFO : EPOCH 4 - PROGRESS: at 91.68% examples, 111327 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:41,533 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:13:41,575 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:13:41,595 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:13:41,621 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:13:41,634 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:13:41,665 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:13:41,705 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:13:41,752 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:13:41,769 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:13:41,791 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:13:41,800 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:13:41,809 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:13:41,809 : INFO : EPOCH - 4 : training on 2399154 raw words (1747480 effective words) took 15.2s, 114938 effective words/s
+2019-05-13 15:13:42,853 : INFO : EPOCH 5 - PROGRESS: at 5.49% examples, 91230 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:43,871 : INFO : EPOCH 5 - PROGRESS: at 11.17% examples, 91775 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:44,885 : INFO : EPOCH 5 - PROGRESS: at 18.27% examples, 99056 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:45,902 : INFO : EPOCH 5 - PROGRESS: at 25.13% examples, 102964 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:13:46,959 : INFO : EPOCH 5 - PROGRESS: at 33.41% examples, 109952 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:48,215 : INFO : EPOCH 5 - PROGRESS: at 40.40% examples, 106402 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:49,255 : INFO : EPOCH 5 - PROGRESS: at 48.37% examples, 110075 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:50,417 : INFO : EPOCH 5 - PROGRESS: at 55.54% examples, 109450 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:13:51,446 : INFO : EPOCH 5 - PROGRESS: at 63.69% examples, 112100 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:52,542 : INFO : EPOCH 5 - PROGRESS: at 70.71% examples, 112277 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:13:53,629 : INFO : EPOCH 5 - PROGRESS: at 78.04% examples, 113100 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:54,642 : INFO : EPOCH 5 - PROGRESS: at 84.26% examples, 112643 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:13:55,755 : INFO : EPOCH 5 - PROGRESS: at 91.35% examples, 113047 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:56,481 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:13:56,519 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:13:56,552 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:13:56,586 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:13:56,601 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:13:56,694 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:13:56,724 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:13:56,734 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:13:56,748 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:13:56,791 : INFO : EPOCH 5 - PROGRESS: at 99.26% examples, 115702 words/s, in_qsize 2, out_qsize 1
+2019-05-13 15:13:56,791 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:13:56,793 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:13:56,801 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:13:56,801 : INFO : EPOCH - 5 : training on 2399154 raw words (1747270 effective words) took 15.0s, 116608 effective words/s
+2019-05-13 15:13:57,886 : INFO : EPOCH 6 - PROGRESS: at 5.49% examples, 87742 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:58,900 : INFO : EPOCH 6 - PROGRESS: at 11.17% examples, 90077 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:13:59,908 : INFO : EPOCH 6 - PROGRESS: at 18.69% examples, 100340 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:00,965 : INFO : EPOCH 6 - PROGRESS: at 26.84% examples, 108180 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:02,023 : INFO : EPOCH 6 - PROGRESS: at 33.03% examples, 107058 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:03,036 : INFO : EPOCH 6 - PROGRESS: at 40.44% examples, 109343 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:04,076 : INFO : EPOCH 6 - PROGRESS: at 47.50% examples, 110747 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:05,157 : INFO : EPOCH 6 - PROGRESS: at 54.68% examples, 111103 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:06,241 : INFO : EPOCH 6 - PROGRESS: at 62.81% examples, 113033 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:14:07,245 : INFO : EPOCH 6 - PROGRESS: at 69.55% examples, 113351 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:08,282 : INFO : EPOCH 6 - PROGRESS: at 76.03% examples, 113318 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:09,334 : INFO : EPOCH 6 - PROGRESS: at 83.46% examples, 114258 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:10,374 : INFO : EPOCH 6 - PROGRESS: at 89.72% examples, 114089 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:11,368 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:14:11,374 : INFO : EPOCH 6 - PROGRESS: at 96.60% examples, 115309 words/s, in_qsize 10, out_qsize 1
+2019-05-13 15:14:11,375 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:14:11,442 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:14:11,470 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:14:11,504 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:14:11,508 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:14:11,509 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:14:11,562 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:14:11,580 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:14:11,645 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:14:11,651 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:14:11,654 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:14:11,654 : INFO : EPOCH - 6 : training on 2399154 raw words (1747982 effective words) took 14.8s, 117767 effective words/s
+2019-05-13 15:14:12,717 : INFO : EPOCH 7 - PROGRESS: at 5.49% examples, 89413 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:13,724 : INFO : EPOCH 7 - PROGRESS: at 11.19% examples, 91271 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:14,755 : INFO : EPOCH 7 - PROGRESS: at 19.57% examples, 105225 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:15,812 : INFO : EPOCH 7 - PROGRESS: at 27.27% examples, 109953 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:14:16,862 : INFO : EPOCH 7 - PROGRESS: at 34.29% examples, 111471 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:17,902 : INFO : EPOCH 7 - PROGRESS: at 41.69% examples, 112554 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:18,914 : INFO : EPOCH 7 - PROGRESS: at 48.40% examples, 112854 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:14:19,975 : INFO : EPOCH 7 - PROGRESS: at 55.54% examples, 113243 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:21,033 : INFO : EPOCH 7 - PROGRESS: at 61.89% examples, 112125 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:22,035 : INFO : EPOCH 7 - PROGRESS: at 68.31% examples, 111845 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:23,048 : INFO : EPOCH 7 - PROGRESS: at 74.82% examples, 112176 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:14:24,159 : INFO : EPOCH 7 - PROGRESS: at 81.84% examples, 112090 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:25,167 : INFO : EPOCH 7 - PROGRESS: at 88.23% examples, 112367 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:26,180 : INFO : EPOCH 7 - PROGRESS: at 94.02% examples, 112010 words/s, in_qsize 17, out_qsize 0
+2019-05-13 15:14:26,528 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:14:26,604 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:14:26,641 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:14:26,642 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:14:26,678 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:14:26,685 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:14:26,739 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:14:26,769 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:14:26,846 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:14:26,860 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:14:26,865 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:14:26,865 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:14:26,865 : INFO : EPOCH - 7 : training on 2399154 raw words (1747097 effective words) took 15.2s, 114925 effective words/s
+2019-05-13 15:14:27,890 : INFO : EPOCH 8 - PROGRESS: at 5.49% examples, 92921 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:28,965 : INFO : EPOCH 8 - PROGRESS: at 11.17% examples, 89994 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:29,972 : INFO : EPOCH 8 - PROGRESS: at 18.74% examples, 100359 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:31,134 : INFO : EPOCH 8 - PROGRESS: at 26.84% examples, 105489 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:32,133 : INFO : EPOCH 8 - PROGRESS: at 33.41% examples, 107441 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:33,263 : INFO : EPOCH 8 - PROGRESS: at 39.98% examples, 105414 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:14:34,363 : INFO : EPOCH 8 - PROGRESS: at 49.23% examples, 111298 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:35,437 : INFO : EPOCH 8 - PROGRESS: at 55.10% examples, 109093 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:36,480 : INFO : EPOCH 8 - PROGRESS: at 62.36% examples, 110139 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:14:37,485 : INFO : EPOCH 8 - PROGRESS: at 69.55% examples, 111430 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:38,537 : INFO : EPOCH 8 - PROGRESS: at 75.64% examples, 110800 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:39,582 : INFO : EPOCH 8 - PROGRESS: at 83.04% examples, 112018 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:40,674 : INFO : EPOCH 8 - PROGRESS: at 89.76% examples, 112112 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:41,697 : INFO : EPOCH 8 - PROGRESS: at 95.57% examples, 111711 words/s, in_qsize 12, out_qsize 1
+2019-05-13 15:14:41,803 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:14:41,817 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:14:41,850 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:14:41,859 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:14:41,902 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:14:41,915 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:14:41,969 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:14:42,041 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:14:42,061 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:14:42,091 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:14:42,097 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:14:42,111 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:14:42,112 : INFO : EPOCH - 8 : training on 2399154 raw words (1747576 effective words) took 15.2s, 114694 effective words/s
+2019-05-13 15:14:43,243 : INFO : EPOCH 9 - PROGRESS: at 5.49% examples, 84016 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:44,334 : INFO : EPOCH 9 - PROGRESS: at 11.61% examples, 88388 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:45,337 : INFO : EPOCH 9 - PROGRESS: at 19.59% examples, 101213 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:46,522 : INFO : EPOCH 9 - PROGRESS: at 27.68% examples, 105367 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:47,531 : INFO : EPOCH 9 - PROGRESS: at 34.33% examples, 107118 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:48,540 : INFO : EPOCH 9 - PROGRESS: at 42.46% examples, 111773 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:14:49,556 : INFO : EPOCH 9 - PROGRESS: at 48.35% examples, 110142 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:50,691 : INFO : EPOCH 9 - PROGRESS: at 56.02% examples, 110743 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:51,693 : INFO : EPOCH 9 - PROGRESS: at 62.77% examples, 111318 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:52,731 : INFO : EPOCH 9 - PROGRESS: at 69.98% examples, 112150 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:53,780 : INFO : EPOCH 9 - PROGRESS: at 76.42% examples, 112100 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:14:54,808 : INFO : EPOCH 9 - PROGRESS: at 83.46% examples, 112770 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:14:55,819 : INFO : EPOCH 9 - PROGRESS: at 89.76% examples, 112933 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:14:56,804 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:14:56,851 : INFO : EPOCH 9 - PROGRESS: at 96.60% examples, 113978 words/s, in_qsize 10, out_qsize 1
+2019-05-13 15:14:56,852 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:14:56,875 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:14:56,939 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:14:56,943 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:14:56,970 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:14:57,059 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:14:57,060 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:14:57,083 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:14:57,101 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:14:57,122 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:14:57,127 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:14:57,127 : INFO : EPOCH - 9 : training on 2399154 raw words (1747565 effective words) took 15.0s, 116457 effective words/s
+2019-05-13 15:14:58,193 : INFO : EPOCH 10 - PROGRESS: at 5.49% examples, 89160 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:14:59,223 : INFO : EPOCH 10 - PROGRESS: at 11.17% examples, 90175 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:15:00,281 : INFO : EPOCH 10 - PROGRESS: at 19.59% examples, 103458 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:15:01,385 : INFO : EPOCH 10 - PROGRESS: at 27.27% examples, 107452 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:15:02,397 : INFO : EPOCH 10 - PROGRESS: at 34.33% examples, 110176 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:03,502 : INFO : EPOCH 10 - PROGRESS: at 42.08% examples, 111518 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:04,648 : INFO : EPOCH 10 - PROGRESS: at 49.19% examples, 110930 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:05,675 : INFO : EPOCH 10 - PROGRESS: at 56.87% examples, 112840 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:06,845 : INFO : EPOCH 10 - PROGRESS: at 64.50% examples, 112706 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:07,978 : INFO : EPOCH 10 - PROGRESS: at 72.80% examples, 114454 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:09,015 : INFO : EPOCH 10 - PROGRESS: at 79.30% examples, 114296 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:10,028 : INFO : EPOCH 10 - PROGRESS: at 86.34% examples, 114895 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:11,092 : INFO : EPOCH 10 - PROGRESS: at 93.22% examples, 115521 words/s, in_qsize 19, out_qsize 0
+2019-05-13 15:15:11,634 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:15:11,718 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:15:11,723 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:15:11,728 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:15:11,741 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:15:11,772 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:15:11,790 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:15:11,827 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:15:11,853 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:15:11,856 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:15:11,865 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:15:11,937 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:15:11,938 : INFO : EPOCH - 10 : training on 2399154 raw words (1747692 effective words) took 14.8s, 118084 effective words/s
+2019-05-13 15:15:11,938 : INFO : training on a 23991540 raw words (17474980 effective words) took 151.6s, 115257 effective words/s
+2019-05-13 15:15:11,938 : WARNING : Effective 'alpha' higher than previous training cycles
+2019-05-13 15:15:11,938 : INFO : training model with 12 workers on 77226 vocabulary and 1500 features, using sg=0 hs=0 sample=6e-05 negative=20 window=3
+2019-05-13 15:15:13,000 : INFO : EPOCH 1 - PROGRESS: at 5.49% examples, 89740 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:14,037 : INFO : EPOCH 1 - PROGRESS: at 11.17% examples, 90108 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:15,057 : INFO : EPOCH 1 - PROGRESS: at 20.02% examples, 106993 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:16,112 : INFO : EPOCH 1 - PROGRESS: at 26.84% examples, 107946 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:17,122 : INFO : EPOCH 1 - PROGRESS: at 34.29% examples, 112066 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:18,144 : INFO : EPOCH 1 - PROGRESS: at 41.29% examples, 112199 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:19,153 : INFO : EPOCH 1 - PROGRESS: at 48.40% examples, 113688 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:20,220 : INFO : EPOCH 1 - PROGRESS: at 55.54% examples, 113852 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:15:21,258 : INFO : EPOCH 1 - PROGRESS: at 64.08% examples, 116804 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:22,381 : INFO : EPOCH 1 - PROGRESS: at 70.71% examples, 115489 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:23,406 : INFO : EPOCH 1 - PROGRESS: at 78.43% examples, 117297 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:24,501 : INFO : EPOCH 1 - PROGRESS: at 85.55% examples, 116892 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:25,518 : INFO : EPOCH 1 - PROGRESS: at 92.04% examples, 117258 words/s, in_qsize 22, out_qsize 0
+2019-05-13 15:15:26,151 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:15:26,219 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:15:26,225 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:15:26,230 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:15:26,234 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:15:26,256 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:15:26,272 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:15:26,344 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:15:26,400 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:15:26,401 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:15:26,411 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:15:26,420 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:15:26,420 : INFO : EPOCH - 1 : training on 2399154 raw words (1748153 effective words) took 14.5s, 120790 effective words/s
+2019-05-13 15:15:27,567 : INFO : EPOCH 2 - PROGRESS: at 5.88% examples, 89373 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:28,575 : INFO : EPOCH 2 - PROGRESS: at 12.51% examples, 97879 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:29,860 : INFO : EPOCH 2 - PROGRESS: at 22.21% examples, 107295 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:30,900 : INFO : EPOCH 2 - PROGRESS: at 30.20% examples, 113414 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:31,923 : INFO : EPOCH 2 - PROGRESS: at 37.48% examples, 114722 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:32,936 : INFO : EPOCH 2 - PROGRESS: at 44.89% examples, 117003 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:34,019 : INFO : EPOCH 2 - PROGRESS: at 52.10% examples, 116454 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:35,022 : INFO : EPOCH 2 - PROGRESS: at 59.46% examples, 117193 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:36,074 : INFO : EPOCH 2 - PROGRESS: at 67.54% examples, 118775 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:37,234 : INFO : EPOCH 2 - PROGRESS: at 74.45% examples, 117556 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:38,397 : INFO : EPOCH 2 - PROGRESS: at 83.46% examples, 119544 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:39,470 : INFO : EPOCH 2 - PROGRESS: at 89.76% examples, 118620 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:40,262 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:15:40,278 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:15:40,284 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:15:40,318 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:15:40,366 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:15:40,435 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:15:40,527 : INFO : EPOCH 2 - PROGRESS: at 98.21% examples, 121324 words/s, in_qsize 5, out_qsize 1
+2019-05-13 15:15:40,528 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:15:40,546 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:15:40,583 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:15:40,593 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:15:40,595 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:15:40,601 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:15:40,601 : INFO : EPOCH - 2 : training on 2399154 raw words (1747604 effective words) took 14.2s, 123324 effective words/s
+2019-05-13 15:15:41,910 : INFO : EPOCH 3 - PROGRESS: at 5.97% examples, 78105 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:42,936 : INFO : EPOCH 3 - PROGRESS: at 14.24% examples, 102800 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:43,970 : INFO : EPOCH 3 - PROGRESS: at 22.21% examples, 109527 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:45,021 : INFO : EPOCH 3 - PROGRESS: at 29.81% examples, 113246 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:46,059 : INFO : EPOCH 3 - PROGRESS: at 37.96% examples, 116905 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:47,104 : INFO : EPOCH 3 - PROGRESS: at 44.47% examples, 116040 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:48,134 : INFO : EPOCH 3 - PROGRESS: at 52.98% examples, 119317 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:49,207 : INFO : EPOCH 3 - PROGRESS: at 59.82% examples, 117969 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:50,223 : INFO : EPOCH 3 - PROGRESS: at 67.48% examples, 119154 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:15:51,293 : INFO : EPOCH 3 - PROGRESS: at 75.26% examples, 120248 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:15:52,322 : INFO : EPOCH 3 - PROGRESS: at 82.58% examples, 120931 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:53,420 : INFO : EPOCH 3 - PROGRESS: at 89.76% examples, 120787 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:54,278 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:15:54,325 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:15:54,365 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:15:54,434 : INFO : EPOCH 3 - PROGRESS: at 97.17% examples, 122100 words/s, in_qsize 8, out_qsize 1
+2019-05-13 15:15:54,434 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:15:54,463 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:15:54,463 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:15:54,487 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:15:54,539 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:15:54,591 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:15:54,598 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:15:54,599 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:15:54,615 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:15:54,615 : INFO : EPOCH - 3 : training on 2399154 raw words (1747986 effective words) took 14.0s, 124806 effective words/s
+2019-05-13 15:15:55,925 : INFO : EPOCH 4 - PROGRESS: at 5.88% examples, 78149 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:56,978 : INFO : EPOCH 4 - PROGRESS: at 15.56% examples, 110819 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:15:58,109 : INFO : EPOCH 4 - PROGRESS: at 23.06% examples, 109905 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:15:59,212 : INFO : EPOCH 4 - PROGRESS: at 31.86% examples, 116969 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:00,259 : INFO : EPOCH 4 - PROGRESS: at 39.24% examples, 117046 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:16:01,298 : INFO : EPOCH 4 - PROGRESS: at 47.51% examples, 120614 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:02,388 : INFO : EPOCH 4 - PROGRESS: at 54.68% examples, 119451 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:03,421 : INFO : EPOCH 4 - PROGRESS: at 62.77% examples, 121159 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:04,444 : INFO : EPOCH 4 - PROGRESS: at 70.32% examples, 121959 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:05,528 : INFO : EPOCH 4 - PROGRESS: at 78.04% examples, 122587 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:06,545 : INFO : EPOCH 4 - PROGRESS: at 86.01% examples, 123673 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:07,579 : INFO : EPOCH 4 - PROGRESS: at 92.04% examples, 122822 words/s, in_qsize 22, out_qsize 0
+2019-05-13 15:16:08,119 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:16:08,160 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:16:08,199 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:16:08,250 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:16:08,291 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:16:08,334 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:16:08,340 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:16:08,378 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:16:08,388 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:16:08,406 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:16:08,427 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:16:08,430 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:16:08,430 : INFO : EPOCH - 4 : training on 2399154 raw words (1747963 effective words) took 13.8s, 126614 effective words/s
+2019-05-13 15:16:09,708 : INFO : EPOCH 5 - PROGRESS: at 5.88% examples, 79989 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:10,732 : INFO : EPOCH 5 - PROGRESS: at 15.63% examples, 113508 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:11,742 : INFO : EPOCH 5 - PROGRESS: at 22.21% examples, 111379 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:12,817 : INFO : EPOCH 5 - PROGRESS: at 30.18% examples, 115792 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:13,879 : INFO : EPOCH 5 - PROGRESS: at 38.86% examples, 119709 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:16:14,933 : INFO : EPOCH 5 - PROGRESS: at 45.32% examples, 118270 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:16:16,004 : INFO : EPOCH 5 - PROGRESS: at 54.68% examples, 122456 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:17,049 : INFO : EPOCH 5 - PROGRESS: at 62.36% examples, 122813 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:18,053 : INFO : EPOCH 5 - PROGRESS: at 69.98% examples, 123696 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:19,128 : INFO : EPOCH 5 - PROGRESS: at 77.25% examples, 123594 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:20,175 : INFO : EPOCH 5 - PROGRESS: at 86.41% examples, 126127 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:21,210 : INFO : EPOCH 5 - PROGRESS: at 92.37% examples, 125059 words/s, in_qsize 21, out_qsize 0
+2019-05-13 15:16:21,779 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:16:21,782 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:16:21,799 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:16:21,821 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:16:21,840 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:16:21,892 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:16:21,914 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:16:21,933 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:16:21,976 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:16:21,981 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:16:21,986 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:16:21,993 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:16:21,993 : INFO : EPOCH - 5 : training on 2399154 raw words (1747029 effective words) took 13.6s, 128874 effective words/s
+2019-05-13 15:16:23,078 : INFO : EPOCH 6 - PROGRESS: at 5.49% examples, 87685 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:24,107 : INFO : EPOCH 6 - PROGRESS: at 13.81% examples, 110140 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:25,158 : INFO : EPOCH 6 - PROGRESS: at 21.79% examples, 114371 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:26,183 : INFO : EPOCH 6 - PROGRESS: at 29.81% examples, 119529 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:27,401 : INFO : EPOCH 6 - PROGRESS: at 37.96% examples, 118552 words/s, in_qsize 24, out_qsize 3
+2019-05-13 15:16:28,430 : INFO : EPOCH 6 - PROGRESS: at 46.62% examples, 122880 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:29,512 : INFO : EPOCH 6 - PROGRESS: at 54.22% examples, 122451 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:30,524 : INFO : EPOCH 6 - PROGRESS: at 62.33% examples, 124179 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:31,545 : INFO : EPOCH 6 - PROGRESS: at 69.98% examples, 124637 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:16:32,575 : INFO : EPOCH 6 - PROGRESS: at 78.03% examples, 126360 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:33,661 : INFO : EPOCH 6 - PROGRESS: at 85.55% examples, 125786 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:34,764 : INFO : EPOCH 6 - PROGRESS: at 93.57% examples, 126873 words/s, in_qsize 18, out_qsize 0
+2019-05-13 15:16:35,184 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:16:35,199 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:16:35,219 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:16:35,253 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:16:35,253 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:16:35,256 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:16:35,318 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:16:35,333 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:16:35,378 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:16:35,398 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:16:35,422 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:16:35,443 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:16:35,443 : INFO : EPOCH - 6 : training on 2399154 raw words (1747218 effective words) took 13.4s, 129991 effective words/s
+2019-05-13 15:16:36,656 : INFO : EPOCH 7 - PROGRESS: at 5.88% examples, 84450 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:37,703 : INFO : EPOCH 7 - PROGRESS: at 14.33% examples, 106096 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:38,739 : INFO : EPOCH 7 - PROGRESS: at 22.89% examples, 116624 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:39,814 : INFO : EPOCH 7 - PROGRESS: at 30.57% examples, 117968 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:40,870 : INFO : EPOCH 7 - PROGRESS: at 39.19% examples, 121628 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:41,904 : INFO : EPOCH 7 - PROGRESS: at 46.67% examples, 122491 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:42,949 : INFO : EPOCH 7 - PROGRESS: at 55.10% examples, 124641 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:16:43,983 : INFO : EPOCH 7 - PROGRESS: at 63.69% examples, 126583 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:45,073 : INFO : EPOCH 7 - PROGRESS: at 71.56% examples, 126709 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:46,086 : INFO : EPOCH 7 - PROGRESS: at 78.90% examples, 127022 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:47,169 : INFO : EPOCH 7 - PROGRESS: at 87.11% examples, 127659 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:48,198 : INFO : EPOCH 7 - PROGRESS: at 94.81% examples, 128771 words/s, in_qsize 13, out_qsize 2
+2019-05-13 15:16:48,434 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:16:48,503 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:16:48,567 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:16:48,603 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:16:48,653 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:16:48,705 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:16:48,711 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:16:48,715 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:16:48,735 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:16:48,736 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:16:48,740 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:16:48,749 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:16:48,749 : INFO : EPOCH - 7 : training on 2399154 raw words (1747492 effective words) took 13.3s, 131426 effective words/s
+2019-05-13 15:16:49,983 : INFO : EPOCH 8 - PROGRESS: at 6.34% examples, 89043 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:51,034 : INFO : EPOCH 8 - PROGRESS: at 15.11% examples, 111385 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:16:52,043 : INFO : EPOCH 8 - PROGRESS: at 23.72% examples, 121463 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:53,114 : INFO : EPOCH 8 - PROGRESS: at 31.39% examples, 121534 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:16:54,200 : INFO : EPOCH 8 - PROGRESS: at 40.02% examples, 123820 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:55,205 : INFO : EPOCH 8 - PROGRESS: at 47.51% examples, 124844 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:16:56,324 : INFO : EPOCH 8 - PROGRESS: at 56.45% examples, 126446 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:57,467 : INFO : EPOCH 8 - PROGRESS: at 65.41% examples, 127394 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:16:58,552 : INFO : EPOCH 8 - PROGRESS: at 73.66% examples, 128195 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:16:59,634 : INFO : EPOCH 8 - PROGRESS: at 82.58% examples, 130256 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:00,686 : INFO : EPOCH 8 - PROGRESS: at 89.36% examples, 129123 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:01,554 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:17:01,555 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:17:01,594 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:17:01,613 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:17:01,666 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:17:01,728 : INFO : EPOCH 8 - PROGRESS: at 97.80% examples, 131340 words/s, in_qsize 6, out_qsize 1
+2019-05-13 15:17:01,729 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:17:01,767 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:17:01,816 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:17:01,816 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:17:01,826 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:17:01,832 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:17:01,856 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:17:01,856 : INFO : EPOCH - 8 : training on 2399154 raw words (1747877 effective words) took 13.1s, 133449 effective words/s
+2019-05-13 15:17:02,945 : INFO : EPOCH 9 - PROGRESS: at 5.88% examples, 94148 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:03,964 : INFO : EPOCH 9 - PROGRESS: at 13.39% examples, 106995 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:17:05,087 : INFO : EPOCH 9 - PROGRESS: at 22.21% examples, 114258 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:06,190 : INFO : EPOCH 9 - PROGRESS: at 31.84% examples, 123996 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:07,213 : INFO : EPOCH 9 - PROGRESS: at 39.57% examples, 124592 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:08,277 : INFO : EPOCH 9 - PROGRESS: at 47.50% examples, 125451 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:09,440 : INFO : EPOCH 9 - PROGRESS: at 55.12% examples, 123309 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:10,446 : INFO : EPOCH 9 - PROGRESS: at 63.23% examples, 124965 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:17:11,570 : INFO : EPOCH 9 - PROGRESS: at 71.55% examples, 125594 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:12,596 : INFO : EPOCH 9 - PROGRESS: at 79.69% examples, 127180 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:13,758 : INFO : EPOCH 9 - PROGRESS: at 87.11% examples, 125746 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:14,784 : INFO : EPOCH 9 - PROGRESS: at 94.81% examples, 127013 words/s, in_qsize 15, out_qsize 0
+2019-05-13 15:17:15,029 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:17:15,051 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:17:15,071 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:17:15,083 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:17:15,086 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:17:15,100 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:17:15,139 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:17:15,162 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:17:15,202 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:17:15,249 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:17:15,260 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:17:15,274 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:17:15,274 : INFO : EPOCH - 9 : training on 2399154 raw words (1747531 effective words) took 13.4s, 130325 effective words/s
+2019-05-13 15:17:16,490 : INFO : EPOCH 10 - PROGRESS: at 5.88% examples, 84273 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:17,506 : INFO : EPOCH 10 - PROGRESS: at 15.14% examples, 113963 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:18,510 : INFO : EPOCH 10 - PROGRESS: at 22.59% examples, 116326 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:19,710 : INFO : EPOCH 10 - PROGRESS: at 31.86% examples, 121094 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:17:20,763 : INFO : EPOCH 10 - PROGRESS: at 41.29% examples, 126786 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:21,786 : INFO : EPOCH 10 - PROGRESS: at 47.93% examples, 124778 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:22,930 : INFO : EPOCH 10 - PROGRESS: at 56.84% examples, 125984 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:24,038 : INFO : EPOCH 10 - PROGRESS: at 65.84% examples, 127476 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:17:25,052 : INFO : EPOCH 10 - PROGRESS: at 74.01% examples, 129246 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:26,053 : INFO : EPOCH 10 - PROGRESS: at 81.45% examples, 129399 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:27,073 : INFO : EPOCH 10 - PROGRESS: at 88.99% examples, 129959 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:28,127 : INFO : EPOCH 10 - PROGRESS: at 95.57% examples, 128887 words/s, in_qsize 13, out_qsize 0
+2019-05-13 15:17:28,188 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:17:28,242 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:17:28,261 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:17:28,267 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:17:28,286 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:17:28,288 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:17:28,329 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:17:28,353 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:17:28,358 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:17:28,388 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:17:28,401 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:17:28,433 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:17:28,434 : INFO : EPOCH - 10 : training on 2399154 raw words (1747327 effective words) took 13.1s, 132880 effective words/s
+2019-05-13 15:17:29,478 : INFO : EPOCH 11 - PROGRESS: at 5.49% examples, 91056 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:30,524 : INFO : EPOCH 11 - PROGRESS: at 13.38% examples, 107861 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:31,570 : INFO : EPOCH 11 - PROGRESS: at 21.75% examples, 115496 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:32,642 : INFO : EPOCH 11 - PROGRESS: at 29.81% examples, 118980 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:33,758 : INFO : EPOCH 11 - PROGRESS: at 38.78% examples, 122616 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:17:34,795 : INFO : EPOCH 11 - PROGRESS: at 47.07% examples, 125484 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:35,807 : INFO : EPOCH 11 - PROGRESS: at 54.68% examples, 125842 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:36,834 : INFO : EPOCH 11 - PROGRESS: at 61.89% examples, 125218 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:37,882 : INFO : EPOCH 11 - PROGRESS: at 70.32% examples, 126795 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:38,924 : INFO : EPOCH 11 - PROGRESS: at 78.43% examples, 128167 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:40,005 : INFO : EPOCH 11 - PROGRESS: at 86.01% examples, 127453 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:41,071 : INFO : EPOCH 11 - PROGRESS: at 92.80% examples, 127067 words/s, in_qsize 20, out_qsize 0
+2019-05-13 15:17:41,459 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:17:41,475 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:17:41,562 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:17:41,618 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:17:41,650 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:17:41,671 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:17:41,706 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:17:41,708 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:17:41,755 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:17:41,758 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:17:41,767 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:17:41,769 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:17:41,769 : INFO : EPOCH - 11 : training on 2399154 raw words (1747067 effective words) took 13.3s, 131100 effective words/s
+2019-05-13 15:17:43,004 : INFO : EPOCH 12 - PROGRESS: at 5.88% examples, 82860 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:44,025 : INFO : EPOCH 12 - PROGRESS: at 13.80% examples, 103189 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:45,172 : INFO : EPOCH 12 - PROGRESS: at 21.65% examples, 106484 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:46,197 : INFO : EPOCH 12 - PROGRESS: at 29.38% examples, 111429 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:47,220 : INFO : EPOCH 12 - PROGRESS: at 37.10% examples, 114440 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:48,332 : INFO : EPOCH 12 - PROGRESS: at 44.47% examples, 115042 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:49,356 : INFO : EPOCH 12 - PROGRESS: at 52.51% examples, 117597 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:50,381 : INFO : EPOCH 12 - PROGRESS: at 59.78% examples, 117955 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:17:51,475 : INFO : EPOCH 12 - PROGRESS: at 68.73% examples, 120437 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:17:52,553 : INFO : EPOCH 12 - PROGRESS: at 76.42% examples, 121286 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:53,710 : INFO : EPOCH 12 - PROGRESS: at 84.26% examples, 121111 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:54,764 : INFO : EPOCH 12 - PROGRESS: at 92.04% examples, 122507 words/s, in_qsize 22, out_qsize 0
+2019-05-13 15:17:55,333 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:17:55,348 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:17:55,416 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:17:55,422 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:17:55,445 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:17:55,469 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:17:55,509 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:17:55,543 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:17:55,560 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:17:55,581 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:17:55,588 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:17:55,636 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:17:55,636 : INFO : EPOCH - 12 : training on 2399154 raw words (1747918 effective words) took 13.9s, 126120 effective words/s
+2019-05-13 15:17:56,900 : INFO : EPOCH 13 - PROGRESS: at 5.88% examples, 81093 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:17:57,913 : INFO : EPOCH 13 - PROGRESS: at 13.81% examples, 102217 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:17:59,122 : INFO : EPOCH 13 - PROGRESS: at 23.72% examples, 114680 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:00,132 : INFO : EPOCH 13 - PROGRESS: at 32.30% examples, 121133 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:18:01,148 : INFO : EPOCH 13 - PROGRESS: at 40.02% examples, 122385 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:02,315 : INFO : EPOCH 13 - PROGRESS: at 49.23% examples, 124944 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:03,361 : INFO : EPOCH 13 - PROGRESS: at 57.31% examples, 125811 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:18:04,428 : INFO : EPOCH 13 - PROGRESS: at 65.42% examples, 126247 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:05,441 : INFO : EPOCH 13 - PROGRESS: at 73.22% examples, 127383 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:06,458 : INFO : EPOCH 13 - PROGRESS: at 79.38% examples, 125581 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:07,463 : INFO : EPOCH 13 - PROGRESS: at 88.23% examples, 128422 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:08,513 : INFO : EPOCH 13 - PROGRESS: at 94.39% examples, 126968 words/s, in_qsize 15, out_qsize 1
+2019-05-13 15:18:08,599 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:18:08,671 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:18:08,674 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:18:08,695 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:18:08,700 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:18:08,732 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:18:08,774 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:18:08,894 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:18:08,894 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:18:08,922 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:18:08,928 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:18:08,931 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:18:08,931 : INFO : EPOCH - 13 : training on 2399154 raw words (1747234 effective words) took 13.3s, 131517 effective words/s
+2019-05-13 15:18:10,021 : INFO : EPOCH 14 - PROGRESS: at 5.49% examples, 87146 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:11,096 : INFO : EPOCH 14 - PROGRESS: at 14.24% examples, 110891 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:12,134 : INFO : EPOCH 14 - PROGRESS: at 20.90% examples, 108607 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:18:13,174 : INFO : EPOCH 14 - PROGRESS: at 29.75% examples, 118072 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:14,193 : INFO : EPOCH 14 - PROGRESS: at 36.95% examples, 118623 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:15,286 : INFO : EPOCH 14 - PROGRESS: at 45.79% examples, 122213 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:16,460 : INFO : EPOCH 14 - PROGRESS: at 53.36% examples, 120363 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:18:17,464 : INFO : EPOCH 14 - PROGRESS: at 61.89% examples, 123235 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:18,482 : INFO : EPOCH 14 - PROGRESS: at 69.55% examples, 123845 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:19,571 : INFO : EPOCH 14 - PROGRESS: at 77.64% examples, 124945 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:20,613 : INFO : EPOCH 14 - PROGRESS: at 86.34% examples, 126826 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:21,636 : INFO : EPOCH 14 - PROGRESS: at 92.48% examples, 125796 words/s, in_qsize 21, out_qsize 0
+2019-05-13 15:18:22,009 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:18:22,055 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:18:22,106 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:18:22,210 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:18:22,212 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:18:22,253 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:18:22,328 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:18:22,340 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:18:22,348 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:18:22,361 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:18:22,376 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:18:22,400 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:18:22,400 : INFO : EPOCH - 14 : training on 2399154 raw words (1747083 effective words) took 13.5s, 129773 effective words/s
+2019-05-13 15:18:23,419 : INFO : EPOCH 15 - PROGRESS: at 5.49% examples, 93669 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:24,450 : INFO : EPOCH 15 - PROGRESS: at 12.96% examples, 106562 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:25,517 : INFO : EPOCH 15 - PROGRESS: at 21.75% examples, 116342 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:26,546 : INFO : EPOCH 15 - PROGRESS: at 29.77% examples, 120879 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:27,551 : INFO : EPOCH 15 - PROGRESS: at 37.58% examples, 122552 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:18:28,586 : INFO : EPOCH 15 - PROGRESS: at 45.33% examples, 124449 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:29,654 : INFO : EPOCH 15 - PROGRESS: at 52.91% examples, 124020 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:18:30,718 : INFO : EPOCH 15 - PROGRESS: at 61.93% examples, 126488 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:31,737 : INFO : EPOCH 15 - PROGRESS: at 70.32% examples, 128347 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:18:32,782 : INFO : EPOCH 15 - PROGRESS: at 77.65% examples, 128108 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:33,802 : INFO : EPOCH 15 - PROGRESS: at 85.58% examples, 128729 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:34,832 : INFO : EPOCH 15 - PROGRESS: at 92.80% examples, 129198 words/s, in_qsize 20, out_qsize 0
+2019-05-13 15:18:35,263 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:18:35,268 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:18:35,353 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:18:35,374 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:18:35,379 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:18:35,461 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:18:35,468 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:18:35,491 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:18:35,509 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:18:35,590 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:18:35,593 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:18:35,608 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:18:35,609 : INFO : EPOCH - 15 : training on 2399154 raw words (1747528 effective words) took 13.2s, 132399 effective words/s
+2019-05-13 15:18:36,651 : INFO : EPOCH 16 - PROGRESS: at 5.49% examples, 91660 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:37,666 : INFO : EPOCH 16 - PROGRESS: at 12.06% examples, 99158 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:38,674 : INFO : EPOCH 16 - PROGRESS: at 20.06% examples, 108937 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:39,827 : INFO : EPOCH 16 - PROGRESS: at 28.11% examples, 111983 words/s, in_qsize 22, out_qsize 2
+2019-05-13 15:18:40,843 : INFO : EPOCH 16 - PROGRESS: at 36.10% examples, 116615 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:41,848 : INFO : EPOCH 16 - PROGRESS: at 43.26% examples, 117561 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:18:42,868 : INFO : EPOCH 16 - PROGRESS: at 50.83% examples, 118990 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:43,874 : INFO : EPOCH 16 - PROGRESS: at 58.62% examples, 120284 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:44,887 : INFO : EPOCH 16 - PROGRESS: at 64.99% examples, 118913 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:45,917 : INFO : EPOCH 16 - PROGRESS: at 70.39% examples, 116262 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:46,954 : INFO : EPOCH 16 - PROGRESS: at 76.52% examples, 115332 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:48,034 : INFO : EPOCH 16 - PROGRESS: at 81.71% examples, 112901 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:49,146 : INFO : EPOCH 16 - PROGRESS: at 88.22% examples, 112229 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:18:50,176 : INFO : EPOCH 16 - PROGRESS: at 94.44% examples, 112255 words/s, in_qsize 16, out_qsize 0
+2019-05-13 15:18:50,325 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:18:50,338 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:18:50,439 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:18:50,505 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:18:50,551 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:18:50,654 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:18:50,703 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:18:50,764 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:18:50,775 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:18:50,791 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:18:50,802 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:18:50,849 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:18:50,850 : INFO : EPOCH - 16 : training on 2399154 raw words (1747416 effective words) took 15.2s, 114756 effective words/s
+2019-05-13 15:18:51,872 : INFO : EPOCH 17 - PROGRESS: at 3.81% examples, 64576 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:52,904 : INFO : EPOCH 17 - PROGRESS: at 11.17% examples, 92093 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:54,079 : INFO : EPOCH 17 - PROGRESS: at 17.35% examples, 89907 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:18:55,126 : INFO : EPOCH 17 - PROGRESS: at 24.58% examples, 96857 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:18:56,286 : INFO : EPOCH 17 - PROGRESS: at 31.39% examples, 97492 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:57,309 : INFO : EPOCH 17 - PROGRESS: at 38.86% examples, 101069 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:58,411 : INFO : EPOCH 17 - PROGRESS: at 46.22% examples, 103704 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:18:59,511 : INFO : EPOCH 17 - PROGRESS: at 53.83% examples, 105499 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:00,580 : INFO : EPOCH 17 - PROGRESS: at 61.89% examples, 108155 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:01,609 : INFO : EPOCH 17 - PROGRESS: at 68.30% examples, 108007 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:19:02,672 : INFO : EPOCH 17 - PROGRESS: at 76.89% examples, 111298 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:03,706 : INFO : EPOCH 17 - PROGRESS: at 83.86% examples, 111940 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:19:04,765 : INFO : EPOCH 17 - PROGRESS: at 91.29% examples, 113358 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:05,583 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:19:05,619 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:19:05,661 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:19:05,709 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:19:05,808 : INFO : EPOCH 17 - PROGRESS: at 97.33% examples, 113429 words/s, in_qsize 7, out_qsize 1
+2019-05-13 15:19:05,808 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:19:05,822 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:19:05,822 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:19:05,869 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:19:05,956 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:19:05,964 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:19:05,983 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:19:05,987 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:19:05,988 : INFO : EPOCH - 17 : training on 2399154 raw words (1747841 effective words) took 15.1s, 115535 effective words/s
+2019-05-13 15:19:07,006 : INFO : EPOCH 18 - PROGRESS: at 5.12% examples, 86259 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:08,086 : INFO : EPOCH 18 - PROGRESS: at 11.17% examples, 90178 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:09,106 : INFO : EPOCH 18 - PROGRESS: at 17.34% examples, 93202 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:10,157 : INFO : EPOCH 18 - PROGRESS: at 25.08% examples, 101118 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:11,268 : INFO : EPOCH 18 - PROGRESS: at 33.41% examples, 107241 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:12,309 : INFO : EPOCH 18 - PROGRESS: at 41.70% examples, 111325 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:13,446 : INFO : EPOCH 18 - PROGRESS: at 49.23% examples, 111920 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:19:14,455 : INFO : EPOCH 18 - PROGRESS: at 57.31% examples, 114800 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:15,502 : INFO : EPOCH 18 - PROGRESS: at 65.38% examples, 116696 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:16,615 : INFO : EPOCH 18 - PROGRESS: at 72.86% examples, 116861 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:19:17,624 : INFO : EPOCH 18 - PROGRESS: at 78.43% examples, 115579 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:18,642 : INFO : EPOCH 18 - PROGRESS: at 87.11% examples, 118307 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:19,659 : INFO : EPOCH 18 - PROGRESS: at 94.37% examples, 119620 words/s, in_qsize 16, out_qsize 0
+2019-05-13 15:19:19,951 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:19:19,989 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:19:20,075 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:19:20,104 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:19:20,113 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:19:20,164 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:19:20,210 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:19:20,225 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:19:20,244 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:19:20,270 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:19:20,281 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:19:20,306 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:19:20,306 : INFO : EPOCH - 18 : training on 2399154 raw words (1747846 effective words) took 14.3s, 122151 effective words/s
+2019-05-13 15:19:21,456 : INFO : EPOCH 19 - PROGRESS: at 5.97% examples, 89084 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:22,457 : INFO : EPOCH 19 - PROGRESS: at 14.69% examples, 114969 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:19:23,477 : INFO : EPOCH 19 - PROGRESS: at 23.35% examples, 123533 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:24,528 : INFO : EPOCH 19 - PROGRESS: at 31.39% examples, 125517 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:25,711 : INFO : EPOCH 19 - PROGRESS: at 40.49% examples, 126084 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:26,831 : INFO : EPOCH 19 - PROGRESS: at 49.61% examples, 128980 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:27,936 : INFO : EPOCH 19 - PROGRESS: at 59.37% examples, 132173 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:28,953 : INFO : EPOCH 19 - PROGRESS: at 67.15% examples, 131759 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:29,964 : INFO : EPOCH 19 - PROGRESS: at 74.89% examples, 132389 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:19:31,016 : INFO : EPOCH 19 - PROGRESS: at 83.86% examples, 134364 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:32,052 : INFO : EPOCH 19 - PROGRESS: at 90.95% examples, 133685 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:19:32,686 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:19:32,718 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:19:32,740 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:19:32,767 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:19:32,790 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:19:32,804 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:19:32,873 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:19:32,881 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:19:32,933 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:19:32,952 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:19:32,964 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:19:32,966 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:19:32,966 : INFO : EPOCH - 19 : training on 2399154 raw words (1747392 effective words) took 12.6s, 138136 effective words/s
+2019-05-13 15:19:34,106 : INFO : EPOCH 20 - PROGRESS: at 5.88% examples, 90042 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:35,112 : INFO : EPOCH 20 - PROGRESS: at 14.24% examples, 112032 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:19:36,145 : INFO : EPOCH 20 - PROGRESS: at 23.35% examples, 123351 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:37,235 : INFO : EPOCH 20 - PROGRESS: at 31.88% examples, 125908 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:19:38,323 : INFO : EPOCH 20 - PROGRESS: at 40.44% examples, 127327 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:39,324 : INFO : EPOCH 20 - PROGRESS: at 48.40% examples, 129026 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:40,343 : INFO : EPOCH 20 - PROGRESS: at 56.87% examples, 130819 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:41,446 : INFO : EPOCH 20 - PROGRESS: at 65.84% examples, 131829 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:19:42,512 : INFO : EPOCH 20 - PROGRESS: at 74.89% examples, 133960 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:43,571 : INFO : EPOCH 20 - PROGRESS: at 83.46% examples, 135016 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:19:44,586 : INFO : EPOCH 20 - PROGRESS: at 91.68% examples, 136386 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:45,156 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:19:45,222 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:19:45,260 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:19:45,307 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:19:45,314 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:19:45,344 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:19:45,398 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:19:45,451 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:19:45,452 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:19:45,459 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:19:45,470 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:19:45,480 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:19:45,480 : INFO : EPOCH - 20 : training on 2399154 raw words (1747485 effective words) took 12.5s, 139750 effective words/s
+2019-05-13 15:19:46,517 : INFO : EPOCH 21 - PROGRESS: at 5.88% examples, 98945 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:47,545 : INFO : EPOCH 21 - PROGRESS: at 13.81% examples, 112738 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:48,596 : INFO : EPOCH 21 - PROGRESS: at 23.06% examples, 123219 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:49,639 : INFO : EPOCH 21 - PROGRESS: at 31.84% examples, 129254 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:50,655 : INFO : EPOCH 21 - PROGRESS: at 40.02% examples, 130399 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:51,658 : INFO : EPOCH 21 - PROGRESS: at 46.64% examples, 128135 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:52,685 : INFO : EPOCH 21 - PROGRESS: at 55.10% examples, 129901 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:19:53,732 : INFO : EPOCH 21 - PROGRESS: at 63.69% examples, 131051 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:54,781 : INFO : EPOCH 21 - PROGRESS: at 72.44% examples, 132789 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:55,806 : INFO : EPOCH 21 - PROGRESS: at 81.04% examples, 134471 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:19:56,838 : INFO : EPOCH 21 - PROGRESS: at 88.58% examples, 134459 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:19:57,766 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:19:57,816 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:19:57,853 : INFO : EPOCH 21 - PROGRESS: at 96.69% examples, 135949 words/s, in_qsize 9, out_qsize 1
+2019-05-13 15:19:57,854 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:19:57,910 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:19:57,937 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:19:57,945 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:19:57,980 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:19:57,982 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:19:58,007 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:19:58,009 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:19:58,018 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:19:58,029 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:19:58,029 : INFO : EPOCH - 21 : training on 2399154 raw words (1748303 effective words) took 12.5s, 139417 effective words/s
+2019-05-13 15:19:59,109 : INFO : EPOCH 22 - PROGRESS: at 5.88% examples, 94948 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:00,132 : INFO : EPOCH 22 - PROGRESS: at 16.52% examples, 131360 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:01,268 : INFO : EPOCH 22 - PROGRESS: at 24.19% examples, 125744 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:02,391 : INFO : EPOCH 22 - PROGRESS: at 34.33% examples, 133180 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:03,393 : INFO : EPOCH 22 - PROGRESS: at 42.08% examples, 132567 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:04,439 : INFO : EPOCH 22 - PROGRESS: at 50.83% examples, 134742 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:05,468 : INFO : EPOCH 22 - PROGRESS: at 60.23% examples, 137597 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:06,471 : INFO : EPOCH 22 - PROGRESS: at 68.28% examples, 137633 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:07,501 : INFO : EPOCH 22 - PROGRESS: at 76.04% examples, 137359 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:08,605 : INFO : EPOCH 22 - PROGRESS: at 85.13% examples, 138170 words/s, in_qsize 22, out_qsize 2
+2019-05-13 15:20:09,774 : INFO : EPOCH 22 - PROGRESS: at 94.39% examples, 139246 words/s, in_qsize 16, out_qsize 0
+2019-05-13 15:20:09,960 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:20:09,961 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:20:09,992 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:20:10,017 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:20:10,046 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:20:10,065 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:20:10,074 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:20:10,121 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:20:10,159 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:20:10,203 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:20:10,219 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:20:10,222 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:20:10,222 : INFO : EPOCH - 22 : training on 2399154 raw words (1747906 effective words) took 12.2s, 143464 effective words/s
+2019-05-13 15:20:11,262 : INFO : EPOCH 23 - PROGRESS: at 5.88% examples, 98791 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:12,280 : INFO : EPOCH 23 - PROGRESS: at 14.24% examples, 116807 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:13,348 : INFO : EPOCH 23 - PROGRESS: at 23.72% examples, 127973 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:14,359 : INFO : EPOCH 23 - PROGRESS: at 33.06% examples, 135157 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:15,392 : INFO : EPOCH 23 - PROGRESS: at 40.91% examples, 133249 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:16,483 : INFO : EPOCH 23 - PROGRESS: at 50.00% examples, 135607 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:17,489 : INFO : EPOCH 23 - PROGRESS: at 59.01% examples, 137767 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:18,499 : INFO : EPOCH 23 - PROGRESS: at 66.63% examples, 136811 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:20:19,523 : INFO : EPOCH 23 - PROGRESS: at 75.64% examples, 139072 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:20,571 : INFO : EPOCH 23 - PROGRESS: at 84.26% examples, 139785 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:21,749 : INFO : EPOCH 23 - PROGRESS: at 92.04% examples, 138136 words/s, in_qsize 22, out_qsize 0
+2019-05-13 15:20:22,027 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:20:22,097 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:20:22,253 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:20:22,308 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:20:22,316 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:20:22,333 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:20:22,338 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:20:22,343 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:20:22,365 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:20:22,369 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:20:22,373 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:20:22,381 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:20:22,381 : INFO : EPOCH - 23 : training on 2399154 raw words (1747846 effective words) took 12.1s, 143861 effective words/s
+2019-05-13 15:20:23,496 : INFO : EPOCH 24 - PROGRESS: at 6.36% examples, 98439 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:24,497 : INFO : EPOCH 24 - PROGRESS: at 15.63% examples, 123643 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:25,597 : INFO : EPOCH 24 - PROGRESS: at 24.19% examples, 126590 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:26,674 : INFO : EPOCH 24 - PROGRESS: at 33.87% examples, 133606 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:27,721 : INFO : EPOCH 24 - PROGRESS: at 42.47% examples, 134604 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:28,724 : INFO : EPOCH 24 - PROGRESS: at 50.39% examples, 135005 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:29,765 : INFO : EPOCH 24 - PROGRESS: at 60.23% examples, 138541 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:30,801 : INFO : EPOCH 24 - PROGRESS: at 69.14% examples, 139674 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:31,835 : INFO : EPOCH 24 - PROGRESS: at 76.78% examples, 139157 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:32,905 : INFO : EPOCH 24 - PROGRESS: at 86.01% examples, 140159 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:34,003 : INFO : EPOCH 24 - PROGRESS: at 93.95% examples, 140051 words/s, in_qsize 17, out_qsize 0
+2019-05-13 15:20:34,221 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:20:34,233 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:20:34,302 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:20:34,329 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:20:34,351 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:20:34,374 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:20:34,395 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:20:34,462 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:20:34,464 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:20:34,472 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:20:34,479 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:20:34,484 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:20:34,484 : INFO : EPOCH - 24 : training on 2399154 raw words (1747161 effective words) took 12.1s, 144466 effective words/s
+2019-05-13 15:20:35,506 : INFO : EPOCH 25 - PROGRESS: at 5.88% examples, 100379 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:36,560 : INFO : EPOCH 25 - PROGRESS: at 14.65% examples, 119251 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:37,667 : INFO : EPOCH 25 - PROGRESS: at 24.18% examples, 127892 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:20:38,680 : INFO : EPOCH 25 - PROGRESS: at 33.87% examples, 136688 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:39,686 : INFO : EPOCH 25 - PROGRESS: at 42.47% examples, 138125 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:40,727 : INFO : EPOCH 25 - PROGRESS: at 51.24% examples, 139478 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:41,781 : INFO : EPOCH 25 - PROGRESS: at 59.37% examples, 138223 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:42,812 : INFO : EPOCH 25 - PROGRESS: at 69.98% examples, 143016 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:43,813 : INFO : EPOCH 25 - PROGRESS: at 76.81% examples, 141029 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:44,938 : INFO : EPOCH 25 - PROGRESS: at 85.88% examples, 141129 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:20:46,011 : INFO : EPOCH 25 - PROGRESS: at 95.22% examples, 143107 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:20:46,180 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:20:46,234 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:20:46,235 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:20:46,248 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:20:46,252 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:20:46,308 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:20:46,330 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:20:46,373 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:20:46,382 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:20:46,386 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:20:46,413 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:20:46,429 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:20:46,430 : INFO : EPOCH - 25 : training on 2399154 raw words (1747555 effective words) took 11.9s, 146414 effective words/s
+2019-05-13 15:20:47,462 : INFO : EPOCH 26 - PROGRESS: at 5.88% examples, 99637 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:20:48,469 : INFO : EPOCH 26 - PROGRESS: at 14.75% examples, 121380 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:49,495 : INFO : EPOCH 26 - PROGRESS: at 23.72% examples, 130527 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:50,529 : INFO : EPOCH 26 - PROGRESS: at 33.41% examples, 138238 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:51,580 : INFO : EPOCH 26 - PROGRESS: at 41.67% examples, 136685 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:20:52,588 : INFO : EPOCH 26 - PROGRESS: at 50.00% examples, 137911 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:53,601 : INFO : EPOCH 26 - PROGRESS: at 59.82% examples, 141654 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:54,639 : INFO : EPOCH 26 - PROGRESS: at 68.70% examples, 142402 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:55,673 : INFO : EPOCH 26 - PROGRESS: at 76.78% examples, 142355 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:20:56,714 : INFO : EPOCH 26 - PROGRESS: at 86.01% examples, 143454 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:20:57,787 : INFO : EPOCH 26 - PROGRESS: at 93.95% examples, 143344 words/s, in_qsize 15, out_qsize 2
+2019-05-13 15:20:58,101 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:20:58,104 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:20:58,136 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:20:58,146 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:20:58,174 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:20:58,185 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:20:58,226 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:20:58,263 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:20:58,285 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:20:58,289 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:20:58,297 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:20:58,301 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:20:58,301 : INFO : EPOCH - 26 : training on 2399154 raw words (1747850 effective words) took 11.9s, 147351 effective words/s
+2019-05-13 15:20:59,359 : INFO : EPOCH 27 - PROGRESS: at 6.36% examples, 103685 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:00,371 : INFO : EPOCH 27 - PROGRESS: at 15.11% examples, 122884 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:21:01,454 : INFO : EPOCH 27 - PROGRESS: at 24.19% examples, 129014 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:02,504 : INFO : EPOCH 27 - PROGRESS: at 33.87% examples, 136325 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:03,507 : INFO : EPOCH 27 - PROGRESS: at 42.08% examples, 136475 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:21:04,510 : INFO : EPOCH 27 - PROGRESS: at 51.66% examples, 141240 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:05,581 : INFO : EPOCH 27 - PROGRESS: at 60.21% examples, 140415 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:06,647 : INFO : EPOCH 27 - PROGRESS: at 69.13% examples, 140834 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:21:07,713 : INFO : EPOCH 27 - PROGRESS: at 78.04% examples, 142019 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:08,804 : INFO : EPOCH 27 - PROGRESS: at 87.49% examples, 143158 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:09,810 : INFO : EPOCH 27 - PROGRESS: at 95.22% examples, 143248 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:21:09,854 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:21:09,942 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:21:09,957 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:21:10,028 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:21:10,045 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:21:10,082 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:21:10,101 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:21:10,110 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:21:10,148 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:21:10,173 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:21:10,185 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:21:10,191 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:21:10,192 : INFO : EPOCH - 27 : training on 2399154 raw words (1747068 effective words) took 11.9s, 147025 effective words/s
+2019-05-13 15:21:11,300 : INFO : EPOCH 28 - PROGRESS: at 5.88% examples, 92430 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:12,448 : INFO : EPOCH 28 - PROGRESS: at 16.92% examples, 125437 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:13,532 : INFO : EPOCH 28 - PROGRESS: at 25.53% examples, 128321 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:21:14,616 : INFO : EPOCH 28 - PROGRESS: at 35.17% examples, 134598 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:15,632 : INFO : EPOCH 28 - PROGRESS: at 44.47% examples, 138744 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:16,640 : INFO : EPOCH 28 - PROGRESS: at 53.36% examples, 140576 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:17,685 : INFO : EPOCH 28 - PROGRESS: at 61.51% examples, 139432 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:18,723 : INFO : EPOCH 28 - PROGRESS: at 70.32% examples, 140450 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:21:19,775 : INFO : EPOCH 28 - PROGRESS: at 78.90% examples, 141052 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:20,797 : INFO : EPOCH 28 - PROGRESS: at 87.12% examples, 141140 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:21,811 : INFO : EPOCH 28 - PROGRESS: at 95.22% examples, 141944 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:21:21,925 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:21:21,928 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:21:21,939 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:21:22,023 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:21:22,053 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:21:22,093 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:21:22,163 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:21:22,211 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:21:22,214 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:21:22,215 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:21:22,221 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:21:22,226 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:21:22,226 : INFO : EPOCH - 28 : training on 2399154 raw words (1747626 effective words) took 12.0s, 145318 effective words/s
+2019-05-13 15:21:23,429 : INFO : EPOCH 29 - PROGRESS: at 6.36% examples, 91259 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:24,434 : INFO : EPOCH 29 - PROGRESS: at 16.07% examples, 121723 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:25,511 : INFO : EPOCH 29 - PROGRESS: at 24.65% examples, 126096 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:26,542 : INFO : EPOCH 29 - PROGRESS: at 33.13% examples, 129456 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:27,615 : INFO : EPOCH 29 - PROGRESS: at 42.08% examples, 131925 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:28,624 : INFO : EPOCH 29 - PROGRESS: at 51.24% examples, 136053 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:29,646 : INFO : EPOCH 29 - PROGRESS: at 60.23% examples, 137882 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:21:30,667 : INFO : EPOCH 29 - PROGRESS: at 68.70% examples, 138485 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:31,717 : INFO : EPOCH 29 - PROGRESS: at 77.64% examples, 140191 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:32,724 : INFO : EPOCH 29 - PROGRESS: at 86.41% examples, 141195 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:33,735 : INFO : EPOCH 29 - PROGRESS: at 94.04% examples, 141433 words/s, in_qsize 17, out_qsize 0
+2019-05-13 15:21:33,903 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:21:33,960 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:21:33,999 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:21:34,093 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:21:34,101 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:21:34,116 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:21:34,153 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:21:34,192 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:21:34,201 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:21:34,216 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:21:34,219 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:21:34,245 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:21:34,245 : INFO : EPOCH - 29 : training on 2399154 raw words (1747611 effective words) took 12.0s, 145497 effective words/s
+2019-05-13 15:21:35,311 : INFO : EPOCH 30 - PROGRESS: at 5.88% examples, 96087 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:36,317 : INFO : EPOCH 30 - PROGRESS: at 16.07% examples, 129811 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:37,407 : INFO : EPOCH 30 - PROGRESS: at 24.65% examples, 131046 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:38,513 : INFO : EPOCH 30 - PROGRESS: at 34.33% examples, 136131 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:39,615 : INFO : EPOCH 30 - PROGRESS: at 43.98% examples, 139363 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:40,628 : INFO : EPOCH 30 - PROGRESS: at 52.98% examples, 140942 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:21:41,634 : INFO : EPOCH 30 - PROGRESS: at 61.89% examples, 142485 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:42,638 : INFO : EPOCH 30 - PROGRESS: at 69.98% examples, 141963 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:43,647 : INFO : EPOCH 30 - PROGRESS: at 79.30% examples, 144595 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:44,686 : INFO : EPOCH 30 - PROGRESS: at 87.49% examples, 144104 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:21:45,706 : INFO : EPOCH 30 - PROGRESS: at 96.22% examples, 145959 words/s, in_qsize 11, out_qsize 1
+2019-05-13 15:21:45,707 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:21:45,757 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:21:45,768 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:21:45,832 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:21:45,838 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:21:45,876 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:21:45,898 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:21:45,931 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:21:45,984 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:21:45,985 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:21:45,997 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:21:46,010 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:21:46,010 : INFO : EPOCH - 30 : training on 2399154 raw words (1748123 effective words) took 11.8s, 148684 effective words/s
+2019-05-13 15:21:47,145 : INFO : EPOCH 31 - PROGRESS: at 6.38% examples, 96551 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:21:48,214 : INFO : EPOCH 31 - PROGRESS: at 16.92% examples, 128455 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:49,227 : INFO : EPOCH 31 - PROGRESS: at 25.13% examples, 131073 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:50,420 : INFO : EPOCH 31 - PROGRESS: at 35.22% examples, 135013 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:21:51,564 : INFO : EPOCH 31 - PROGRESS: at 45.35% examples, 138597 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:52,679 : INFO : EPOCH 31 - PROGRESS: at 55.54% examples, 141410 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:53,761 : INFO : EPOCH 31 - PROGRESS: at 65.84% examples, 144174 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:54,767 : INFO : EPOCH 31 - PROGRESS: at 74.01% examples, 144333 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:21:55,804 : INFO : EPOCH 31 - PROGRESS: at 81.84% examples, 143158 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:56,940 : INFO : EPOCH 31 - PROGRESS: at 91.35% examples, 144291 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:21:57,540 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:21:57,572 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:21:57,598 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:21:57,624 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:21:57,644 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:21:57,645 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:21:57,657 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:21:57,688 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:21:57,700 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:21:57,720 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:21:57,732 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:21:57,746 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:21:57,746 : INFO : EPOCH - 31 : training on 2399154 raw words (1747401 effective words) took 11.7s, 148990 effective words/s
+2019-05-13 15:21:58,848 : INFO : EPOCH 32 - PROGRESS: at 6.36% examples, 99586 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:21:59,862 : INFO : EPOCH 32 - PROGRESS: at 15.10% examples, 120354 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:00,940 : INFO : EPOCH 32 - PROGRESS: at 25.13% examples, 131954 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:01,957 : INFO : EPOCH 32 - PROGRESS: at 34.33% examples, 137886 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:02,984 : INFO : EPOCH 32 - PROGRESS: at 43.24% examples, 139995 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:04,059 : INFO : EPOCH 32 - PROGRESS: at 52.10% examples, 140197 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:05,091 : INFO : EPOCH 32 - PROGRESS: at 61.89% examples, 143256 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:06,096 : INFO : EPOCH 32 - PROGRESS: at 70.37% examples, 143522 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:07,123 : INFO : EPOCH 32 - PROGRESS: at 79.30% examples, 144953 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:08,158 : INFO : EPOCH 32 - PROGRESS: at 87.49% examples, 144517 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:09,191 : INFO : EPOCH 32 - PROGRESS: at 95.16% examples, 144159 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:22:09,231 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:22:09,234 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:22:09,301 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:22:09,322 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:22:09,356 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:22:09,362 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:22:09,408 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:22:09,442 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:22:09,485 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:22:09,500 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:22:09,521 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:22:09,529 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:22:09,530 : INFO : EPOCH - 32 : training on 2399154 raw words (1748071 effective words) took 11.8s, 148435 effective words/s
+2019-05-13 15:22:10,638 : INFO : EPOCH 33 - PROGRESS: at 5.97% examples, 92133 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:22:11,717 : INFO : EPOCH 33 - PROGRESS: at 16.52% examples, 126034 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:22:12,730 : INFO : EPOCH 33 - PROGRESS: at 25.05% examples, 131655 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:13,835 : INFO : EPOCH 33 - PROGRESS: at 34.76% examples, 136588 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:14,857 : INFO : EPOCH 33 - PROGRESS: at 43.63% examples, 138981 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:15,905 : INFO : EPOCH 33 - PROGRESS: at 52.91% examples, 141055 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:16,929 : INFO : EPOCH 33 - PROGRESS: at 62.36% examples, 143112 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:17,944 : INFO : EPOCH 33 - PROGRESS: at 71.12% examples, 144139 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:18,970 : INFO : EPOCH 33 - PROGRESS: at 79.30% examples, 143917 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:19,996 : INFO : EPOCH 33 - PROGRESS: at 87.11% examples, 143004 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:21,057 : INFO : EPOCH 33 - PROGRESS: at 96.05% examples, 144476 words/s, in_qsize 11, out_qsize 1
+2019-05-13 15:22:21,058 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:22:21,132 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:22:21,135 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:22:21,161 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:22:21,169 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:22:21,180 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:22:21,212 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:22:21,248 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:22:21,261 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:22:21,267 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:22:21,286 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:22:21,292 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:22:21,292 : INFO : EPOCH - 33 : training on 2399154 raw words (1747591 effective words) took 11.8s, 148660 effective words/s
+2019-05-13 15:22:22,414 : INFO : EPOCH 34 - PROGRESS: at 5.99% examples, 91046 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:23,495 : INFO : EPOCH 34 - PROGRESS: at 16.52% examples, 125223 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:24,559 : INFO : EPOCH 34 - PROGRESS: at 26.39% examples, 135699 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:25,603 : INFO : EPOCH 34 - PROGRESS: at 34.76% examples, 136422 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:26,632 : INFO : EPOCH 34 - PROGRESS: at 44.47% examples, 141436 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:27,748 : INFO : EPOCH 34 - PROGRESS: at 54.30% examples, 142653 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:28,765 : INFO : EPOCH 34 - PROGRESS: at 64.08% examples, 145650 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:29,786 : INFO : EPOCH 34 - PROGRESS: at 71.56% examples, 143671 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:30,809 : INFO : EPOCH 34 - PROGRESS: at 80.63% examples, 145085 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:31,865 : INFO : EPOCH 34 - PROGRESS: at 89.39% examples, 145738 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:32,744 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:22:32,751 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:22:32,809 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:22:32,810 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:22:32,811 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:22:32,856 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:22:32,882 : INFO : EPOCH 34 - PROGRESS: at 98.21% examples, 147671 words/s, in_qsize 5, out_qsize 1
+2019-05-13 15:22:32,882 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:22:32,907 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:22:32,926 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:22:32,927 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:22:32,946 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:22:32,980 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:22:32,980 : INFO : EPOCH - 34 : training on 2399154 raw words (1747274 effective words) took 11.7s, 149615 effective words/s
+2019-05-13 15:22:34,086 : INFO : EPOCH 35 - PROGRESS: at 6.36% examples, 99290 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:35,202 : INFO : EPOCH 35 - PROGRESS: at 16.96% examples, 127539 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:36,214 : INFO : EPOCH 35 - PROGRESS: at 25.96% examples, 134863 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:37,242 : INFO : EPOCH 35 - PROGRESS: at 34.76% examples, 138001 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:38,300 : INFO : EPOCH 35 - PROGRESS: at 43.98% examples, 140553 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:39,316 : INFO : EPOCH 35 - PROGRESS: at 53.83% examples, 144161 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:40,316 : INFO : EPOCH 35 - PROGRESS: at 61.93% examples, 143379 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:41,346 : INFO : EPOCH 35 - PROGRESS: at 70.71% examples, 144095 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:42,352 : INFO : EPOCH 35 - PROGRESS: at 80.17% examples, 146553 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:43,452 : INFO : EPOCH 35 - PROGRESS: at 88.23% examples, 145016 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:44,438 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:22:44,462 : INFO : EPOCH 35 - PROGRESS: at 96.60% examples, 146294 words/s, in_qsize 10, out_qsize 1
+2019-05-13 15:22:44,462 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:22:44,533 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:22:44,582 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:22:44,612 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:22:44,662 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:22:44,733 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:22:44,735 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:22:44,746 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:22:44,792 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:22:44,793 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:22:44,796 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:22:44,796 : INFO : EPOCH - 35 : training on 2399154 raw words (1747037 effective words) took 11.8s, 147964 effective words/s
+2019-05-13 15:22:45,931 : INFO : EPOCH 36 - PROGRESS: at 5.88% examples, 90395 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:46,939 : INFO : EPOCH 36 - PROGRESS: at 15.63% examples, 122167 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:22:47,944 : INFO : EPOCH 36 - PROGRESS: at 23.72% examples, 127071 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:49,006 : INFO : EPOCH 36 - PROGRESS: at 31.86% examples, 127700 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:50,099 : INFO : EPOCH 36 - PROGRESS: at 40.40% examples, 128623 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:51,140 : INFO : EPOCH 36 - PROGRESS: at 48.40% examples, 129266 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:52,147 : INFO : EPOCH 36 - PROGRESS: at 56.02% examples, 129289 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:53,151 : INFO : EPOCH 36 - PROGRESS: at 64.56% examples, 131131 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:54,179 : INFO : EPOCH 36 - PROGRESS: at 72.44% examples, 131582 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:22:55,231 : INFO : EPOCH 36 - PROGRESS: at 80.17% examples, 131647 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:56,395 : INFO : EPOCH 36 - PROGRESS: at 89.36% examples, 132869 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:57,150 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:22:57,208 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:22:57,235 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:22:57,254 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:22:57,294 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:22:57,307 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:22:57,325 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:22:57,406 : INFO : EPOCH 36 - PROGRESS: at 98.59% examples, 136325 words/s, in_qsize 4, out_qsize 1
+2019-05-13 15:22:57,406 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:22:57,407 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:22:57,435 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:22:57,437 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:22:57,441 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:22:57,441 : INFO : EPOCH - 36 : training on 2399154 raw words (1747597 effective words) took 12.6s, 138313 effective words/s
+2019-05-13 15:22:58,563 : INFO : EPOCH 37 - PROGRESS: at 5.88% examples, 91530 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:22:59,702 : INFO : EPOCH 37 - PROGRESS: at 16.52% examples, 122059 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:00,746 : INFO : EPOCH 37 - PROGRESS: at 25.96% examples, 131970 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:23:01,810 : INFO : EPOCH 37 - PROGRESS: at 34.76% examples, 134634 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:02,841 : INFO : EPOCH 37 - PROGRESS: at 43.98% examples, 138539 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:03,870 : INFO : EPOCH 37 - PROGRESS: at 52.10% examples, 137671 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:04,870 : INFO : EPOCH 37 - PROGRESS: at 61.45% examples, 140641 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:06,053 : INFO : EPOCH 37 - PROGRESS: at 71.13% examples, 140821 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:07,148 : INFO : EPOCH 37 - PROGRESS: at 81.04% examples, 142966 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:08,187 : INFO : EPOCH 37 - PROGRESS: at 90.13% examples, 144746 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:08,965 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:23:08,973 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:23:09,052 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:23:09,055 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:23:09,095 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:23:09,136 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:23:09,154 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:23:09,156 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:23:09,159 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:23:09,201 : INFO : EPOCH 37 - PROGRESS: at 99.29% examples, 147434 words/s, in_qsize 2, out_qsize 1
+2019-05-13 15:23:09,202 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:23:09,211 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:23:09,226 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:23:09,226 : INFO : EPOCH - 37 : training on 2399154 raw words (1747311 effective words) took 11.8s, 148377 effective words/s
+2019-05-13 15:23:10,268 : INFO : EPOCH 38 - PROGRESS: at 5.88% examples, 98557 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:11,407 : INFO : EPOCH 38 - PROGRESS: at 16.52% examples, 126610 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:12,427 : INFO : EPOCH 38 - PROGRESS: at 25.13% examples, 131761 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:13,594 : INFO : EPOCH 38 - PROGRESS: at 34.79% examples, 134605 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:14,647 : INFO : EPOCH 38 - PROGRESS: at 44.47% examples, 139365 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:15,665 : INFO : EPOCH 38 - PROGRESS: at 52.10% examples, 137504 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:16,684 : INFO : EPOCH 38 - PROGRESS: at 61.05% examples, 139153 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:17,716 : INFO : EPOCH 38 - PROGRESS: at 69.55% examples, 139438 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:18,746 : INFO : EPOCH 38 - PROGRESS: at 78.04% examples, 140527 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:19,760 : INFO : EPOCH 38 - PROGRESS: at 87.11% examples, 142137 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:20,786 : INFO : EPOCH 38 - PROGRESS: at 94.74% examples, 142128 words/s, in_qsize 15, out_qsize 0
+2019-05-13 15:23:20,953 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:23:20,997 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:23:21,002 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:23:21,030 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:23:21,065 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:23:21,109 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:23:21,170 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:23:21,180 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:23:21,206 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:23:21,232 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:23:21,240 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:23:21,256 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:23:21,257 : INFO : EPOCH - 38 : training on 2399154 raw words (1747911 effective words) took 12.0s, 145404 effective words/s
+2019-05-13 15:23:22,293 : INFO : EPOCH 39 - PROGRESS: at 6.36% examples, 105905 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:23,308 : INFO : EPOCH 39 - PROGRESS: at 14.65% examples, 120647 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:23:24,372 : INFO : EPOCH 39 - PROGRESS: at 24.19% examples, 130710 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:25,382 : INFO : EPOCH 39 - PROGRESS: at 33.41% examples, 137281 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:26,403 : INFO : EPOCH 39 - PROGRESS: at 41.69% examples, 136719 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:27,417 : INFO : EPOCH 39 - PROGRESS: at 51.66% examples, 142476 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:28,442 : INFO : EPOCH 39 - PROGRESS: at 60.23% examples, 142375 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:29,553 : INFO : EPOCH 39 - PROGRESS: at 69.55% examples, 142661 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:30,575 : INFO : EPOCH 39 - PROGRESS: at 78.43% examples, 144309 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:31,646 : INFO : EPOCH 39 - PROGRESS: at 87.87% examples, 145482 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:32,657 : INFO : EPOCH 39 - PROGRESS: at 95.96% examples, 145983 words/s, in_qsize 12, out_qsize 0
+2019-05-13 15:23:32,662 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:23:32,695 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:23:32,739 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:23:32,777 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:23:32,814 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:23:32,837 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:23:32,846 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:23:32,848 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:23:32,913 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:23:32,947 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:23:32,953 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:23:32,963 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:23:32,963 : INFO : EPOCH - 39 : training on 2399154 raw words (1747391 effective words) took 11.7s, 149388 effective words/s
+2019-05-13 15:23:34,062 : INFO : EPOCH 40 - PROGRESS: at 5.88% examples, 93217 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:35,211 : INFO : EPOCH 40 - PROGRESS: at 16.96% examples, 125968 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:36,235 : INFO : EPOCH 40 - PROGRESS: at 25.96% examples, 133298 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:23:37,295 : INFO : EPOCH 40 - PROGRESS: at 33.53% examples, 130738 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:23:38,401 : INFO : EPOCH 40 - PROGRESS: at 43.24% examples, 134801 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:39,419 : INFO : EPOCH 40 - PROGRESS: at 52.10% examples, 137090 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:40,430 : INFO : EPOCH 40 - PROGRESS: at 59.82% examples, 136018 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:41,550 : INFO : EPOCH 40 - PROGRESS: at 69.58% examples, 137810 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:42,581 : INFO : EPOCH 40 - PROGRESS: at 78.04% examples, 139071 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:43,642 : INFO : EPOCH 40 - PROGRESS: at 87.49% examples, 140851 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:44,654 : INFO : EPOCH 40 - PROGRESS: at 95.57% examples, 141699 words/s, in_qsize 13, out_qsize 0
+2019-05-13 15:23:44,711 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:23:44,785 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:23:44,827 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:23:44,904 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:23:44,938 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:23:44,942 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:23:44,965 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:23:44,998 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:23:45,013 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:23:45,025 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:23:45,033 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:23:45,037 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:23:45,037 : INFO : EPOCH - 40 : training on 2399154 raw words (1747337 effective words) took 12.1s, 144813 effective words/s
+2019-05-13 15:23:46,162 : INFO : EPOCH 41 - PROGRESS: at 5.88% examples, 91175 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:47,266 : INFO : EPOCH 41 - PROGRESS: at 16.52% examples, 123767 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:48,373 : INFO : EPOCH 41 - PROGRESS: at 24.65% examples, 124179 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:49,400 : INFO : EPOCH 41 - PROGRESS: at 34.33% examples, 133091 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:50,418 : INFO : EPOCH 41 - PROGRESS: at 42.47% examples, 133520 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:23:51,532 : INFO : EPOCH 41 - PROGRESS: at 51.66% examples, 135118 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:52,569 : INFO : EPOCH 41 - PROGRESS: at 61.03% examples, 137744 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:53,657 : INFO : EPOCH 41 - PROGRESS: at 70.32% examples, 138972 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:54,738 : INFO : EPOCH 41 - PROGRESS: at 78.43% examples, 138557 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:23:55,782 : INFO : EPOCH 41 - PROGRESS: at 87.87% examples, 140625 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:56,805 : INFO : EPOCH 41 - PROGRESS: at 95.22% examples, 140105 words/s, in_qsize 14, out_qsize 0
+2019-05-13 15:23:56,961 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:23:56,975 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:23:56,998 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:23:57,040 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:23:57,082 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:23:57,099 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:23:57,142 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:23:57,157 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:23:57,174 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:23:57,189 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:23:57,198 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:23:57,224 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:23:57,225 : INFO : EPOCH - 41 : training on 2399154 raw words (1746661 effective words) took 12.2s, 143428 effective words/s
+2019-05-13 15:23:58,281 : INFO : EPOCH 42 - PROGRESS: at 5.88% examples, 97120 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:23:59,404 : INFO : EPOCH 42 - PROGRESS: at 16.52% examples, 126674 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:00,429 : INFO : EPOCH 42 - PROGRESS: at 25.53% examples, 133841 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:01,487 : INFO : EPOCH 42 - PROGRESS: at 34.33% examples, 136271 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:02,492 : INFO : EPOCH 42 - PROGRESS: at 43.98% examples, 142036 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:03,578 : INFO : EPOCH 42 - PROGRESS: at 52.51% examples, 140462 words/s, in_qsize 23, out_qsize 2
+2019-05-13 15:24:04,696 : INFO : EPOCH 42 - PROGRESS: at 62.77% examples, 142762 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:05,698 : INFO : EPOCH 42 - PROGRESS: at 72.44% examples, 145709 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:06,761 : INFO : EPOCH 42 - PROGRESS: at 80.63% examples, 144777 words/s, in_qsize 22, out_qsize 3
+2019-05-13 15:24:07,809 : INFO : EPOCH 42 - PROGRESS: at 88.99% examples, 144888 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:24:08,575 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:24:08,602 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:24:08,637 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:24:08,657 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:24:08,707 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:24:08,768 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:24:08,806 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:24:08,820 : INFO : EPOCH 42 - PROGRESS: at 98.59% examples, 148241 words/s, in_qsize 4, out_qsize 1
+2019-05-13 15:24:08,820 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:24:08,840 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:24:08,854 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:24:08,856 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:24:08,864 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:24:08,864 : INFO : EPOCH - 42 : training on 2399154 raw words (1747545 effective words) took 11.6s, 150264 effective words/s
+2019-05-13 15:24:09,916 : INFO : EPOCH 43 - PROGRESS: at 5.88% examples, 97615 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:24:10,916 : INFO : EPOCH 43 - PROGRESS: at 15.65% examples, 127454 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:11,968 : INFO : EPOCH 43 - PROGRESS: at 25.13% examples, 135877 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:13,006 : INFO : EPOCH 43 - PROGRESS: at 34.76% examples, 142070 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:14,010 : INFO : EPOCH 43 - PROGRESS: at 43.37% examples, 142405 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:15,037 : INFO : EPOCH 43 - PROGRESS: at 51.66% examples, 142174 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:16,099 : INFO : EPOCH 43 - PROGRESS: at 61.45% examples, 144436 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:17,104 : INFO : EPOCH 43 - PROGRESS: at 70.71% examples, 146326 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:18,137 : INFO : EPOCH 43 - PROGRESS: at 79.30% examples, 146540 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:24:19,204 : INFO : EPOCH 43 - PROGRESS: at 88.22% examples, 146888 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:20,120 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:24:20,188 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:24:20,201 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:24:20,274 : INFO : EPOCH 43 - PROGRESS: at 97.01% examples, 148034 words/s, in_qsize 8, out_qsize 1
+2019-05-13 15:24:20,274 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:24:20,295 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:24:20,304 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:24:20,325 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:24:20,364 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:24:20,383 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:24:20,405 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:24:20,415 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:24:20,426 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:24:20,426 : INFO : EPOCH - 43 : training on 2399154 raw words (1747322 effective words) took 11.6s, 151243 effective words/s
+2019-05-13 15:24:21,530 : INFO : EPOCH 44 - PROGRESS: at 6.36% examples, 99551 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:22,766 : INFO : EPOCH 44 - PROGRESS: at 16.92% examples, 121135 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:23,883 : INFO : EPOCH 44 - PROGRESS: at 27.27% examples, 132496 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:24,916 : INFO : EPOCH 44 - PROGRESS: at 36.95% examples, 139170 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:25,921 : INFO : EPOCH 44 - PROGRESS: at 45.35% examples, 140139 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:27,002 : INFO : EPOCH 44 - PROGRESS: at 54.22% examples, 140104 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:28,052 : INFO : EPOCH 44 - PROGRESS: at 64.56% examples, 143730 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:29,096 : INFO : EPOCH 44 - PROGRESS: at 73.18% examples, 144189 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:30,100 : INFO : EPOCH 44 - PROGRESS: at 81.80% examples, 145059 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:31,109 : INFO : EPOCH 44 - PROGRESS: at 89.36% examples, 144326 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:31,862 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:24:31,880 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:24:31,886 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:24:31,893 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:24:31,917 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:24:31,951 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:24:32,005 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:24:32,077 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:24:32,103 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:24:32,123 : INFO : EPOCH 44 - PROGRESS: at 99.29% examples, 148323 words/s, in_qsize 2, out_qsize 1
+2019-05-13 15:24:32,123 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:24:32,124 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:24:32,147 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:24:32,147 : INFO : EPOCH - 44 : training on 2399154 raw words (1748139 effective words) took 11.7s, 149275 effective words/s
+2019-05-13 15:24:33,188 : INFO : EPOCH 45 - PROGRESS: at 5.88% examples, 98618 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:34,205 : INFO : EPOCH 45 - PROGRESS: at 15.63% examples, 127217 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:24:35,287 : INFO : EPOCH 45 - PROGRESS: at 24.67% examples, 132057 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:36,301 : INFO : EPOCH 45 - PROGRESS: at 34.33% examples, 139806 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:37,309 : INFO : EPOCH 45 - PROGRESS: at 42.47% examples, 139177 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:24:38,359 : INFO : EPOCH 45 - PROGRESS: at 50.80% examples, 139012 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:24:39,399 : INFO : EPOCH 45 - PROGRESS: at 60.21% examples, 141070 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:40,463 : INFO : EPOCH 45 - PROGRESS: at 69.55% examples, 142324 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:41,471 : INFO : EPOCH 45 - PROGRESS: at 77.25% examples, 141876 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:42,579 : INFO : EPOCH 45 - PROGRESS: at 86.01% examples, 141408 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:43,597 : INFO : EPOCH 45 - PROGRESS: at 94.39% examples, 142804 words/s, in_qsize 16, out_qsize 0
+2019-05-13 15:24:43,833 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:24:43,839 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:24:43,859 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:24:43,889 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:24:43,920 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:24:43,951 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:24:43,972 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:24:43,988 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:24:44,035 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:24:44,068 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:24:44,087 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:24:44,089 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:24:44,089 : INFO : EPOCH - 45 : training on 2399154 raw words (1747855 effective words) took 11.9s, 146458 effective words/s
+2019-05-13 15:24:45,142 : INFO : EPOCH 46 - PROGRESS: at 6.38% examples, 104047 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:46,192 : INFO : EPOCH 46 - PROGRESS: at 16.92% examples, 134695 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:47,284 : INFO : EPOCH 46 - PROGRESS: at 25.96% examples, 136432 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:48,292 : INFO : EPOCH 46 - PROGRESS: at 34.33% examples, 138120 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:49,442 : INFO : EPOCH 46 - PROGRESS: at 44.47% examples, 141015 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:50,612 : INFO : EPOCH 46 - PROGRESS: at 54.68% examples, 142244 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:51,712 : INFO : EPOCH 46 - PROGRESS: at 64.99% examples, 144639 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:52,715 : INFO : EPOCH 46 - PROGRESS: at 74.45% examples, 147347 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:53,724 : INFO : EPOCH 46 - PROGRESS: at 83.04% examples, 147823 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:54,728 : INFO : EPOCH 46 - PROGRESS: at 91.25% examples, 148219 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:24:55,286 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:24:55,287 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:24:55,360 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:24:55,441 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:24:55,478 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:24:55,505 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:24:55,524 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:24:55,536 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:24:55,600 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:24:55,600 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:24:55,602 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:24:55,614 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:24:55,614 : INFO : EPOCH - 46 : training on 2399154 raw words (1747614 effective words) took 11.5s, 151728 effective words/s
+2019-05-13 15:24:56,634 : INFO : EPOCH 47 - PROGRESS: at 5.88% examples, 100861 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:24:57,659 : INFO : EPOCH 47 - PROGRESS: at 15.63% examples, 128078 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:24:58,700 : INFO : EPOCH 47 - PROGRESS: at 24.19% examples, 132015 words/s, in_qsize 22, out_qsize 1
+2019-05-13 15:24:59,751 : INFO : EPOCH 47 - PROGRESS: at 33.87% examples, 138665 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:00,759 : INFO : EPOCH 47 - PROGRESS: at 43.24% examples, 142601 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:01,822 : INFO : EPOCH 47 - PROGRESS: at 52.10% examples, 142615 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:02,829 : INFO : EPOCH 47 - PROGRESS: at 61.03% examples, 143908 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:03,908 : INFO : EPOCH 47 - PROGRESS: at 70.71% examples, 145478 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:04,956 : INFO : EPOCH 47 - PROGRESS: at 79.78% examples, 146337 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:05,982 : INFO : EPOCH 47 - PROGRESS: at 88.58% examples, 147314 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:25:06,902 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:25:06,940 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:25:07,000 : INFO : EPOCH 47 - PROGRESS: at 96.69% examples, 147740 words/s, in_qsize 9, out_qsize 1
+2019-05-13 15:25:07,001 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:25:07,028 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:25:07,047 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:25:07,089 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:25:07,096 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:25:07,166 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:25:07,168 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:25:07,170 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:25:07,170 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:25:07,199 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:25:07,199 : INFO : EPOCH - 47 : training on 2399154 raw words (1748353 effective words) took 11.6s, 151037 effective words/s
+2019-05-13 15:25:08,272 : INFO : EPOCH 48 - PROGRESS: at 5.88% examples, 95428 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:09,306 : INFO : EPOCH 48 - PROGRESS: at 16.52% examples, 131004 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:10,312 : INFO : EPOCH 48 - PROGRESS: at 25.13% examples, 135407 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:11,322 : INFO : EPOCH 48 - PROGRESS: at 33.87% examples, 139055 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:12,349 : INFO : EPOCH 48 - PROGRESS: at 43.24% examples, 142360 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:13,380 : INFO : EPOCH 48 - PROGRESS: at 52.51% examples, 144345 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:14,435 : INFO : EPOCH 48 - PROGRESS: at 61.47% examples, 144423 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:25:15,482 : INFO : EPOCH 48 - PROGRESS: at 71.55% examples, 147366 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:16,520 : INFO : EPOCH 48 - PROGRESS: at 79.78% examples, 146601 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:17,539 : INFO : EPOCH 48 - PROGRESS: at 88.23% examples, 146923 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:18,485 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:25:18,551 : INFO : EPOCH 48 - PROGRESS: at 96.60% examples, 148014 words/s, in_qsize 10, out_qsize 1
+2019-05-13 15:25:18,552 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:25:18,570 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:25:18,631 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:25:18,645 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:25:18,662 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:25:18,670 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:25:18,709 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:25:18,723 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:25:18,750 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:25:18,763 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:25:18,770 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:25:18,771 : INFO : EPOCH - 48 : training on 2399154 raw words (1747572 effective words) took 11.6s, 151140 effective words/s
+2019-05-13 15:25:19,936 : INFO : EPOCH 49 - PROGRESS: at 6.34% examples, 94084 words/s, in_qsize 21, out_qsize 2
+2019-05-13 15:25:20,961 : INFO : EPOCH 49 - PROGRESS: at 16.92% examples, 129412 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:22,015 : INFO : EPOCH 49 - PROGRESS: at 26.84% examples, 138931 words/s, in_qsize 24, out_qsize 1
+2019-05-13 15:25:23,039 : INFO : EPOCH 49 - PROGRESS: at 35.17% examples, 139624 words/s, in_qsize 22, out_qsize 2
+2019-05-13 15:25:24,060 : INFO : EPOCH 49 - PROGRESS: at 43.74% examples, 140025 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:25,126 : INFO : EPOCH 49 - PROGRESS: at 53.83% examples, 143790 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:26,163 : INFO : EPOCH 49 - PROGRESS: at 63.25% examples, 145251 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:27,191 : INFO : EPOCH 49 - PROGRESS: at 72.44% examples, 146666 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:28,207 : INFO : EPOCH 49 - PROGRESS: at 81.04% examples, 147127 words/s, in_qsize 23, out_qsize 1
+2019-05-13 15:25:29,270 : INFO : EPOCH 49 - PROGRESS: at 88.99% examples, 146105 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:30,022 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:25:30,051 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:25:30,092 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:25:30,114 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:25:30,121 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:25:30,171 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:25:30,237 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:25:30,272 : INFO : EPOCH 49 - PROGRESS: at 98.59% examples, 149488 words/s, in_qsize 4, out_qsize 1
+2019-05-13 15:25:30,272 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:25:30,311 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:25:30,326 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:25:30,337 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:25:30,349 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:25:30,349 : INFO : EPOCH - 49 : training on 2399154 raw words (1747915 effective words) took 11.6s, 151068 effective words/s
+2019-05-13 15:25:31,380 : INFO : EPOCH 50 - PROGRESS: at 5.88% examples, 99592 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:32,541 : INFO : EPOCH 50 - PROGRESS: at 16.92% examples, 129248 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:33,542 : INFO : EPOCH 50 - PROGRESS: at 25.53% examples, 134399 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:34,587 : INFO : EPOCH 50 - PROGRESS: at 34.76% examples, 138821 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:35,616 : INFO : EPOCH 50 - PROGRESS: at 43.98% examples, 142040 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:36,650 : INFO : EPOCH 50 - PROGRESS: at 53.36% examples, 143895 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:37,708 : INFO : EPOCH 50 - PROGRESS: at 62.36% examples, 143968 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:38,761 : INFO : EPOCH 50 - PROGRESS: at 71.55% examples, 145102 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:39,806 : INFO : EPOCH 50 - PROGRESS: at 80.17% examples, 145268 words/s, in_qsize 24, out_qsize 0
+2019-05-13 15:25:40,891 : INFO : EPOCH 50 - PROGRESS: at 88.23% examples, 144107 words/s, in_qsize 23, out_qsize 0
+2019-05-13 15:25:41,847 : INFO : worker thread finished; awaiting finish of 11 more threads
+2019-05-13 15:25:41,861 : INFO : worker thread finished; awaiting finish of 10 more threads
+2019-05-13 15:25:41,937 : INFO : EPOCH 50 - PROGRESS: at 96.69% examples, 145097 words/s, in_qsize 9, out_qsize 1
+2019-05-13 15:25:41,938 : INFO : worker thread finished; awaiting finish of 9 more threads
+2019-05-13 15:25:41,955 : INFO : worker thread finished; awaiting finish of 8 more threads
+2019-05-13 15:25:41,982 : INFO : worker thread finished; awaiting finish of 7 more threads
+2019-05-13 15:25:41,996 : INFO : worker thread finished; awaiting finish of 6 more threads
+2019-05-13 15:25:42,005 : INFO : worker thread finished; awaiting finish of 5 more threads
+2019-05-13 15:25:42,034 : INFO : worker thread finished; awaiting finish of 4 more threads
+2019-05-13 15:25:42,073 : INFO : worker thread finished; awaiting finish of 3 more threads
+2019-05-13 15:25:42,079 : INFO : worker thread finished; awaiting finish of 2 more threads
+2019-05-13 15:25:42,087 : INFO : worker thread finished; awaiting finish of 1 more threads
+2019-05-13 15:25:42,114 : INFO : worker thread finished; awaiting finish of 0 more threads
+2019-05-13 15:25:42,114 : INFO : EPOCH - 50 : training on 2399154 raw words (1747612 effective words) took 11.8s, 148672 effective words/s
+2019-05-13 15:25:42,114 : INFO : training on a 119957700 raw words (87379548 effective words) took 630.2s, 138659 effective words/s
+2019-05-13 15:25:42,114 : INFO : precomputing L2-norms of word weight vectors
+2019-05-13 15:25:42,463 : INFO : saving Word2Vec object under search/vocab.model, separately None
+2019-05-13 15:25:42,463 : INFO : storing np array 'vectors' to search/vocab.model.wv.vectors.npy
+2019-05-13 15:25:45,436 : INFO : not storing attribute vectors_norm
+2019-05-13 15:25:45,437 : INFO : storing np array 'syn1neg' to search/vocab.model.trainables.syn1neg.npy
+2019-05-13 15:25:48,464 : INFO : not storing attribute cum_table
+2019-05-13 15:25:48,636 : INFO : saved search/vocab.model
+2019-05-13 15:25:48,718 : INFO : loading Word2Vec object from search/vocab.model
+2019-05-13 15:25:48,828 : INFO : loading wv recursively from search/vocab.model.wv.* with mmap=None
+2019-05-13 15:25:48,828 : INFO : loading vectors from search/vocab.model.wv.vectors.npy with mmap=None
+2019-05-13 15:25:49,050 : INFO : setting ignored attribute vectors_norm to None
+2019-05-13 15:25:49,051 : INFO : loading vocabulary recursively from search/vocab.model.vocabulary.* with mmap=None
+2019-05-13 15:25:49,051 : INFO : loading trainables recursively from search/vocab.model.trainables.* with mmap=None
+2019-05-13 15:25:49,051 : INFO : loading syn1neg from search/vocab.model.trainables.syn1neg.npy with mmap=None
+2019-05-13 15:25:49,252 : INFO : setting ignored attribute cum_table to None
+2019-05-13 15:25:49,252 : INFO : loaded search/vocab.model
+2019-05-13 15:25:49,407 : INFO : precomputing L2-norms of word weight vectors
+2019-05-13 15:27:15,084 : INFO : loading Word2Vec object from search/vocab.model
+2019-05-13 15:27:15,256 : INFO : loading wv recursively from search/vocab.model.wv.* with mmap=None
+2019-05-13 15:27:15,256 : INFO : loading vectors from search/vocab.model.wv.vectors.npy with mmap=None
+2019-05-13 15:27:15,457 : INFO : setting ignored attribute vectors_norm to None
+2019-05-13 15:27:15,457 : INFO : loading vocabulary recursively from search/vocab.model.vocabulary.* with mmap=None
+2019-05-13 15:27:15,457 : INFO : loading trainables recursively from search/vocab.model.trainables.* with mmap=None
+2019-05-13 15:27:15,457 : INFO : loading syn1neg from search/vocab.model.trainables.syn1neg.npy with mmap=None
+2019-05-13 15:27:15,659 : INFO : setting ignored attribute cum_table to None
+2019-05-13 15:27:15,659 : INFO : loaded search/vocab.model
+2019-05-13 15:27:15,881 : INFO : loading Word2Vec object from search/vocab.model
+2019-05-13 15:27:16,019 : INFO : loading wv recursively from search/vocab.model.wv.* with mmap=None
+2019-05-13 15:27:16,019 : INFO : loading vectors from search/vocab.model.wv.vectors.npy with mmap=None
+2019-05-13 15:27:16,231 : INFO : setting ignored attribute vectors_norm to None
+2019-05-13 15:27:16,231 : INFO : loading vocabulary recursively from search/vocab.model.vocabulary.* with mmap=None
+2019-05-13 15:27:16,231 : INFO : loading trainables recursively from search/vocab.model.trainables.* with mmap=None
+2019-05-13 15:27:16,231 : INFO : loading syn1neg from search/vocab.model.trainables.syn1neg.npy with mmap=None
+2019-05-13 15:27:16,426 : INFO : setting ignored attribute cum_table to None
+2019-05-13 15:27:16,427 : INFO : loaded search/vocab.model
+2019-05-13 15:27:16,575 : INFO : precomputing L2-norms of word weight vectors
+2019-05-13 15:28:06,525 : INFO : E:\Studia\Projekty\Systemy SI\Systemy-SI\searchengine\search\main.py changed, reloading.
