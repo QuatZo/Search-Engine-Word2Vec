@@ -1,3 +1,11 @@
+body{
+    background-color: black;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
 ul {
     list-style-type: None;
 	display: None;
@@ -5,22 +13,114 @@ ul {
 
 input{
 	position: relative;
-	left: 15%;
+	left: 0;
 	padding: 5 10;
 }
 
 input[type=text]{
 	width: 55%;
 	border: solid 1px red;
-	border-top: None;
-	border-radius: 33px
+    background: black;
+    color: #ffffff;
+	border-radius: 33px;
 }
 
 input[type=submit]{
 	width: 5%;
 	border: None;
-	background: white;
+	background: black;
+    color: #ffffff;
 	border: solid 1px red;
-	border-top: None;
-	border-radius: 33px
+	border-radius: 33px;
 }
+
+th{
+    border-top: None;
+    border: solid 1px red;
+    background-color: #001122 ;
+    text-align: center;
+    color: #ffffff;
+}
+
+td{
+    border-top: None;
+    text-align: center;
+    color: #ffffff;
+}
+
+tr{
+    background-color: grey;
+}
+tr:nth-child(odd){
+    background-color: dimgrey;
+}
+table{
+    width: 80%;
+    float: left;
+    left: 10%;
+    position: relative;
+    border: solid 1px red;
+    overflow: hidden;
+}
+td.actors,
+th.actors{
+    width: 15%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 10px;
+    border: solid black;
+    
+}
+td.year,
+th.year{
+    width: 2%;
+    border: solid black;
+    
+}
+
+td.directors,
+th.directors{
+    width: 1%;
+    border: solid black;
+    
+}
+
+td.rating,
+th.rating{
+    width: 1%;
+    border: solid black;
+    
+}
+
+td.category,
+th.category{
+    width: 2%;
+    border: solid black;
+    
+}
+
+td.plot,
+th.plot{
+    width: 15%;
+    overflow: hidden;
+    border: solid black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+    
+}
+
+td.title,
+th.title{
+    width: 5%;
+    border: solid black;
+    
+}
+
+/*.act{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 20px;
+    width: 10%;
+} */
