@@ -78,6 +78,11 @@ def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja z
     result, _ = fetch_data(arg_match, result, arg_dataset, rows_per_match, similar=True)  # wyrazy podobne
 
     print(f"Search time: {time.time() - start} secs")
+    for i in range(len(result)):
+        try:
+            result[i][1] = int(float(result[i][1]))
+        except ValueError:
+            pass
     return result
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion

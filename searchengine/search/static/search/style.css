@@ -55,22 +55,22 @@ tr:nth-child(odd){
     background-color: dimgrey;
 }
 table{
-    width: 80%;
+    table-layout: fixed;
+	width: 100%;
     float: left;
     left: 10%;
     position: relative;
     border: solid 1px red;
-    overflow: hidden;
 }
+
 td.actors,
 th.actors{
-    width: 15%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 10%;
     height: 10px;
     border: solid black;
     
 }
+
 td.year,
 th.year{
     width: 2%;
@@ -80,34 +80,30 @@ th.year{
 
 td.directors,
 th.directors{
-    width: 1%;
+    width: 10%;;
     border: solid black;
     
 }
 
 td.rating,
 th.rating{
-    width: 1%;
+    width: 2%;
     border: solid black;
     
 }
 
 td.category,
 th.category{
-    width: 2%;
+    width: 5%;
     border: solid black;
     
 }
 
 td.plot,
 th.plot{
-    width: 15%;
+    width: 10%;
     overflow: hidden;
-    border: solid black;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    
-    
+    border: solid black;  
 }
 
 td.title,
@@ -117,10 +113,24 @@ th.title{
     
 }
 
-/*.act{
+.actors,
+.plot,
+.directors,
+.category,
+.title{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     height: 20px;
-    width: 10%;
-} */
+} 
+.actors:hover,
+.plot:hover,
+.directors:hover,
+.category:hover,
+.title:hover{
+	text-overflow: clip;
+    white-space: normal;
+	height: auto;
+}
+.container{
+	width: 80%;
