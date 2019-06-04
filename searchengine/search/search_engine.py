@@ -54,8 +54,8 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words=0, similar
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 
 
-# -------------------------------------------- FUNKCJA POBIERAJACA DANE ---------------------------------------------- #
-def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja zwracająca/sortująca wynik wyszukiwania
+# -------------------------------------------- FUNKCJA ZWRACAJaCA DANE ----------------------------------------------- #
+def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja zwracajaca/sortujaca wynik wyszukiwania
     input_rows = arg_total_rows - sum(arg_match.values())  # ilosc wierszy przeznaczonych dla wyrazow z wejscia to ilosc
     # wszystkich wierszy minus ilosc wierszy zarezerwowanych dla wyrazow podobnych
     rows_per_input = int(input_rows / len(arg_input))  # ilosc wierszy na wyraz z wejscia

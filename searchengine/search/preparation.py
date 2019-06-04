@@ -1,10 +1,3 @@
-# -------------------------------------------------------------------------------------------------------------------- #
-#                                                                                                                      #
-#                                                                                                                      #
-# Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
-# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
-
-
 import time
 import re
 
@@ -25,7 +18,7 @@ def prepare(arg_dataset, arg_path_to_stop_words):
         stop_words = list()
     stop_words.append('')  # dodaj pusty element do usuniecia
 
-    for row in arg_dataset:  # wyciągnij informacje
+    for row in arg_dataset:  # wyciagnij informacje
         temp_str = ""
         for i in range(len(row)):
             if i == 1:  # pomijamy rok

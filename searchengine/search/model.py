@@ -1,10 +1,3 @@
-# -------------------------------------------------------------------------------------------------------------------- #
-#                                                                                                                      #
-# TODO - Zabawa parametrami modelu, sprawdzanie najlepszego (najbardziej dokladnego) rozwiazania                       #
-#                                                                                                                      #
-# Jesli cos  zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                      #
-# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
-
 from gensim.models import word2vec
 import time
 import logging

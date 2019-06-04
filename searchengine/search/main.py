@@ -1,7 +1,3 @@
-# ----------------------------------------- DON'T TOUCH -------------------------------------------------------------- #
-# TODO - Optymalizacja kodu (czesciowo zrobiona)                                                                       #
-# Heart of our program
-
 import pandas as pd
 
 from .variables import path_to_model, path_to_stop_words, path_to_dataset, top_n, ai_rows, total_rows, line, \

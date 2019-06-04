@@ -5,18 +5,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from gensim.models import word2vec
-from sklearn.manifold import TSNE
+from MulticoreTSNE import MulticoreTSNE as TSNE
 import pandas as pd
+import logging
 
 # region Functions
 
 
 # ---------------------------------------------- PLOT WSZYSTKICH WYRAZOW --------------------------------------------- #
 def display_allwords_tsnescatterplot(arg_path_to_model):
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     model = word2vec.Word2Vec.load(arg_path_to_model)
     vocab = list(model.wv.vocab)
+
     X = model[vocab]
-    tsne = TSNE(n_components=2, random_state=0)
+    tsne = TSNE(n_jobs=12, random_state=0)
     X_tsne = tsne.fit_transform(X)
     df = pd.DataFrame(X_tsne, index=vocab, columns=['x', 'y'])
 
@@ -66,3 +69,5 @@ def display_closestwords_tsnescatterplot(arg_path_to_model, word):
     plt.show()
 # ------------------------------------------------------ KONIEC ------------------------------------------------------ #
 # endregion
+
+display_allwords_tsnescatterplot("vocab.model")

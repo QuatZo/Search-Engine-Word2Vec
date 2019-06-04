@@ -1,5 +1,3 @@
-# ----------------------------------------- DON'T TOUCH -------------------------------------------------------------- #
-# Variables for every .py file
 import datetime as dt
 
 # region Path

@@ -1,8 +1,3 @@
-# -------------------------------------------------------------------------------------------------------------------- #
-# Jesli cos zrobicie to usuncie. Jak zrobicie wszystko z listy zostawcie naglowek i te wiadomosc                       #
-# ------------------------------------------ ELO MORDY --------------------------------------------------------------- #
-
-
 import numpy as np
 import pandas as pd
 from imdb import IMDb, IMDbError
@@ -33,7 +28,7 @@ def get_info(movie, arg_i, arg_row, arg_row_info_len=7, bool_title=True, bool_ye
 
         # zmienne typu Bool obsluguja blad pustej wartosci (w ich miejsce bedzie wpisywany NULL)
         if bool_title:
-            list_of_infos.append(movie['title'])  # na początek tytułu
+            list_of_infos.append(movie['title'])  # na poczatek tytułu
         else:
             list_of_infos.append("NULL")
 
@@ -136,7 +131,7 @@ def save_to_file(argrow_info, arg_dataset):  # zapisywanie pobranych danych do p
         #  tworzenie dataFrame - taka tabelka która ma jasno określone nagłówki i indeksy
         temp_dataset = pd.DataFrame(argrow_info, columns=['title', 'year', 'directors', 'rating', 'genres', 'plotmarks',
                                                           'actors'])
-        arg_dataset = pd.concat([arg_dataset, temp_dataset])  # konkatenacja - łączenie pliku z tym co pobrane
+        arg_dataset = pd.concat([arg_dataset, temp_dataset])  # konkatenacja - łaczenie pliku z tym co pobrane
         arg_dataset = arg_dataset.reset_index(drop=True)  # reset indeksu
         arg_dataset.to_csv(path_to_dataset, sep=";")  # zmiana na plik .csv
         return True  # zwracamy prawde, dzieki czemu ID tych filmow mozemy zapisac jako 'zrobione'
@@ -164,7 +159,7 @@ last_id = file_read[0]  # ustawione jako najnowszy
 try:  # obsluga bledu 'brak pliku'
     with open(path_to_dataset_ids) as ids:  # rownie dobrze mogloby byc cos w stylu:
         try:
-            last_id = list(ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od początku
+            last_id = list(ids)[-1]  # pobranie ostatniego id żeby nie powtarzać pobierania danych do pliku od poczatku
             file_read = file_read[file_read.index(
                 last_id[:-1]) + 1:]  # ucinamy wszystkie ID z IMDb od ostatniego najnowszego ID - 1
         except IndexError:  # jesli plik jest pusty
@@ -194,7 +189,7 @@ for row in file_read:  # kazdy imdb_id z bazy
             save_ids(ids_to_save)  # zapisuje
             ids_to_save.clear()  # czyści - dupe na przykład
         else:
-            print("Niepowodzenie w zapisie!")  # błąd, wyświetla komunikat błedu
+            print("Niepowodzenie w zapisie!")  # bład, wyświetla komunikat błedu
             exit(-1)  # kod błędu - kończenie programu
 
     ids_to_save.append(row)  # dopisue aktualne ID do listy ID przeznaczonych do zapisu
@@ -212,5 +207,5 @@ for row in file_read:  # kazdy imdb_id z bazy
 # --------------------------------------- ZAMKNIECIE PROGRAMU (OSTATNI ZAPIS) ---------------------------------------- #
 if save_to_file(row_info, dataset):
     save_ids(ids_to_save)
-# ------------------------------------------- TO BY BYLO NA TYLE KURWIBĄKI ------------------------------------------- #
+# ------------------------------------------- TO BY BYLO NA TYLE KURWIBaKI ------------------------------------------- #
 # endregion
