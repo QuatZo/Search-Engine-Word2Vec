@@ -15,7 +15,7 @@ total_rows = 100  # ogolna ilosc wierszy
 
 # region Main
 line = "-"*10
-website = "http://localhost:8000/search/table.html?search_text"
+website = "http://localhost:8000/search?search_text"
 
 
 def now():

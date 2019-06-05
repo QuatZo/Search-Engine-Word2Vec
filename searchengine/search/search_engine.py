@@ -58,11 +58,16 @@ def fetch_data(arg_data, arg_result, arg_arg_dataset, arg_total_words=0, similar
 def return_data(arg_input, arg_match, arg_dataset, arg_total_rows):  # funkcja zwracajaca/sortujaca wynik wyszukiwania
     input_rows = arg_total_rows - sum(arg_match.values())  # ilosc wierszy przeznaczonych dla wyrazow z wejscia to ilosc
     # wszystkich wierszy minus ilosc wierszy zarezerwowanych dla wyrazow podobnych
-    rows_per_input = int(input_rows / len(arg_input))  # ilosc wierszy na wyraz z wejscia
-    arg_dataset = arg_dataset.sort_values(by='rating', ascending=False)  # sortuj po ratingu
 
     result = list()
     inp = dict()
+
+    try:
+        rows_per_input = int(input_rows / len(arg_input))  # ilosc wierszy na wyraz z wejscia
+    except ZeroDivisionError:
+        return result
+
+    arg_dataset = arg_dataset.sort_values(by='rating', ascending=False)  # sortuj po ratingu
 
     for word in arg_input:
         inp[word] = rows_per_input  # slownik z listy, unifikacja zmiennej dla funkcji fetch_data
